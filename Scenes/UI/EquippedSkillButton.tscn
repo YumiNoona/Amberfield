@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://by3fddmfudlb5"]
+
+[ext_resource type="Texture2D" uid="uid://bp6d7mnsg1eqs" path="res://Assets/Sprites/Bags/Bag (6).png" id="1_v4iid"]
+[ext_resource type="Script" uid="uid://cc1bki2o54bxu" path="res://Scripts/UI/EquippedSkillButton.gd" id="1_x6cwv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_v4iid"]
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[node name="EquippedSkillButton" type="Button" unique_id=2040865236]
+custom_minimum_size = Vector2(50, 50)
+offset_right = 8.0
+offset_bottom = 8.0
+flat = true
+script = ExtResource("1_x6cwv")
+
+[node name="Empty" type="Panel" parent="." unique_id=1697362110]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SkillIcon" type="TextureRect" parent="." unique_id=1288623934]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -21.0
+offset_right = 20.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_v4iid")
+
+[node name="Label" type="Label" parent="." unique_id=1525335866]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -15.0
+offset_top = -26.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "1"
+label_settings = SubResource("LabelSettings_v4iid")
+horizontal_alignment = 2

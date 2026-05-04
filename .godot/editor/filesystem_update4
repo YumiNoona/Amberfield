@@ -1,0 +1,13 @@
+res://Scenes/Level/Town.tscn
+res://Scenes/UI/StatsPanel.tscn
+res://Scripts/UI/StatsPanel.gd
+res://Scenes/UI/SkillButton.tscn
+res://Scripts/UI/SkillButton.gd
+res://Scenes/UI/SkillsPanel.tscn
+res://Scripts/UI/SkillsPanel.gd
+res://Scenes/UI/EquippedSkillButton.tscn
+res://Scripts/UI/EquippedSkillButton.gd
+res://Scenes/UI/EquipmentPanel.tscn
+res://Scenes/UI/InventoryPanel.tscn
+res://Scripts/UI/HUD.gd
+res://Scripts/Core/Town.gd

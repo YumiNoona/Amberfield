@@ -1,19 +1,87 @@
 [gd_scene format=4 uid="uid://w7udftimvpfs"]
 
+[ext_resource type="Script" uid="uid://cthonfgh7jdfu" path="res://Scripts/Core/Town.gd" id="1_7cdkx"]
 [ext_resource type="PackedScene" uid="uid://t1hxff50qtww" path="res://Scenes/Player/Player.tscn" id="1_gs2kd"]
 [ext_resource type="Texture2D" uid="uid://cyeqsr8xuekb" path="res://Assets/Sprites/Bags/Bag (1).png" id="2_0qpxt"]
 [ext_resource type="Script" uid="uid://ttffb5nav2xv" path="res://Scripts/UI/HUD.gd" id="2_clneh"]
 [ext_resource type="Texture2D" uid="uid://jqvq3l7fwkbs" path="res://Assets/Sprites/Weapons/Weapons (3).png" id="2_i6v2t"]
 [ext_resource type="Texture2D" uid="uid://d3hcp8xj10s6t" path="res://Assets/Sprites/Quest/Quest (5).png" id="4_clneh"]
 [ext_resource type="Texture2D" uid="uid://csmkkc7vs7l2m" path="res://Assets/Sprites/Books/Book (2).png" id="5_jpcvw"]
+[ext_resource type="PackedScene" uid="uid://by3fddmfudlb5" path="res://Scenes/UI/EquippedSkillButton.tscn" id="7_34u31"]
 [ext_resource type="PackedScene" uid="uid://c53sf3e0eri5d" path="res://Scenes/UI/EquipmentPanel.tscn" id="7_erq3x"]
 [ext_resource type="PackedScene" uid="uid://dpftas3q175mg" path="res://Scenes/UI/InventoryPanel.tscn" id="7_jpcvw"]
 [ext_resource type="Script" uid="uid://dc78c2abmcv6p" path="res://Scripts/UI/EquipmentPanel.gd" id="8_4osci"]
+[ext_resource type="PackedScene" uid="uid://b12dv7liwfm2f" path="res://Scenes/UI/StatsPanel.tscn" id="10_l3akt"]
+[ext_resource type="PackedScene" uid="uid://b5nfldvggmx0d" path="res://Scenes/UI/SkillsPanel.tscn" id="11_r3xdj"]
 
 [sub_resource type="TileSet" id="TileSet_drxi1"]
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Floor"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_34u31"]
+bg_color = Color(0.25882354, 0.05882353, 0.011764706, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7cdkx"]
+bg_color = Color(0.77254903, 0.2509804, 0.105882354, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.25882354, 0.05882353, 0.011764706, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l0gx2"]
+bg_color = Color(0.015686275, 0.12941177, 0.2, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pg3w3"]
+bg_color = Color(0.14509805, 0.48235294, 0.68235296, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.015686275, 0.12941177, 0.2, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w73ec"]
+bg_color = Color(0.015686275, 0.15686275, 0.07058824, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.015686275, 0.15686275, 0.07058824, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_47ufo"]
+bg_color = Color(0.11372549, 0.5372549, 0.3019608, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.015686275, 0.15686275, 0.07058824, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gs2kd"]
 bg_color = Color(0.14901961, 0.16470589, 0.20784314, 1)
@@ -39,6 +107,8 @@ corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
 [node name="Town" type="Node2D" unique_id=594205815]
+script = ExtResource("1_7cdkx")
+player_scene = ExtResource("1_gs2kd")
 
 [node name="Terrain" type="Node2D" parent="." unique_id=808884103]
 
@@ -50,11 +120,71 @@ tile_set = SubResource("TileSet_drxi1")
 tile_map_data = PackedByteArray("AAAEAAEAAwAEAAAAAAAEAAAAAwAHAAEAAAAEAP//AwALAAIAAAAEAP7/AwAHAAEAAAAEAP3/AwALAAAAAAADAAEAAwAGAAMAAAADAAAAAwAJAAIAAAADAP//AwAFAAEAAAADAP7/AwAFAAEAAAADAP3/AwAKAAAAAAACAAEAAwACAAEAAAACAAAAAwAJAAIAAAACAP//AwAFAAEAAAACAP7/AwAFAAEAAAACAP3/AwAKAAAAAAABAAEAAwACAAEAAAABAAAAAwAFAAEAAAABAP//AwAFAAEAAAABAP7/AwAJAAIAAAABAP3/AwAKAAAAAAAAAAEAAwAGAAMAAAAAAAAAAwAGAAEAAAAAAP//AwAFAAEAAAAAAP7/AwAFAAEAAAAAAP3/AwAKAAAAAAD//wEAAwAGAAMAAAD//wAAAwAGAAEAAAD/////AwAJAAIAAAD///7/AwAJAAIAAAD///3/AwAKAAAAAAD+/wEAAwAGAAMAAAD+/wAAAwAJAAIAAAD+////AwAJAAIAAAD+//7/AwAFAAEAAAD+//3/AwAKAAAAAAD9/wEAAwAGAAMAAAD9/wAAAwAJAAIAAAD9////AwAFAAEAAAD9//7/AwAFAAEAAAD9//3/AwAKAAAAAAD8/wEAAwAHAAAAAAD8/wAAAwAEAAEAAAD8////AwAEAAEAAAD8//7/AwAIAAEAAAD8//3/AwAFAAAAAAA=")
 tile_set = SubResource("TileSet_drxi1")
 
-[node name="Player" parent="." unique_id=1975534470 instance=ExtResource("1_gs2kd")]
-position = Vector2(585, 341)
-
 [node name="HUD" type="CanvasLayer" parent="." unique_id=470864458]
 script = ExtResource("2_clneh")
+
+[node name="HealthBar" type="ProgressBar" parent="HUD" unique_id=1271459084]
+custom_minimum_size = Vector2(200, 30)
+offset_top = 17.0
+offset_right = 200.0
+offset_bottom = 47.0
+theme_override_styles/background = SubResource("StyleBoxFlat_34u31")
+theme_override_styles/fill = SubResource("StyleBoxFlat_7cdkx")
+max_value = 1.0
+step = 0.001
+value = 0.5
+show_percentage = false
+
+[node name="HealthLabel" type="Label" parent="HUD/HealthBar" unique_id=891331945]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "20/20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ManaBar" type="ProgressBar" parent="HUD" unique_id=1442470233]
+custom_minimum_size = Vector2(200, 30)
+offset_top = 57.0
+offset_right = 200.0
+offset_bottom = 87.0
+theme_override_styles/background = SubResource("StyleBoxFlat_l0gx2")
+theme_override_styles/fill = SubResource("StyleBoxFlat_pg3w3")
+max_value = 1.0
+step = 0.001
+value = 0.5
+show_percentage = false
+
+[node name="ManaLabel" type="Label" parent="HUD/ManaBar" unique_id=2043883766]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "20/20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExpBar" type="ProgressBar" parent="HUD" unique_id=422890304]
+custom_minimum_size = Vector2(500, 20)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_top = 20.0
+offset_right = 250.0
+offset_bottom = 51.0
+grow_horizontal = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_w73ec")
+theme_override_styles/fill = SubResource("StyleBoxFlat_47ufo")
+max_value = 1.0
+step = 0.001
 
 [node name="MainButtons" type="Panel" parent="HUD" unique_id=1578788269]
 custom_minimum_size = Vector2(240, 70)
@@ -171,6 +301,53 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("5_jpcvw")
 
+[node name="ActionButtons" type="Panel" parent="HUD" unique_id=702734012]
+custom_minimum_size = Vector2(240, 70)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -88.0
+offset_right = 120.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_gs2kd")
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD/ActionButtons" unique_id=1609687185]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD/ActionButtons/MarginContainer" unique_id=1970403776]
+layout_mode = 2
+alignment = 1
+
+[node name="EquippedSkillButton" parent="HUD/ActionButtons/MarginContainer/HBoxContainer" unique_id=2040865236 instance=ExtResource("7_34u31")]
+layout_mode = 2
+number = 1
+
+[node name="EquippedSkillButton2" parent="HUD/ActionButtons/MarginContainer/HBoxContainer" unique_id=1955212060 instance=ExtResource("7_34u31")]
+layout_mode = 2
+number = 2
+
+[node name="EquippedSkillButton3" parent="HUD/ActionButtons/MarginContainer/HBoxContainer" unique_id=1383288453 instance=ExtResource("7_34u31")]
+layout_mode = 2
+number = 3
+
+[node name="EquippedSkillButton4" parent="HUD/ActionButtons/MarginContainer/HBoxContainer" unique_id=2021077694 instance=ExtResource("7_34u31")]
+layout_mode = 2
+number = 4
+
 [node name="Panels" type="HBoxContainer" parent="HUD" unique_id=502462574]
 custom_minimum_size = Vector2(450, 350)
 anchors_preset = 3
@@ -178,21 +355,38 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -482.0
-offset_top = -503.0
-offset_right = -32.0
-offset_bottom = -96.0
+offset_left = -983.0
+offset_top = -518.0
+offset_right = -38.0
+offset_bottom = -107.99994
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_constants/separation = 15
 alignment = 2
 
 [node name="EquipmentPanel" parent="HUD/Panels" unique_id=1790938808 instance=ExtResource("7_erq3x")]
+unique_name_in_owner = true
+visible = false
 layout_mode = 2
+size_flags_vertical = 8
 script = ExtResource("8_4osci")
 
 [node name="InventoryPanel" parent="HUD/Panels" unique_id=909020893 instance=ExtResource("7_jpcvw")]
+unique_name_in_owner = true
+visible = false
 layout_mode = 2
+
+[node name="StatsPanel" parent="HUD/Panels" unique_id=982901738 instance=ExtResource("10_l3akt")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="SkillsPanel" parent="HUD/Panels" unique_id=1232977192 instance=ExtResource("11_r3xdj")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_vertical = 8
 
 [connection signal="pressed" from="HUD/MainButtons/MarginContainer/HBoxContainer/Equipment" to="HUD" method="_on_equipment_pressed"]
 [connection signal="pressed" from="HUD/MainButtons/MarginContainer/HBoxContainer/Inventory" to="HUD" method="_on_inventory_pressed"]

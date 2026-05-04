@@ -1,0 +1,258 @@
+[gd_scene format=3 uid="uid://b12dv7liwfm2f"]
+
+[ext_resource type="Script" uid="uid://bym8ir6tvxrgh" path="res://Scripts/UI/StatsPanel.gd" id="1_dtg81"]
+[ext_resource type="Texture2D" uid="uid://bqs80but2ahli" path="res://Assets/UI/Minus.png" id="1_x87mb"]
+[ext_resource type="Texture2D" uid="uid://dwlk00lgsb8no" path="res://Assets/UI/Plus.png" id="2_dtg81"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_clneh"]
+bg_color = Color(0.14901961, 0.16470589, 0.20784314, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(0.101960786, 0.11372549, 0.14901961, 1)
+shadow_size = 2
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4osci"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r3xdj"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="StatsPanel" type="PanelContainer" unique_id=982901738]
+custom_minimum_size = Vector2(220, 360)
+offset_right = 220.0
+offset_bottom = 360.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_clneh")
+script = ExtResource("1_dtg81")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=387810016]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1684050514]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Heading" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1393561771]
+layout_mode = 2
+text = "Stats"
+horizontal_alignment = 1
+
+[node name="Control" type="ColorRect" parent="MarginContainer/VBoxContainer" unique_id=1366724947]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(0.5294118, 0.3529412, 0.3529412, 1)
+
+[node name="Space" type="Control" parent="MarginContainer/VBoxContainer" unique_id=755529758]
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1812896203]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=1345412985]
+layout_mode = 2
+alignment = 1
+
+[node name="DMGLabel" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=1010749655]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+text = "DMG: 120"
+label_settings = SubResource("LabelSettings_4osci")
+horizontal_alignment = 1
+
+[node name="HPLabel" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=55640083]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+text = "HP: 20"
+label_settings = SubResource("LabelSettings_4osci")
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=1780211714]
+layout_mode = 2
+alignment = 1
+
+[node name="VelLabel" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2" unique_id=1995915681]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+text = "VEL: 80"
+label_settings = SubResource("LabelSettings_4osci")
+horizontal_alignment = 1
+
+[node name="Mana" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2" unique_id=1312445964]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+text = "Mana: 30"
+label_settings = SubResource("LabelSettings_4osci")
+horizontal_alignment = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=766647456]
+layout_mode = 2
+alignment = 1
+
+[node name="CritLabel" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer3" unique_id=9612480]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+text = "CRIT: 19%"
+label_settings = SubResource("LabelSettings_4osci")
+horizontal_alignment = 1
+
+[node name="CDmgLabel" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer3" unique_id=1777111305]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+text = "C. DMG: 28%"
+label_settings = SubResource("LabelSettings_4osci")
+horizontal_alignment = 1
+
+[node name="Space5" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1946531469]
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 2
+
+[node name="Control2" type="ColorRect" parent="MarginContainer/VBoxContainer" unique_id=1228460954]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(0.5294118, 0.3529412, 0.3529412, 1)
+
+[node name="Space2" type="Control" parent="MarginContainer/VBoxContainer" unique_id=181564452]
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 2
+
+[node name="CurrentLevel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=887859519]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Level 5"
+horizontal_alignment = 1
+
+[node name="Space3" type="Control" parent="MarginContainer/VBoxContainer" unique_id=486201816]
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 2
+
+[node name="Attributes" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=391241148]
+layout_mode = 2
+
+[node name="Strength" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Attributes" unique_id=1240826856]
+layout_mode = 2
+
+[node name="StrengthLabel" type="Label" parent="MarginContainer/VBoxContainer/Attributes/Strength" unique_id=198185972]
+layout_mode = 2
+text = "Strength"
+
+[node name="Space" type="Control" parent="MarginContainer/VBoxContainer/Attributes/Strength" unique_id=1467464906]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="Strength Minus Button" type="Button" parent="MarginContainer/VBoxContainer/Attributes/Strength" unique_id=447060597]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_r3xdj")
+icon = ExtResource("1_x87mb")
+icon_alignment = 1
+
+[node name="StrengthPoints" type="Label" parent="MarginContainer/VBoxContainer/Attributes/Strength" unique_id=1086772029]
+unique_name_in_owner = true
+layout_mode = 2
+text = "1"
+
+[node name="Strength Plus Button" type="Button" parent="MarginContainer/VBoxContainer/Attributes/Strength" unique_id=988028994]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_r3xdj")
+icon = ExtResource("2_dtg81")
+icon_alignment = 1
+
+[node name="Dexterity" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Attributes" unique_id=1267900273]
+layout_mode = 2
+
+[node name="DexterityLabel" type="Label" parent="MarginContainer/VBoxContainer/Attributes/Dexterity" unique_id=1402576344]
+layout_mode = 2
+text = "Dexterity"
+
+[node name="Space" type="Control" parent="MarginContainer/VBoxContainer/Attributes/Dexterity" unique_id=1024545428]
+custom_minimum_size = Vector2(45, 0)
+layout_mode = 2
+
+[node name="Dexterity Minus Button" type="Button" parent="MarginContainer/VBoxContainer/Attributes/Dexterity" unique_id=1534251759]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_r3xdj")
+icon = ExtResource("1_x87mb")
+icon_alignment = 1
+
+[node name="DexterityPoints" type="Label" parent="MarginContainer/VBoxContainer/Attributes/Dexterity" unique_id=1602162179]
+unique_name_in_owner = true
+layout_mode = 2
+text = "1"
+
+[node name="Dexterity Plus Button" type="Button" parent="MarginContainer/VBoxContainer/Attributes/Dexterity" unique_id=2028156479]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_r3xdj")
+icon = ExtResource("2_dtg81")
+icon_alignment = 1
+
+[node name="Intelligence" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Attributes" unique_id=758955840]
+layout_mode = 2
+
+[node name="IntelligenceLabel" type="Label" parent="MarginContainer/VBoxContainer/Attributes/Intelligence" unique_id=76619273]
+layout_mode = 2
+text = "Intelligence"
+
+[node name="Space" type="Control" parent="MarginContainer/VBoxContainer/Attributes/Intelligence" unique_id=111610819]
+custom_minimum_size = Vector2(27, 0)
+layout_mode = 2
+
+[node name="Intelligence Minus Button" type="Button" parent="MarginContainer/VBoxContainer/Attributes/Intelligence" unique_id=28071151]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_r3xdj")
+icon = ExtResource("1_x87mb")
+icon_alignment = 1
+
+[node name="IntelligencePoints" type="Label" parent="MarginContainer/VBoxContainer/Attributes/Intelligence" unique_id=677346643]
+unique_name_in_owner = true
+layout_mode = 2
+text = "1"
+
+[node name="Intelligence Plus Button" type="Button" parent="MarginContainer/VBoxContainer/Attributes/Intelligence" unique_id=981334924]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_r3xdj")
+icon = ExtResource("2_dtg81")
+icon_alignment = 1
+
+[node name="Space4" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1769586928]
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 2
+
+[node name="CurrentPoints" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1154600078]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Points 5"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Attributes/Strength/Strength Plus Button" to="." method="_on_strength_plus_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Attributes/Dexterity/Dexterity Plus Button" to="." method="_on_dexterity_plus_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Attributes/Intelligence/Intelligence Plus Button" to="." method="_on_intelligence_plus_button_pressed"]
