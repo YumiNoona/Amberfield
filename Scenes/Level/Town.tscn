@@ -1,0 +1,200 @@
+[gd_scene format=4 uid="uid://w7udftimvpfs"]
+
+[ext_resource type="PackedScene" uid="uid://t1hxff50qtww" path="res://Scenes/Player/Player.tscn" id="1_gs2kd"]
+[ext_resource type="Texture2D" uid="uid://cyeqsr8xuekb" path="res://Assets/Sprites/Bags/Bag (1).png" id="2_0qpxt"]
+[ext_resource type="Script" uid="uid://ttffb5nav2xv" path="res://Scripts/UI/HUD.gd" id="2_clneh"]
+[ext_resource type="Texture2D" uid="uid://jqvq3l7fwkbs" path="res://Assets/Sprites/Weapons/Weapons (3).png" id="2_i6v2t"]
+[ext_resource type="Texture2D" uid="uid://d3hcp8xj10s6t" path="res://Assets/Sprites/Quest/Quest (5).png" id="4_clneh"]
+[ext_resource type="Texture2D" uid="uid://csmkkc7vs7l2m" path="res://Assets/Sprites/Books/Book (2).png" id="5_jpcvw"]
+[ext_resource type="PackedScene" uid="uid://c53sf3e0eri5d" path="res://Scenes/UI/EquipmentPanel.tscn" id="7_erq3x"]
+[ext_resource type="PackedScene" uid="uid://dpftas3q175mg" path="res://Scenes/UI/InventoryPanel.tscn" id="7_jpcvw"]
+[ext_resource type="Script" uid="uid://dc78c2abmcv6p" path="res://Scripts/UI/EquipmentPanel.gd" id="8_4osci"]
+
+[sub_resource type="TileSet" id="TileSet_drxi1"]
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "Floor"
+terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gs2kd"]
+bg_color = Color(0.14901961, 0.16470589, 0.20784314, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0qpxt"]
+bg_color = Color(0.28627452, 0.30588236, 0.36862746, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.58103293, 0.581033, 0.58103263, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="Town" type="Node2D" unique_id=594205815]
+
+[node name="Terrain" type="Node2D" parent="." unique_id=808884103]
+
+[node name="Floor" type="TileMapLayer" parent="Terrain" unique_id=1814278703]
+tile_map_data = PackedByteArray("AAAEAAEAAwAEAAAAAAAEAAAAAwAHAAEAAAAEAP//AwALAAIAAAAEAP7/AwAHAAEAAAAEAP3/AwALAAAAAAADAAEAAwAGAAMAAAADAAAAAwAJAAIAAAADAP//AwAFAAEAAAADAP7/AwAFAAEAAAADAP3/AwAKAAAAAAACAAEAAwACAAEAAAACAAAAAwAJAAIAAAACAP//AwAFAAEAAAACAP7/AwAFAAEAAAACAP3/AwAKAAAAAAABAAEAAwACAAEAAAABAAAAAwAFAAEAAAABAP//AwAFAAEAAAABAP7/AwAJAAIAAAABAP3/AwAKAAAAAAAAAAEAAwAGAAMAAAAAAAAAAwAGAAEAAAAAAP//AwAFAAEAAAAAAP7/AwAFAAEAAAAAAP3/AwAKAAAAAAD//wEAAwAGAAMAAAD//wAAAwAGAAEAAAD/////AwAJAAIAAAD///7/AwAJAAIAAAD///3/AwAKAAAAAAD+/wEAAwAGAAMAAAD+/wAAAwAJAAIAAAD+////AwAJAAIAAAD+//7/AwAFAAEAAAD+//3/AwAKAAAAAAD9/wEAAwAGAAMAAAD9/wAAAwAJAAIAAAD9////AwAFAAEAAAD9//7/AwAFAAEAAAD9//3/AwAKAAAAAAD8/wEAAwAHAAAAAAD8/wAAAwAEAAEAAAD8////AwAEAAEAAAD8//7/AwAIAAEAAAD8//3/AwAFAAAAAAA=")
+tile_set = SubResource("TileSet_drxi1")
+
+[node name="House" type="TileMapLayer" parent="Terrain" unique_id=436678688]
+tile_map_data = PackedByteArray("AAAEAAEAAwAEAAAAAAAEAAAAAwAHAAEAAAAEAP//AwALAAIAAAAEAP7/AwAHAAEAAAAEAP3/AwALAAAAAAADAAEAAwAGAAMAAAADAAAAAwAJAAIAAAADAP//AwAFAAEAAAADAP7/AwAFAAEAAAADAP3/AwAKAAAAAAACAAEAAwACAAEAAAACAAAAAwAJAAIAAAACAP//AwAFAAEAAAACAP7/AwAFAAEAAAACAP3/AwAKAAAAAAABAAEAAwACAAEAAAABAAAAAwAFAAEAAAABAP//AwAFAAEAAAABAP7/AwAJAAIAAAABAP3/AwAKAAAAAAAAAAEAAwAGAAMAAAAAAAAAAwAGAAEAAAAAAP//AwAFAAEAAAAAAP7/AwAFAAEAAAAAAP3/AwAKAAAAAAD//wEAAwAGAAMAAAD//wAAAwAGAAEAAAD/////AwAJAAIAAAD///7/AwAJAAIAAAD///3/AwAKAAAAAAD+/wEAAwAGAAMAAAD+/wAAAwAJAAIAAAD+////AwAJAAIAAAD+//7/AwAFAAEAAAD+//3/AwAKAAAAAAD9/wEAAwAGAAMAAAD9/wAAAwAJAAIAAAD9////AwAFAAEAAAD9//7/AwAFAAEAAAD9//3/AwAKAAAAAAD8/wEAAwAHAAAAAAD8/wAAAwAEAAEAAAD8////AwAEAAEAAAD8//7/AwAIAAEAAAD8//3/AwAFAAAAAAA=")
+tile_set = SubResource("TileSet_drxi1")
+
+[node name="Player" parent="." unique_id=1975534470 instance=ExtResource("1_gs2kd")]
+position = Vector2(585, 341)
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=470864458]
+script = ExtResource("2_clneh")
+
+[node name="MainButtons" type="Panel" parent="HUD" unique_id=1578788269]
+custom_minimum_size = Vector2(240, 70)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -272.0
+offset_top = -88.0
+offset_right = -32.0
+offset_bottom = -18.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_gs2kd")
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD/MainButtons" unique_id=1299558567]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD/MainButtons/MarginContainer" unique_id=1462967092]
+layout_mode = 2
+alignment = 1
+
+[node name="Equipment" type="Button" parent="HUD/MainButtons/MarginContainer/HBoxContainer" unique_id=1239428202]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_0qpxt")
+
+[node name="TextureRect" type="TextureRect" parent="HUD/MainButtons/MarginContainer/HBoxContainer/Equipment" unique_id=1126038526]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_i6v2t")
+
+[node name="Inventory" type="Button" parent="HUD/MainButtons/MarginContainer/HBoxContainer" unique_id=160546255]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_0qpxt")
+
+[node name="TextureRect" type="TextureRect" parent="HUD/MainButtons/MarginContainer/HBoxContainer/Inventory" unique_id=1618496927]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_0qpxt")
+
+[node name="Stats" type="Button" parent="HUD/MainButtons/MarginContainer/HBoxContainer" unique_id=2146491271]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_0qpxt")
+
+[node name="TextureRect" type="TextureRect" parent="HUD/MainButtons/MarginContainer/HBoxContainer/Stats" unique_id=403697260]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_clneh")
+
+[node name="Skills" type="Button" parent="HUD/MainButtons/MarginContainer/HBoxContainer" unique_id=1939034734]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_0qpxt")
+
+[node name="TextureRect" type="TextureRect" parent="HUD/MainButtons/MarginContainer/HBoxContainer/Skills" unique_id=1548972065]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_jpcvw")
+
+[node name="Panels" type="HBoxContainer" parent="HUD" unique_id=502462574]
+custom_minimum_size = Vector2(450, 350)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -482.0
+offset_top = -503.0
+offset_right = -32.0
+offset_bottom = -96.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/separation = 15
+alignment = 2
+
+[node name="EquipmentPanel" parent="HUD/Panels" unique_id=1790938808 instance=ExtResource("7_erq3x")]
+layout_mode = 2
+script = ExtResource("8_4osci")
+
+[node name="InventoryPanel" parent="HUD/Panels" unique_id=909020893 instance=ExtResource("7_jpcvw")]
+layout_mode = 2
+
+[connection signal="pressed" from="HUD/MainButtons/MarginContainer/HBoxContainer/Equipment" to="HUD" method="_on_equipment_pressed"]
+[connection signal="pressed" from="HUD/MainButtons/MarginContainer/HBoxContainer/Inventory" to="HUD" method="_on_inventory_pressed"]
+[connection signal="pressed" from="HUD/MainButtons/MarginContainer/HBoxContainer/Stats" to="HUD" method="_on_stats_pressed"]
+[connection signal="pressed" from="HUD/MainButtons/MarginContainer/HBoxContainer/Skills" to="HUD" method="_on_skills_pressed"]

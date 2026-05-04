@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://1glycur4qm4u"]
+
+[ext_resource type="Script" uid="uid://b7mwrqni6q0hn" path="res://Scripts/UI/InventorySlots.gd" id="1_u6o6v"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jpcvw"]
+bg_color = Color(0.38039216, 0.39215687, 0.4392157, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="InventorySlots" type="Button" unique_id=1154074496]
+custom_minimum_size = Vector2(40, 40)
+theme_override_styles/normal = SubResource("StyleBoxFlat_jpcvw")
+script = ExtResource("1_u6o6v")

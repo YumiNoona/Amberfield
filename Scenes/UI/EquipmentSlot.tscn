@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://03vlyprcxpoc"]
+
+[ext_resource type="Script" uid="uid://c1jmoofsqts0p" path="res://Scripts/UI/EquipmentSlot.gd" id="1_o0ubt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jpcvw"]
+bg_color = Color(0.21960784, 0.23137255, 0.2901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5921569, 0.5921569, 0.5921569, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="Equipment Slot" type="Button" unique_id=1500920206]
+custom_minimum_size = Vector2(40, 40)
+theme_override_styles/normal = SubResource("StyleBoxFlat_jpcvw")
+script = ExtResource("1_o0ubt")
