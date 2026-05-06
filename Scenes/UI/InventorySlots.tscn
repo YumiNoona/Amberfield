@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://1glycur4qm4u"]
 
 [ext_resource type="Script" uid="uid://b7mwrqni6q0hn" path="res://Scripts/UI/InventorySlots.gd" id="1_u6o6v"]
+[ext_resource type="Texture2D" uid="uid://cak5x6sdvr1dm" path="res://Assets/Sprites/Bags/Bag (7).png" id="2_jnsin"]
+[ext_resource type="Texture2D" uid="uid://dyfp866hjtsx4" path="res://Assets/UI/Selector (1).png" id="3_mp2f8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jpcvw"]
 bg_color = Color(0.38039216, 0.39215687, 0.4392157, 1)
@@ -9,7 +11,69 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
+[sub_resource type="LabelSettings" id="LabelSettings_mp2f8"]
+font_size = 12
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
 [node name="InventorySlots" type="Button" unique_id=1154074496]
 custom_minimum_size = Vector2(40, 40)
 theme_override_styles/normal = SubResource("StyleBoxFlat_jpcvw")
 script = ExtResource("1_u6o6v")
+
+[node name="ItemIcon" type="TextureRect" parent="." unique_id=346851691]
+visible = false
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.5
+offset_top = -12.5
+offset_right = 12.5
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_jnsin")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AmountLabel" type="Label" parent="." unique_id=1774698985]
+visible = false
+custom_minimum_size = Vector2(25, 18)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -23.0
+offset_top = -8.0
+offset_right = 2.0
+offset_bottom = 10.0
+grow_horizontal = 0
+text = "64"
+label_settings = SubResource("LabelSettings_mp2f8")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Selecter" type="TextureRect" parent="." unique_id=1392176674]
+visible = false
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_mp2f8")
+expand_mode = 1
+stretch_mode = 5

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dmt3b2d6itqv"]
+
+[ext_resource type="Texture2D" uid="uid://bp6d7mnsg1eqs" path="res://Assets/Sprites/Bags/Bag (6).png" id="1_x42w5"]
+[ext_resource type="Script" uid="uid://dbi2l6pf50xf7" path="res://Data/ItemData.gd" id="2_5bxqq"]
+
+[resource]
+script = ExtResource("2_5bxqq")
+type = 2
+is_consumable = true
+max_stack = 12
+icon = ExtResource("1_x42w5")
+name = "Apple"
+description = "I give health"
+price = 10
+metadata/_custom_type_script = "uid://dbi2l6pf50xf7"

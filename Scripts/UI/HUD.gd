@@ -19,7 +19,6 @@ func _ready() -> void:
 	EventBus.on_player_health_updated.connect(on_player_health_updated)
 	EventBus.on_player_mana_updated.connect(on_player_mana_updated)
 	EventBus.on_player_new_level.connect(on_player_new_level)
-	EventBus.on_player_stats_updated.connect(on_player_stats_updated)
 
 func _on_equipment_pressed() -> void:
 	equipment_panel.visible = not equipment_panel.visible
@@ -47,6 +46,3 @@ func on_player_mana_updated(curr: float, max: float) -> void:
 
 func on_player_new_level(curr: float, new_level: float) -> void:
 	exp_bar.value = curr / new_level
-
-func on_player_stats_updated(curr: float, new_level: float) -> void:
-	pass

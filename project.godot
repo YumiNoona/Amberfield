@@ -17,6 +17,7 @@ config/icon="uid://br5xenjj46ri5"
 [autoload]
 
 EventBus="*uid://b44dipre2e123"
+Inventory="*uid://dp1ff6v315am5"
 
 [display]
 

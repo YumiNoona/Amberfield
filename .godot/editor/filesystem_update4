@@ -1,0 +1,16 @@
+res://Scenes/Level/Town.tscn
+res://Data/Item.gd
+res://Data/ItemData.gd
+res://Resources/Inventory/HP Potion.tres
+res://Data/SlotData.gd
+res://Scenes/UI/EquipmentSlot.tscn
+res://Scenes/UI/InventorySlots.tscn
+res://Scripts/UI/InventorySlots.gd
+res://Scenes/UI/DropItem.tscn
+res://Shaders/DropItem.gdshader
+res://Scripts/UI/DropItem.gd
+res://Scripts/UI/HUD.gd
+res://Autoloads/Inventory.gd
+res://Scenes/UI/InventoryPanel.tscn
+res://Scripts/UI/InventoryPanel.gd
+res://Scenes/Player/Player.tscn
