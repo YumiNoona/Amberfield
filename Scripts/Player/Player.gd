@@ -36,6 +36,10 @@ func _process(delta: float) -> void:
 	if fsm.curr_state:
 		fsm.curr_state.process_state(delta)
 
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_accept"):
+		use_mana(2)
+
 func is_moving() -> bool:
 	var move_input = ["Move_Up", "Move_Down", "Move_Left", "Move_Right"]
 	for input in move_input:
@@ -77,6 +81,11 @@ func use_mana(value: float) -> void:
 	curr_mana = max(curr_mana, 0)
 	EventBus.on_player_mana_updated.emit(curr_mana, max_mana)
 
+func add_mana(value: float) -> void:
+	curr_mana += value
+	curr_mana = min(curr_mana, max_mana)
+	EventBus.on_player_mana_updated.emit(curr_mana, max_mana)
+
 func setup() -> void:
 	reset_health()
 	reset_mana()
@@ -92,3 +101,11 @@ func reset_mana() -> void:
 
 func enable_weapon_collision(value: bool) -> void:
 	enemy_attack_area.monitoring = value
+
+
+func _on_health_component_on_dead() -> void:
+	queue_free()
+
+
+func _on_health_component_on_health_changed(curr_health: float) -> void:
+	EventBus.on_player_health_updated.emit(curr_health, max_health)

@@ -14,3 +14,6 @@ signal on_player_new_level(curr: float, new_level: float)
 
 @warning_ignore("unused_signal")
 signal on_player_stats_updated
+
+@warning_ignore("unused_signal")
+signal on_inventory_used_item(item: ItemData)

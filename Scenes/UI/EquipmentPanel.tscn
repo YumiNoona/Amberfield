@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://c53sf3e0eri5d"]
 
+[ext_resource type="Script" uid="uid://dc78c2abmcv6p" path="res://Scripts/UI/EquipmentPanel.gd" id="1_docaa"]
 [ext_resource type="PackedScene" uid="uid://03vlyprcxpoc" path="res://Scenes/UI/EquipmentSlot.tscn" id="1_or8pq"]
 [ext_resource type="Texture2D" uid="uid://jqvq3l7fwkbs" path="res://Assets/Sprites/Weapons/Weapons (3).png" id="2_docaa"]
 
@@ -21,6 +22,7 @@ custom_minimum_size = Vector2(200, 310)
 offset_right = 200.0
 offset_bottom = 310.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_clneh")
+script = ExtResource("1_docaa")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=54698507]
 layout_mode = 2
@@ -56,6 +58,7 @@ layout_mode = 2
 alignment = 1
 
 [node name="Helmet Slot" parent="MarginContainer/VBoxContainer/VBoxContainer/Helmet" unique_id=1500920206 instance=ExtResource("1_or8pq")]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="Chest" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=1334153354]
@@ -64,9 +67,11 @@ theme_override_constants/separation = 16
 alignment = 1
 
 [node name="Armour Slot" parent="MarginContainer/VBoxContainer/VBoxContainer/Chest" unique_id=1713715451 instance=ExtResource("1_or8pq")]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="Sword Slot" parent="MarginContainer/VBoxContainer/VBoxContainer/Chest" unique_id=1584824036 instance=ExtResource("1_or8pq")]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="Control" type="Control" parent="MarginContainer/VBoxContainer/VBoxContainer/Chest" unique_id=1007235244]
@@ -78,6 +83,7 @@ layout_mode = 2
 alignment = 1
 
 [node name="Legs Slot" parent="MarginContainer/VBoxContainer/VBoxContainer/Legs" unique_id=168839954 instance=ExtResource("1_or8pq")]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="Rings" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=1829559974]
@@ -85,6 +91,7 @@ layout_mode = 2
 alignment = 1
 
 [node name="Ring Slot" parent="MarginContainer/VBoxContainer/VBoxContainer/Rings" unique_id=1177690746 instance=ExtResource("1_or8pq")]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=519141154]

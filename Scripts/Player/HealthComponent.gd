@@ -18,3 +18,8 @@ func take_damage(value: float) -> void:
 	on_health_changed.emit(curr_health)
 	if curr_health <= 0:
 		on_dead.emit()
+
+func heal(value:float) -> void:
+	curr_health += value
+	curr_health = min(curr_health, max_health)
+	on_health_changed.emit(curr_health)

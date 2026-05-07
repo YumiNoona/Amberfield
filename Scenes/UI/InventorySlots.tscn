@@ -58,7 +58,7 @@ label_settings = SubResource("LabelSettings_mp2f8")
 horizontal_alignment = 2
 vertical_alignment = 2
 
-[node name="Selecter" type="TextureRect" parent="." unique_id=1392176674]
+[node name="Selector" type="TextureRect" parent="." unique_id=1392176674]
 visible = false
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 1
@@ -77,3 +77,7 @@ mouse_filter = 2
 texture = ExtResource("3_mp2f8")
 expand_mode = 1
 stretch_mode = 5
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

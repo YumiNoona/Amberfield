@@ -15,7 +15,9 @@
 [ext_resource type="PackedScene" uid="uid://b12dv7liwfm2f" path="res://Scenes/UI/StatsPanel.tscn" id="10_l3akt"]
 [ext_resource type="PackedScene" uid="uid://b5nfldvggmx0d" path="res://Scenes/UI/SkillsPanel.tscn" id="11_r3xdj"]
 [ext_resource type="PackedScene" uid="uid://clixaseqvjwyv" path="res://Scenes/UI/DropItem.tscn" id="14_pg3w3"]
+[ext_resource type="PackedScene" uid="uid://1glycur4qm4u" path="res://Scenes/UI/InventorySlots.tscn" id="15_47ufo"]
 [ext_resource type="Resource" uid="uid://dmt3b2d6itqv" path="res://Resources/Inventory/HP Potion.tres" id="15_w73ec"]
+[ext_resource type="Resource" uid="uid://c62qiugkg2mw2" path="res://Resources/Inventory/Mana Potion.tres" id="18_p55rt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_47ufo"]
 texture = ExtResource("3_w73ec")
@@ -382,10 +384,11 @@ layout_mode = 2
 size_flags_vertical = 8
 script = ExtResource("8_4osci")
 
-[node name="InventoryPanel" parent="HUD/Panels" unique_id=909020893 instance=ExtResource("7_jpcvw")]
+[node name="InventoryPanel" parent="HUD/Panels" unique_id=909020893 node_paths=PackedStringArray("grabbed_slot") instance=ExtResource("7_jpcvw")]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+grabbed_slot = NodePath("../../GrabbedSlots")
 
 [node name="StatsPanel" parent="HUD/Panels" unique_id=982901738 instance=ExtResource("10_l3akt")]
 unique_name_in_owner = true
@@ -399,9 +402,21 @@ visible = false
 layout_mode = 2
 size_flags_vertical = 8
 
+[node name="GrabbedSlots" parent="HUD" unique_id=1154074496 instance=ExtResource("15_47ufo")]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+flat = true
+
 [node name="DropItem" parent="." unique_id=1600881298 instance=ExtResource("14_pg3w3")]
 position = Vector2(6, 49)
 item = ExtResource("15_w73ec")
+amount = 20
+
+[node name="DropItem2" parent="." unique_id=1350690633 instance=ExtResource("14_pg3w3")]
+position = Vector2(6, 84)
+item = ExtResource("18_p55rt")
 amount = 20
 
 [connection signal="pressed" from="HUD/MainButtons/MarginContainer/HBoxContainer/Equipment" to="HUD" method="_on_equipment_pressed"]

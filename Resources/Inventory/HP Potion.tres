@@ -7,9 +7,11 @@
 script = ExtResource("2_5bxqq")
 type = 2
 is_consumable = true
-max_stack = 12
+max_stack = 5
+value = 2.0
 icon = ExtResource("1_x42w5")
-name = "Apple"
+id = "hp_potion"
+name = "Apple 2 HP"
 description = "I give health"
 price = 10
 metadata/_custom_type_script = "uid://dbi2l6pf50xf7"

@@ -1,16 +1,23 @@
+res://Scripts/UI/InventorySlots.gd
+res://Scenes/UI/InventorySlots.tscn
+res://Shaders/DropItem.gdshader
+res://Autoloads/Inventory.gd
 res://Scenes/Level/Town.tscn
-res://Data/Item.gd
+res://Scripts/UI/HUD.gd
+res://Scripts/UI/InventoryPanel.gd
+res://Autoloads/EventBus.gd
+res://Scripts/Core/Town.gd
+res://Autoloads/Reference.gd
+res://Scripts/Player/HealthComponent.gd
+res://Scripts/Player/Player.gd
+res://Scenes/Player/Player.tscn
 res://Data/ItemData.gd
 res://Resources/Inventory/HP Potion.tres
-res://Data/SlotData.gd
-res://Scenes/UI/EquipmentSlot.tscn
-res://Scenes/UI/InventorySlots.tscn
-res://Scripts/UI/InventorySlots.gd
-res://Scenes/UI/DropItem.tscn
-res://Shaders/DropItem.gdshader
-res://Scripts/UI/DropItem.gd
-res://Scripts/UI/HUD.gd
-res://Autoloads/Inventory.gd
-res://Scenes/UI/InventoryPanel.tscn
-res://Scripts/UI/InventoryPanel.gd
-res://Scenes/Player/Player.tscn
+res://Resources/Inventory/Mana Potion.tres
+res://Data/Item.gd
+res://Data/EquipData.gd
+res://Resources/Equipment/Helmet.tres
+res://Autoloads/GameData.gd
+res://Scenes/UI/EquipmentPanel.tscn
+res://Scripts/UI/EquipmentPanel.gd
+res://Scripts/UI/EquipmentSlot.gd

@@ -14,7 +14,6 @@ class_name HUD
 @onready var stats_panel: StatsPanel = %StatsPanel
 @onready var skills_panel: SkillsPanel = %SkillsPanel
 
-
 func _ready() -> void:
 	EventBus.on_player_health_updated.connect(on_player_health_updated)
 	EventBus.on_player_mana_updated.connect(on_player_mana_updated)

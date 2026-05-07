@@ -1,1 +1,2 @@
 extends Button
+class_name EquipmentSlot
