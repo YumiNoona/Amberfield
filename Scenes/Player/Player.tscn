@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://t1hxff50qtww"]
 
 [ext_resource type="Script" uid="uid://cbjkc2687iyy5" path="res://Scripts/Player/Player.gd" id="1_fk5o5"]
+[ext_resource type="Texture2D" uid="uid://cg357incy4cwv" path="res://Assets/Sprites/Character/Shadow.png" id="2_0kmp4"]
 [ext_resource type="Texture2D" uid="uid://0ceyu8nuer0t" path="res://Assets/Sprites/Character/Tori/Idle.png" id="2_825xp"]
 [ext_resource type="Texture2D" uid="uid://bcegs7omxi07e" path="res://Assets/Sprites/Character/Tori/Sword.png" id="2_ji083"]
 [ext_resource type="Texture2D" uid="uid://bh0cumj84okn6" path="res://Assets/Sprites/Character/Tori/Walk.png" id="3_ji083"]
@@ -645,6 +646,9 @@ collision_layer = 2
 script = ExtResource("1_fk5o5")
 
 [node name="Shadow" type="Sprite2D" parent="." unique_id=933621078]
+self_modulate = Color(1, 1, 1, 0.19607843)
+position = Vector2(0, 10)
+texture = ExtResource("2_0kmp4")
 
 [node name="AnimSprite" type="AnimatedSprite2D" parent="." unique_id=770892585]
 sprite_frames = SubResource("SpriteFrames_vmcrb")

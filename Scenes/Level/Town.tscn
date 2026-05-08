@@ -15,8 +15,10 @@
 [ext_resource type="PackedScene" uid="uid://clixaseqvjwyv" path="res://Scenes/UI/DropItem.tscn" id="14_pg3w3"]
 [ext_resource type="PackedScene" uid="uid://1glycur4qm4u" path="res://Scenes/UI/InventorySlots.tscn" id="15_47ufo"]
 [ext_resource type="Resource" uid="uid://dmt3b2d6itqv" path="res://Resources/Potions/Common HP Potion.tres" id="15_w73ec"]
+[ext_resource type="Script" uid="uid://dq74he3k220jy" path="res://Scripts/Enemy/EnemyZone.gd" id="18_2eknc"]
 [ext_resource type="Resource" uid="uid://dmn4d1fdcrrlu" path="res://Resources/Equipment/Common/CommonHelmet.tres" id="18_bo67d"]
 [ext_resource type="Resource" uid="uid://c62qiugkg2mw2" path="res://Resources/Potions/Rare HP Potion.tres" id="18_p55rt"]
+[ext_resource type="PackedScene" uid="uid://daqc4symhca27" path="res://Scenes/Enemy/GoblinArcher.tscn" id="19_bo67d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_47ufo"]
 texture = ExtResource("3_w73ec")
@@ -117,6 +119,9 @@ corner_radius_bottom_left = 4
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_47ufo"]
 load_path = "res://.godot/imported/CommonPickAxe.png-b198273e1a35de690caa846e1f4e2dbe.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_47ufo"]
+size = Vector2(198, 142)
 
 [node name="Town" type="Node2D" unique_id=594205815]
 script = ExtResource("1_7cdkx")
@@ -423,6 +428,17 @@ amount = 20
 [node name="DropItem3" parent="." unique_id=1783966479 instance=ExtResource("14_pg3w3")]
 position = Vector2(85, 115)
 item = ExtResource("18_bo67d")
+
+[node name="EnemyZones" type="Node2D" parent="." unique_id=133079998]
+
+[node name="ZoneA" type="Area2D" parent="EnemyZones" unique_id=1182228045]
+position = Vector2(263, 117)
+script = ExtResource("18_2eknc")
+enemy_scene = ExtResource("19_bo67d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyZones/ZoneA" unique_id=939445912]
+shape = SubResource("RectangleShape2D_47ufo")
+debug_color = Color(0.48235294, 0.56078434, 0.007843138, 0.39215687)
 
 [connection signal="pressed" from="HUD/MainButtons/MarginContainer/HBoxContainer/Equipment" to="HUD" method="_on_equipment_pressed"]
 [connection signal="pressed" from="HUD/MainButtons/MarginContainer/HBoxContainer/Inventory" to="HUD" method="_on_inventory_pressed"]

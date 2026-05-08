@@ -46,3 +46,11 @@ res://Scripts/Player/Player.gd
 res://Scripts/UI/StatsPanel.gd
 res://Scenes/UI/StatsPanel.tscn
 res://Scenes/Player/Player.tscn
+res://Scenes/Enemy/Enemy.tscn
+res://Scenes/Enemy/EnemyGoblin.tscn
+res://Scenes/Enemy/GoblinArcher.tscn
+res://Scripts/Enemy/Enemy.gd
+res://Scripts/Enemy/EnemyZone.gd
+res://Scripts/Enemy/States/EnemyState.gd
+res://Scripts/Enemy/States/EnemyWanderState.gd
+res://Scripts/Core/FSM.gd
