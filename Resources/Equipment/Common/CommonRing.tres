@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EquipData" format=3 uid="uid://qf56mlkciak"]
+
+[ext_resource type="Texture2D" uid="uid://dbo5a87x21q4y" path="res://Assets/Sprites/Weapons/CommonRing.png" id="1_6g0i8"]
+[ext_resource type="Script" uid="uid://cnf0nl3l0t521" path="res://Data/EquipData.gd" id="2_u0w7w"]
+
+[resource]
+script = ExtResource("2_u0w7w")
+equip_type = 4
+type = 4
+max_stack = 1
+icon = ExtResource("1_6g0i8")
+id = "equip_ring"
+name = "Common Ring"
+price = 5
+metadata/_custom_type_script = "uid://cnf0nl3l0t521"

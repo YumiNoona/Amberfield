@@ -174,6 +174,7 @@ func merge_slots(from_index: int, to_index: int) -> void:
 
 #endregion
 
+
 #region Equipment
 
 func equip_item(slot_index: int) -> void:
@@ -201,3 +202,19 @@ func equip_item(slot_index: int) -> void:
 	on_equipment_changed.emit()
 
 #endregion
+
+
+func unequip_item(equip_type: EquipData.EquipType) -> void:
+	var equip_key = GameData.equipment.keys()[equip_type]
+	var equipped_item = GameData.equipment[equip_key]
+
+	if not equipped_item:
+		return
+
+	# Add to Inventory
+	add_item(equipped_item, 1)
+
+	# Clear equipment slot
+	GameData.equipment[equip_key] = null
+
+	on_equipment_changed.emit()

@@ -1,23 +1,48 @@
-res://Scripts/UI/InventorySlots.gd
-res://Scenes/UI/InventorySlots.tscn
+res://Scenes/UI/EquipmentSlot.tscn
 res://Shaders/DropItem.gdshader
-res://Autoloads/Inventory.gd
-res://Scenes/Level/Town.tscn
-res://Scripts/UI/HUD.gd
-res://Scripts/UI/InventoryPanel.gd
-res://Autoloads/EventBus.gd
-res://Scripts/Core/Town.gd
-res://Autoloads/Reference.gd
-res://Scripts/Player/HealthComponent.gd
-res://Scripts/Player/Player.gd
-res://Scenes/Player/Player.tscn
-res://Data/ItemData.gd
-res://Resources/Inventory/HP Potion.tres
-res://Resources/Inventory/Mana Potion.tres
-res://Data/Item.gd
-res://Data/EquipData.gd
-res://Resources/Equipment/Helmet.tres
-res://Autoloads/GameData.gd
+res://Scripts/UI/EquipmentSlot.gd
 res://Scenes/UI/EquipmentPanel.tscn
 res://Scripts/UI/EquipmentPanel.gd
-res://Scripts/UI/EquipmentSlot.gd
+res://Autoloads/GameData.gd
+res://Data/EquipData.gd
+res://Scenes/Level/Town.tscn
+res://Autoloads/Inventory.gd
+res://Resources/Food/Beaf.tres
+res://Resources/Food/Honey.tres
+res://Resources/Food/Meat.tres
+res://Resources/Food/Noodle.tres
+res://Resources/Food/FortuneCookie.tres
+res://Resources/Food/Nut.tres
+res://Resources/Food/Octopus.tres
+res://Resources/Food/Onigiri.tres
+res://Resources/Food/Shrimp.tres
+res://Resources/Food/Sushi.tres
+res://Resources/Food/TeaLeaf.tres
+res://Resources/Food/Yakitori.tres
+res://Resources/Equipment/Common/CommonHelmet.tres
+res://Resources/Equipment/Common/CommonArmour.tres
+res://Resources/Equipment/Common/CommonArrow.tres
+res://Resources/Equipment/Common/CommonAxe.tres
+res://Resources/Equipment/Common/CommonBow.tres
+res://Resources/Equipment/Common/CommonFishingRod.tres
+res://Resources/Equipment/Common/CommonLegs.tres
+res://Resources/Equipment/Common/CommonPickAxe.tres
+res://Resources/Equipment/Common/CommonQuiver.tres
+res://Resources/Equipment/Common/CommonRing.tres
+res://Resources/Equipment/Common/CommonShovel.tres
+res://Resources/Equipment/Common/CommonSickel.tres
+res://Resources/Equipment/Common/CommonSword.tres
+res://Resources/Equipment/Common/CommonWateringCan.tres
+res://Scenes/UI/InventorySlots.tscn
+res://Resources/Potions/Common HP Potion.tres
+res://Resources/Potions/Rare Mana Potion.tres
+res://Resources/Potions/Epic Mana Potion.tres
+res://Resources/Potions/Legendary Buff Potion.tres
+res://Resources/Potions/Mythic Mana Potion.tres
+res://Resources/Potions/Rare HP Potion.tres
+res://Scripts/Core/Town.gd
+res://Scenes/UI/DropItem.tscn
+res://Scripts/Player/Player.gd
+res://Scripts/UI/StatsPanel.gd
+res://Scenes/UI/StatsPanel.tscn
+res://Scenes/Player/Player.tscn

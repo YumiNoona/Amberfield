@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://d07jurkkdwkka"]
+
+[ext_resource type="Texture2D" uid="uid://ccx5tj5mvm8i6" path="res://Assets/Sprites/Potion/LegendaryBuffPotion.png" id="1_ayft7"]
+[ext_resource type="Script" uid="uid://dbi2l6pf50xf7" path="res://Data/ItemData.gd" id="2_xnyie"]
+
+[resource]
+script = ExtResource("2_xnyie")
+type = 2
+is_consumable = true
+max_stack = 1
+value = 35.0
+icon = ExtResource("1_ayft7")
+id = "buff_potion"
+name = "Orange 35 Mana"
+description = "I give buff"
+price = 80
+metadata/_custom_type_script = "uid://dbi2l6pf50xf7"

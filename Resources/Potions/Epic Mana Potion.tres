@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cbw7lqjf3k80l"]
+
+[ext_resource type="Texture2D" uid="uid://d1s4pm3fpthaw" path="res://Assets/Sprites/Potion/EpicManaPotion.png" id="1_roe5c"]
+[ext_resource type="Script" uid="uid://dbi2l6pf50xf7" path="res://Data/ItemData.gd" id="2_tlwqp"]
+
+[resource]
+script = ExtResource("2_tlwqp")
+type = 2
+is_consumable = true
+max_stack = 2
+value = 10.0
+icon = ExtResource("1_roe5c")
+id = "mana_potion"
+name = "Berries 10 Mana"
+description = "I give mana"
+price = 35
+metadata/_custom_type_script = "uid://dbi2l6pf50xf7"

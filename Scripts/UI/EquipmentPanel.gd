@@ -5,7 +5,7 @@ class_name EquipmentPanel
 @onready var slots: Array[EquipmentSlot] = [
 	%"Helmet Slot", 
 	%"Armour Slot", 
-	%"Sword Slot", 
+	%"Weapon Slot", 
 	%"Legs Slot", 
 	%"Ring Slot"
 ]
@@ -19,8 +19,10 @@ func _ready() -> void:
 
 
 func _on_equipment_changed() -> void:
-	pass
+	var items: Array[EquipData] = GameData.equipment.values()
 
+	for i in slots.size():
+		slots[i].load_data(items[i])
 
 func _on_slot_pressed(slot: EquipmentSlot) -> void:
-	pass
+	Inventory.unequip_item(slot.equip_type)

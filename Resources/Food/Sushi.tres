@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bc7r5pdvn6usr"]
+
+[ext_resource type="Texture2D" uid="uid://pkkw4dr0xcut" path="res://Assets/Sprites/Food/Sushi.png" id="1_gossn"]
+[ext_resource type="Script" uid="uid://dbi2l6pf50xf7" path="res://Data/ItemData.gd" id="1_u20mh"]
+
+[resource]
+script = ExtResource("1_u20mh")
+icon = ExtResource("1_gossn")
+metadata/_custom_type_script = "uid://dbi2l6pf50xf7"

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://c62qiugkg2mw2"]
+
+[ext_resource type="Texture2D" uid="uid://0dnrx0heh6e8" path="res://Assets/Sprites/Potion/RareHealthPotion.png" id="1_d0fxy"]
+[ext_resource type="Script" uid="uid://dbi2l6pf50xf7" path="res://Data/ItemData.gd" id="2_ahla1"]
+
+[resource]
+script = ExtResource("2_ahla1")
+type = 2
+is_consumable = true
+max_stack = 3
+value = 5.0
+icon = ExtResource("1_d0fxy")
+id = "mana_potion"
+name = "Orange 5 Mana"
+description = "I give health"
+price = 20
+metadata/_custom_type_script = "uid://dbi2l6pf50xf7"

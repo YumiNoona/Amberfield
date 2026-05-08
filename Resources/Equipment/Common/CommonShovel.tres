@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EquipData" format=3 uid="uid://becfetq62gbeu"]
+
+[ext_resource type="Texture2D" uid="uid://ddf4p153f6jqg" path="res://Assets/Sprites/Farming/CommonShovel.png" id="1_jgg62"]
+[ext_resource type="Script" uid="uid://cnf0nl3l0t521" path="res://Data/EquipData.gd" id="2_y0u47"]
+
+[resource]
+script = ExtResource("2_y0u47")
+equip_type = 2
+type = 4
+max_stack = 1
+icon = ExtResource("1_jgg62")
+id = "equip_weapon"
+name = "Common Shovel"
+price = 30
+metadata/_custom_type_script = "uid://cnf0nl3l0t521"

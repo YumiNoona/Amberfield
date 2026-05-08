@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ksn1xcjt6jgf"]
+
+[ext_resource type="Texture2D" uid="uid://ca2577esqq6jn" path="res://Assets/Sprites/Food/Beaf.png" id="1_dbli8"]
+[ext_resource type="Script" uid="uid://dbi2l6pf50xf7" path="res://Data/ItemData.gd" id="2_f1f1p"]
+
+[resource]
+script = ExtResource("2_f1f1p")
+is_consumable = true
+max_stack = 5
+value = 1.0
+icon = ExtResource("1_dbli8")
+id = "food"
+name = "Beaf"
+price = 2
+metadata/_custom_type_script = "uid://dbi2l6pf50xf7"

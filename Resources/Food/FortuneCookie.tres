@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://d3bqxaefc8tir"]
+
+[ext_resource type="Texture2D" uid="uid://biob2oclo2gw1" path="res://Assets/Sprites/Food/FortuneCookie.png" id="1_5spdb"]
+[ext_resource type="Script" uid="uid://dbi2l6pf50xf7" path="res://Data/ItemData.gd" id="2_57oe2"]
+
+[resource]
+script = ExtResource("2_57oe2")
+icon = ExtResource("1_5spdb")
+metadata/_custom_type_script = "uid://dbi2l6pf50xf7"

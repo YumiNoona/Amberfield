@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EquipData" format=3 uid="uid://p0bewys1gxm6"]
+
+[ext_resource type="Texture2D" uid="uid://6wa11ofj82n6" path="res://Assets/Sprites/Weapons/CommonArrow.png" id="1_5617l"]
+[ext_resource type="Script" uid="uid://cnf0nl3l0t521" path="res://Data/EquipData.gd" id="2_t67xi"]
+
+[resource]
+script = ExtResource("2_t67xi")
+equip_type = 2
+type = 4
+max_stack = 1
+icon = ExtResource("1_5617l")
+id = "equip_weapon"
+name = "Common Arrow"
+price = 30
+metadata/_custom_type_script = "uid://cnf0nl3l0t521"

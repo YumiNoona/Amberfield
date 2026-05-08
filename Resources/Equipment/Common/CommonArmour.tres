@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EquipData" format=3 uid="uid://dpanc2mq03hmv"]
+
+[ext_resource type="Texture2D" uid="uid://nty0t1qa5ugo" path="res://Assets/Sprites/Weapons/CommonArmour.png" id="1_ryddu"]
+[ext_resource type="Script" uid="uid://cnf0nl3l0t521" path="res://Data/EquipData.gd" id="2_1fu77"]
+
+[resource]
+script = ExtResource("2_1fu77")
+equip_type = 1
+type = 4
+max_stack = 1
+icon = ExtResource("1_ryddu")
+id = "equip_armour"
+name = "Common Armour"
+price = 15
+metadata/_custom_type_script = "uid://cnf0nl3l0t521"

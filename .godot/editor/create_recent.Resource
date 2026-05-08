@@ -1,2 +1,2 @@
-EquipData
 ItemData
+EquipData

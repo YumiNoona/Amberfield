@@ -2,7 +2,11 @@
 
 [ext_resource type="Script" uid="uid://dc78c2abmcv6p" path="res://Scripts/UI/EquipmentPanel.gd" id="1_docaa"]
 [ext_resource type="PackedScene" uid="uid://03vlyprcxpoc" path="res://Scenes/UI/EquipmentSlot.tscn" id="1_or8pq"]
-[ext_resource type="Texture2D" uid="uid://jqvq3l7fwkbs" path="res://Assets/Sprites/Weapons/Weapons (3).png" id="2_docaa"]
+[ext_resource type="Texture2D" uid="uid://c5ruq50xq0m5q" path="res://Assets/UI/Placeholder/Helmet.png" id="3_43gs8"]
+[ext_resource type="Texture2D" uid="uid://c0blvm1681q3i" path="res://Assets/UI/Placeholder/Weapon.png" id="3_docaa"]
+[ext_resource type="Texture2D" uid="uid://cy415v01rxeq2" path="res://Assets/UI/Placeholder/Armour.png" id="4_l5vbp"]
+[ext_resource type="Texture2D" uid="uid://drlebs364pck" path="res://Assets/UI/Placeholder/Legs.png" id="6_1w63l"]
+[ext_resource type="Texture2D" uid="uid://bj4gr15a8mb50" path="res://Assets/UI/Placeholder/Ring.png" id="7_jdqss"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_clneh"]
 bg_color = Color(0.14901961, 0.16470589, 0.20784314, 1)
@@ -60,6 +64,7 @@ alignment = 1
 [node name="Helmet Slot" parent="MarginContainer/VBoxContainer/VBoxContainer/Helmet" unique_id=1500920206 instance=ExtResource("1_or8pq")]
 unique_name_in_owner = true
 layout_mode = 2
+icon = ExtResource("3_43gs8")
 
 [node name="Chest" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=1334153354]
 layout_mode = 2
@@ -69,10 +74,14 @@ alignment = 1
 [node name="Armour Slot" parent="MarginContainer/VBoxContainer/VBoxContainer/Chest" unique_id=1713715451 instance=ExtResource("1_or8pq")]
 unique_name_in_owner = true
 layout_mode = 2
+icon = ExtResource("4_l5vbp")
+equip_type = 1
 
-[node name="Sword Slot" parent="MarginContainer/VBoxContainer/VBoxContainer/Chest" unique_id=1584824036 instance=ExtResource("1_or8pq")]
+[node name="Weapon Slot" parent="MarginContainer/VBoxContainer/VBoxContainer/Chest" unique_id=1584824036 instance=ExtResource("1_or8pq")]
 unique_name_in_owner = true
 layout_mode = 2
+icon = ExtResource("3_docaa")
+equip_type = 2
 
 [node name="Control" type="Control" parent="MarginContainer/VBoxContainer/VBoxContainer/Chest" unique_id=1007235244]
 custom_minimum_size = Vector2(40, 40)
@@ -85,6 +94,8 @@ alignment = 1
 [node name="Legs Slot" parent="MarginContainer/VBoxContainer/VBoxContainer/Legs" unique_id=168839954 instance=ExtResource("1_or8pq")]
 unique_name_in_owner = true
 layout_mode = 2
+icon = ExtResource("6_1w63l")
+equip_type = 3
 
 [node name="Rings" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=1829559974]
 layout_mode = 2
@@ -93,6 +104,8 @@ alignment = 1
 [node name="Ring Slot" parent="MarginContainer/VBoxContainer/VBoxContainer/Rings" unique_id=1177690746 instance=ExtResource("1_or8pq")]
 unique_name_in_owner = true
 layout_mode = 2
+icon = ExtResource("7_jdqss")
+equip_type = 4
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=519141154]
 layout_mode = 2
@@ -103,7 +116,7 @@ alignment = 1
 [node name="Control" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1477107971]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
-texture = ExtResource("2_docaa")
+texture = ExtResource("3_docaa")
 stretch_mode = 5
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1823320420]

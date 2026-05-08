@@ -3,13 +3,15 @@ class_name EquipData
 
 enum EquipType {
 	HELMET,
-	BODY,
-	LEGS,
+	ARMOUR,
 	WEAPON,
+	LEGS,
 	RING
 }
 
 @export var equip_type: EquipType
+@export var bonus_damage: float = 0.0
+
 
 func _init() -> void:
 	type = Type.EQUIPMENT
@@ -20,8 +22,8 @@ func get_equip_key() -> String:
 		EquipType.HELMET:
 			return "helmet"
 
-		EquipType.BODY:
-			return "body"
+		EquipType.ARMOUR:
+			return "armour"
 
 		EquipType.LEGS:
 			return "legs"

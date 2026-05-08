@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://by3fddmfudlb5"]
 
-[ext_resource type="Texture2D" uid="uid://bp6d7mnsg1eqs" path="res://Assets/Sprites/Bags/Bag (6).png" id="1_v4iid"]
+[ext_resource type="Texture2D" uid="uid://bp6d7mnsg1eqs" path="res://Assets/Sprites/Bags/Legendary.png" id="1_v4iid"]
 [ext_resource type="Script" uid="uid://cc1bki2o54bxu" path="res://Scripts/UI/EquippedSkillButton.gd" id="1_x6cwv"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_v4iid"]

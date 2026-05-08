@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EquipData" format=3 uid="uid://bhkunvdk5wlj1"]
+
+[ext_resource type="Texture2D" uid="uid://bp3ybaw7vdqr2" path="res://Assets/Sprites/Weapons/CommonQuiver.png" id="1_jgnv0"]
+[ext_resource type="Script" uid="uid://cnf0nl3l0t521" path="res://Data/EquipData.gd" id="2_v3gim"]
+
+[resource]
+script = ExtResource("2_v3gim")
+equip_type = 2
+type = 4
+max_stack = 1
+icon = ExtResource("1_jgnv0")
+id = "equip_weapon"
+name = "Common Quiver"
+price = 30
+metadata/_custom_type_script = "uid://cnf0nl3l0t521"

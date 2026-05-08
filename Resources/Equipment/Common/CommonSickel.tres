@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EquipData" format=3 uid="uid://vbg4k1qpped3"]
+
+[ext_resource type="Texture2D" uid="uid://it0atgofure6" path="res://Assets/Sprites/Farming/CommonSickel.png" id="1_ouwwa"]
+[ext_resource type="Script" uid="uid://cnf0nl3l0t521" path="res://Data/EquipData.gd" id="2_8aiak"]
+
+[resource]
+script = ExtResource("2_8aiak")
+equip_type = 2
+type = 4
+max_stack = 1
+icon = ExtResource("1_ouwwa")
+id = "equip_weapon"
+name = "Common Sickel"
+price = 30
+metadata/_custom_type_script = "uid://cnf0nl3l0t521"

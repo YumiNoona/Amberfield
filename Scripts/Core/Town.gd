@@ -22,3 +22,4 @@ func _on_inventory_used_item(item: ItemData) -> void:
 	match item.id:
 		"hp_potion": Reference.player.health_component.heal(item.value)
 		"mana_potion": Reference.player.add_mana(item.value)
+		"buff_potion": pass

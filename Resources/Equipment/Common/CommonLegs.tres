@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EquipData" format=3 uid="uid://76j3bdf1cav5"]
+
+[ext_resource type="Texture2D" uid="uid://srbklelkkdku" path="res://Assets/Sprites/Weapons/CommonLegs.png" id="1_8s804"]
+[ext_resource type="Script" uid="uid://cnf0nl3l0t521" path="res://Data/EquipData.gd" id="2_hpi6o"]
+
+[resource]
+script = ExtResource("2_hpi6o")
+equip_type = 3
+type = 4
+max_stack = 1
+icon = ExtResource("1_8s804")
+id = "equip_legs"
+name = "Common Legs"
+price = 10
+metadata/_custom_type_script = "uid://cnf0nl3l0t521"

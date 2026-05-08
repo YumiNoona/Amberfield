@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bejtnmvw1much"]
+
+[ext_resource type="Script" uid="uid://dbi2l6pf50xf7" path="res://Data/ItemData.gd" id="1_csuuv"]
+[ext_resource type="Texture2D" uid="uid://dgteislxpsggx" path="res://Assets/Sprites/Food/Yakitori.png" id="1_pvw87"]
+
+[resource]
+script = ExtResource("1_csuuv")
+icon = ExtResource("1_pvw87")
+metadata/_custom_type_script = "uid://dbi2l6pf50xf7"

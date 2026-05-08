@@ -93,7 +93,7 @@ text = "VEL: 80"
 label_settings = SubResource("LabelSettings_4osci")
 horizontal_alignment = 1
 
-[node name="Mana" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2" unique_id=1312445964]
+[node name="ManaLabel" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2" unique_id=1312445964]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
@@ -173,8 +173,11 @@ icon_alignment = 1
 
 [node name="StrengthPoints" type="Label" parent="MarginContainer/VBoxContainer/Attributes/Strength" unique_id=1086772029]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 25)
 layout_mode = 2
 text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Strength Plus Button" type="Button" parent="MarginContainer/VBoxContainer/Attributes/Strength" unique_id=988028994]
 custom_minimum_size = Vector2(25, 25)
@@ -203,8 +206,11 @@ icon_alignment = 1
 
 [node name="DexterityPoints" type="Label" parent="MarginContainer/VBoxContainer/Attributes/Dexterity" unique_id=1602162179]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 25)
 layout_mode = 2
 text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Dexterity Plus Button" type="Button" parent="MarginContainer/VBoxContainer/Attributes/Dexterity" unique_id=2028156479]
 custom_minimum_size = Vector2(25, 25)
@@ -233,8 +239,11 @@ icon_alignment = 1
 
 [node name="IntelligencePoints" type="Label" parent="MarginContainer/VBoxContainer/Attributes/Intelligence" unique_id=677346643]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 25)
 layout_mode = 2
 text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Intelligence Plus Button" type="Button" parent="MarginContainer/VBoxContainer/Attributes/Intelligence" unique_id=981334924]
 custom_minimum_size = Vector2(25, 25)
@@ -253,6 +262,9 @@ layout_mode = 2
 text = "Points 5"
 horizontal_alignment = 1
 
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Attributes/Strength/Strength Minus Button" to="." method="_on_strength_minus_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Attributes/Strength/Strength Plus Button" to="." method="_on_strength_plus_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Attributes/Dexterity/Dexterity Minus Button" to="." method="_on_dexterity_minus_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Attributes/Dexterity/Dexterity Plus Button" to="." method="_on_dexterity_plus_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Attributes/Intelligence/Intelligence Minus Button" to="." method="_on_intelligence_minus_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Attributes/Intelligence/Intelligence Plus Button" to="." method="_on_intelligence_plus_button_pressed"]

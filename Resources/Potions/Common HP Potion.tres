@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dmt3b2d6itqv"]
+
+[ext_resource type="Texture2D" uid="uid://b65y1uvxrxqdy" path="res://Assets/Sprites/Potion/CommonHealthPotion.png" id="1_b0qfs"]
+[ext_resource type="Script" uid="uid://dbi2l6pf50xf7" path="res://Data/ItemData.gd" id="2_ahlqd"]
+
+[resource]
+script = ExtResource("2_ahlqd")
+type = 2
+is_consumable = true
+max_stack = 5
+value = 2.0
+icon = ExtResource("1_b0qfs")
+id = "hp_potion"
+name = "Apple 2 HP"
+description = "I give health"
+price = 10
+metadata/_custom_type_script = "uid://dbi2l6pf50xf7"
