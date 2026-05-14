@@ -35,10 +35,12 @@ func _on_skills_pressed() -> void:
 	skills_panel.visible = not skills_panel.visible
 	
 
+@warning_ignore("shadowed_global_identifier")
 func on_player_health_updated(curr: float, max: float) -> void:
 	health_bar.value = curr / max
 	health_label.text = "%d / %d" % [curr,max]
 	
+@warning_ignore("shadowed_global_identifier")
 func on_player_mana_updated(curr: float, max: float) -> void:
 	mana_bar.value = curr / max
 	mana_label.text = "%d / %d" % [curr,max]

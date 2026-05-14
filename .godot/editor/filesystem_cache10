@@ -1,7 +1,7 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1778240599
+::res://::1778747612
 icon.png::CompressedTexture2D::3642966689326395674::1777865536::1778045968::1::::<><><>0<>0<>02591770243c3bc24d285926dcddcedd<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex::
-::res://Assets/::1778238543
+::res://Assets/::1778676137
 ::res://Assets/Enemy/::1778238543
 ::res://Assets/Enemy/Archer Goblin/::1778238399
 Bow.png::CompressedTexture2D::1786463701570019126::1778238399::1778238399::1::::<><><>0<>0<>bd00c90ea86f05eb3981bc6eeb865c4b<>res://.godot/imported/Bow.png-0ac2dfe5216c1b404150c27e0c671c64.ctex::
@@ -82,6 +82,12 @@ Fx.png::CompressedTexture2D::8718892178727331650::1778238537::1778238537::1::::<
 Idle attack 2.png::CompressedTexture2D::4898423796541974388::1778238537::1778238537::1::::<><><>0<>0<>53ddb8af827710a841b1ca3eb0493ecf<>res://.godot/imported/Idle attack 2.png-cfdb72acb84f4d6618dfb4fe02955039.ctex::
 Idle.png::CompressedTexture2D::3100348469222910386::1778238537::1778238537::1::::<><><>0<>0<>807e8a744239e706608b9ad385758669<>res://.godot/imported/Idle.png-713856e255da6cda4b1e7f3207bf0493.ctex::
 Wake up.png::CompressedTexture2D::4405219877071165685::1778238537::1778238537::1::::<><><>0<>0<>d9a8ac16823f03c5901716ee823ea3d2<>res://.godot/imported/Wake up.png-40d866a481aab7ec5bb4eead7b56e731.ctex::
+::res://Assets/FX/::1778676280
+Healed (1).png::CompressedTexture2D::2756355916338046653::1778676178::1778676178::1::::<><><>0<>0<>bc46c263c7d4d4a95f673998f9bfb47f<>res://.godot/imported/Healed (1).png-05b79a5f92439124e390c2c1315929a3.ctex::
+Healed (2).png::CompressedTexture2D::436802801683459169::1778676178::1778676178::1::::<><><>0<>0<>b452079e71e0e43edabfb7e55a980a6a<>res://.godot/imported/Healed (2).png-d7f7e65762d047adaf0b13370c8a97b0.ctex::
+LevelUP.png::CompressedTexture2D::2981001114141197550::1778676280::1778676280::1::::<><><>0<>0<>70c4540bcf969587fb1264d9a61238ea<>res://.godot/imported/LevelUP.png-301dfb79b6dd7f47b6edd368d6f05586.ctex::
+PowerUP.png::CompressedTexture2D::5067486573279706674::1778676156::1778676156::1::::<><><>0<>0<>7549316bf93c85bb637eca3e8a5d4694<>res://.godot/imported/PowerUP.png-cb0f03aac8e81a60475866873a97fa13.ctex::
+SkillUP.png::CompressedTexture2D::675136535777510778::1778676195::1778676195::1::::<><><>0<>0<>ad360325facffc69b59abef0942beea7<>res://.godot/imported/SkillUP.png-93b1df15547983322eed6783d367d6ca.ctex::
 ::res://Assets/Sprites/::1778232432
 ::res://Assets/Sprites/Bags/::1778222447
 CommonBag.png::CompressedTexture2D::190195167259917013::1777286204::1778222402::1::::<><><>0<>0<>87f5d1ed2b4c946d926c7b31914046c1<>res://.godot/imported/CommonBag.png-11e5d529a4fa07850209a91885d49995.ctex::
@@ -571,11 +577,11 @@ Slash.wav::AudioStreamWAV::692624732528081476::1776675841::1778045969::1::::<><>
 Sword2.wav::AudioStreamWAV::8454114031731656001::1776675841::1778045969::1::::<><><>0<>0<>3501cc9780c481d5bffbafca763a3fdd<>res://.godot/imported/Sword2.wav-d709f20029c05fa7a1765c9061760567.sample::
 Whoosh2.wav::AudioStreamWAV::3031772199298450671::1776675841::1778045969::1::::<><><>0<>0<>5701346c23260fb9ae21b161ca66b68d<>res://.godot/imported/Whoosh2.wav-422e46d5e0b2164b77d58882fd80e797.sample::
 Whoosh.wav::AudioStreamWAV::5386276288740651692::1776675841::1778045969::1::::<><><>0<>0<>220ca28fdf64a7bd9000b6de0f5507c4<>res://.godot/imported/Whoosh.wav-b3ce3cac8f9e9424c54efa84f7f46f96.sample::
-::res://Autoloads/::1778216087
+::res://Autoloads/::1778676991
 EventBus.gd::GDScript::4481961355723250474::1778149866::0::1::::<>Node<><>0<>0<><>::
 GameData.gd::GDScript::5801982402677174056::1778214207::0::1::::<>Node<><>0<>0<><>::
 Inventory.gd::GDScript::8266082703161563270::1778216087::0::1::::<>Node<><>0<>0<><>::
-Reference.gd::GDScript::4755533352128747540::1778150236::0::1::::<>Node<><>0<>0<><>::
+Reference.gd::GDScript::4755533352128747540::1778676991::0::1::::<>Node<><>0<>0<><>::
 ::res://Data/::1778235554
 EquipData.gd::GDScript::5697159985136202928::1778235554::0::1::::EquipData<>ItemData<><>0<>0<><>::
 Item.gd::GDScript::8270245839520188751::1778155239::0::1::::Item<>Resource<><>0<>0<><>::
@@ -623,15 +629,18 @@ Epic Mana Potion.tres::Resource/ItemData::4890409963656898897::1778224630::0::1:
 Legendary Buff Potion.tres::Resource/ItemData::8980626307777258140::1778224626::0::1::::<><><>0<>0<><>::uid://ccx5tj5mvm8i6::::res://Assets/Sprites/Potion/LegendaryBuffPotion.png<>uid://dbi2l6pf50xf7::::res://Data/ItemData.gd
 Mythic Mana Potion.tres::Resource/ItemData::5542518707429842871::1778224622::0::1::::<><><>0<>0<><>::uid://s28d0c2p7own::::res://Assets/Sprites/Potion/MythicManaPotion.png<>uid://dbi2l6pf50xf7::::res://Data/ItemData.gd
 Rare HP Potion.tres::Resource/ItemData::7005420537959600047::1778224547::0::1::::<><><>0<>0<><>::uid://0dnrx0heh6e8::::res://Assets/Sprites/Potion/RareHealthPotion.png<>uid://dbi2l6pf50xf7::::res://Data/ItemData.gd
-::res://Scenes/::1778237482
-::res://Scenes/Enemy/::1778240599
-EnemyGoblin.tscn::PackedScene::3577119535330977028::1778240577::0::1::::<><><>0<>0<><>::uid://cg357incy4cwv::::res://Assets/Sprites/Character/Shadow.png
-GoblinArcher.tscn::PackedScene::7192466300203302070::1778240528::0::1::::<><><>0<>0<><>::uid://cg357incy4cwv::::res://Assets/Sprites/Character/Shadow.png<>uid://0pm2cmii4n2e::::res://Assets/Enemy/Archer Goblin/Bow.png<>uid://d1kyaver5gujs::::res://Assets/Enemy/Archer Goblin/Idle.png<>uid://cv61dt1bwd8y7::::res://Assets/Enemy/Archer Goblin/Damage.png<>uid://rakyyst43dra::::res://Assets/Enemy/Archer Goblin/Walk.png<>uid://di3w5gcqh0dfd::::res://Assets/Enemy/Archer Goblin/Dead.png<>uid://cusgneussbvq0::::res://Assets/Enemy/Archer Goblin/Run.png
-::res://Scenes/Level/::1778235616
-Town.tscn::PackedScene::1611434637752066208::1778235616::0::1::::<><><>0<>0<><>::uid://cthonfgh7jdfu::::res://Scripts/Core/Town.gd<>uid://t1hxff50qtww::::res://Scenes/Player/Player.tscn<>uid://cyeqsr8xuekb::::res://Assets/Sprites/Bags/CommonBag.png<>uid://ttffb5nav2xv::::res://Scripts/UI/HUD.gd<>uid://b3saruoehxywy::::res://Assets/Sprites/Tileset/Water tile.png<>uid://d3hcp8xj10s6t::::res://Assets/Sprites/Quest/Story.png<>uid://csmkkc7vs7l2m::::res://Assets/Sprites/Books/Book (2).png<>uid://by3fddmfudlb5::::res://Scenes/UI/EquippedSkillButton.tscn<>uid://c53sf3e0eri5d::::res://Scenes/UI/EquipmentPanel.tscn<>uid://dpftas3q175mg::::res://Scenes/UI/InventoryPanel.tscn<>uid://b12dv7liwfm2f::::res://Scenes/UI/StatsPanel.tscn<>uid://b5nfldvggmx0d::::res://Scenes/UI/SkillsPanel.tscn<>uid://clixaseqvjwyv::::res://Scenes/UI/DropItem.tscn<>uid://1glycur4qm4u::::res://Scenes/UI/InventorySlots.tscn<>uid://dmt3b2d6itqv::::res://Resources/Potions/Common HP Potion.tres<>uid://dmn4d1fdcrrlu::::res://Resources/Equipment/Common/CommonHelmet.tres<>uid://c62qiugkg2mw2::::res://Resources/Potions/Rare HP Potion.tres
-::res://Scenes/Player/::1778238656
+::res://Scenes/::1778675871
+::res://Scenes/Enemy/::1778675153
+Enemy.tscn::PackedScene::3577119535330977028::1778240907::0::1::::<><><>0<>0<><>::uid://cg357incy4cwv::::res://Assets/Sprites/Character/Shadow.png<>uid://by5yt3ficc703::::res://Assets/UI/Selector (2).png<>uid://dh2jh3memmx2a::::res://Scenes/Player/HealthComponent.tscn
+GoblinArcher.tscn::PackedScene::7192466300203302070::1778675153::0::1::::<><><>0<>0<><>::uid://cg357incy4cwv::::res://Assets/Sprites/Character/Shadow.png<>uid://1817vqgng0lu::::res://Scripts/Enemy/Enemy.gd<>uid://0pm2cmii4n2e::::res://Assets/Enemy/Archer Goblin/Bow.png<>uid://cv61dt1bwd8y7::::res://Assets/Enemy/Archer Goblin/Damage.png<>uid://di3w5gcqh0dfd::::res://Assets/Enemy/Archer Goblin/Dead.png<>uid://d1kyaver5gujs::::res://Assets/Enemy/Archer Goblin/Idle.png<>uid://cusgneussbvq0::::res://Assets/Enemy/Archer Goblin/Run.png<>uid://rakyyst43dra::::res://Assets/Enemy/Archer Goblin/Walk.png<>uid://by5yt3ficc703::::res://Assets/UI/Selector (2).png<>uid://dh2jh3memmx2a::::res://Scenes/Player/HealthComponent.tscn<>uid://7ecvm0i4l8h3::::res://Scripts/Core/FSM.gd<>uid://bmrek5u72lyos::::res://Scripts/Enemy/States/EnemyWanderState.gd<>uid://o6iaagvwujgb::::res://Scripts/Enemy/States/EnemyFollowState.gd<>uid://d4dv1he2aledp::::res://Scripts/Enemy/States/EnemyAttackState.gd
+::res://Scenes/FX/::1778677243
+DamageText.tscn::PackedScene::5386662539985788079::1778677243::0::1::::<><><>0<>0<><>::
+NewLevelFX.tscn::PackedScene::6115334766351833567::1778676334::0::1::::<><><>0<>0<><>::uid://biqawgwpehuju::::res://Assets/FX/LevelUP.png
+::res://Scenes/Level/::1778674018
+Town.tscn::PackedScene::1611434637752066208::1778674018::0::1::::<><><>0<>0<><>::uid://cthonfgh7jdfu::::res://Scripts/Core/Town.gd<>uid://t1hxff50qtww::::res://Scenes/Player/Player.tscn<>uid://cyeqsr8xuekb::::res://Assets/Sprites/Bags/CommonBag.png<>uid://ttffb5nav2xv::::res://Scripts/UI/HUD.gd<>uid://b3saruoehxywy::::res://Assets/Sprites/Tileset/Water tile.png<>uid://d3hcp8xj10s6t::::res://Assets/Sprites/Quest/Story.png<>uid://csmkkc7vs7l2m::::res://Assets/Sprites/Books/Book (2).png<>uid://by3fddmfudlb5::::res://Scenes/UI/EquippedSkillButton.tscn<>uid://c53sf3e0eri5d::::res://Scenes/UI/EquipmentPanel.tscn<>uid://dpftas3q175mg::::res://Scenes/UI/InventoryPanel.tscn<>uid://b12dv7liwfm2f::::res://Scenes/UI/StatsPanel.tscn<>uid://b5nfldvggmx0d::::res://Scenes/UI/SkillsPanel.tscn<>uid://clixaseqvjwyv::::res://Scenes/UI/DropItem.tscn<>uid://1glycur4qm4u::::res://Scenes/UI/InventorySlots.tscn<>uid://dmt3b2d6itqv::::res://Resources/Potions/Common HP Potion.tres<>uid://dq74he3k220jy::::res://Scripts/Enemy/EnemyZone.gd<>uid://dmn4d1fdcrrlu::::res://Resources/Equipment/Common/CommonHelmet.tres<>uid://c62qiugkg2mw2::::res://Resources/Potions/Rare HP Potion.tres<>uid://daqc4symhca27::::res://Scenes/Enemy/GoblinArcher.tscn
+::res://Scenes/Player/::1778675807
 HealthComponent.tscn::PackedScene::7706882598787110162::1776771844::0::1::::<><><>0<>0<><>::uid://cvmsajvhdana3::::res://Scripts/Player/HealthComponent.gd
-Player.tscn::PackedScene::1387728214675242846::1778238656::0::1::::<><><>0<>0<><>::uid://cbjkc2687iyy5::::res://Scripts/Player/Player.gd<>uid://cg357incy4cwv::::res://Assets/Sprites/Character/Shadow.png<>uid://0ceyu8nuer0t::::res://Assets/Sprites/Character/Tori/Idle.png<>uid://bcegs7omxi07e::::res://Assets/Sprites/Character/Tori/Sword.png<>uid://bh0cumj84okn6::::res://Assets/Sprites/Character/Tori/Walk.png<>uid://dh2jh3memmx2a::::res://Scenes/Player/HealthComponent.tscn<>uid://7ecvm0i4l8h3::::res://Scripts/Core/FSM.gd<>uid://ba0d4dqfi0mkj::::res://Scripts/Player/States/PlayerIdleState.gd<>uid://bjrua7xvy84so::::res://Scripts/Player/States/PlayerWalkState.gd<>uid://c0recwrbc6af6::::res://Scripts/Player/States/PlayerAttackState.gd
+Player.tscn::PackedScene::1387728214675242846::1778675807::0::1::::<><><>0<>0<><>::uid://cbjkc2687iyy5::::res://Scripts/Player/Player.gd<>uid://cg357incy4cwv::::res://Assets/Sprites/Character/Shadow.png<>uid://0ceyu8nuer0t::::res://Assets/Sprites/Character/Tori/Idle.png<>uid://bcegs7omxi07e::::res://Assets/Sprites/Character/Tori/Sword.png<>uid://bh0cumj84okn6::::res://Assets/Sprites/Character/Tori/Walk.png<>uid://dh2jh3memmx2a::::res://Scenes/Player/HealthComponent.tscn<>uid://bc3fgumhyr5th::::res://Assets/Sprites/Character/Tori/Damage.png<>uid://u3gbh7r2uax2::::res://Assets/Sprites/Character/Tori/Dead.png<>uid://7ecvm0i4l8h3::::res://Scripts/Core/FSM.gd<>uid://ba0d4dqfi0mkj::::res://Scripts/Player/States/PlayerIdleState.gd<>uid://bjrua7xvy84so::::res://Scripts/Player/States/PlayerWalkState.gd<>uid://c8er6btplc1ec::::res://Assets/Sprites/Character/Tori/Run.png<>uid://c0recwrbc6af6::::res://Scripts/Player/States/PlayerAttackState.gd
 ::res://Scenes/UI/::1778234998
 DropItem.tscn::PackedScene::5562831112625595317::1778231281::0::1::::<><><>0<>0<><>::uid://b26wcnaggn::::res://Scripts/UI/DropItem.gd<>uid://dph3crpefo1ft::::res://Shaders/DropItem.gdshader<>uid://cg357incy4cwv::::res://Assets/Sprites/Character/Shadow.png
 EquipmentPanel.tscn::PackedScene::6937412566455099271::1778231748::0::1::::<><><>0<>0<><>::uid://dc78c2abmcv6p::::res://Scripts/UI/EquipmentPanel.gd<>uid://03vlyprcxpoc::::res://Scenes/UI/EquipmentSlot.tscn<>uid://c5ruq50xq0m5q::::res://Assets/UI/Placeholder/Helmet.png<>uid://c0blvm1681q3i::::res://Assets/UI/Placeholder/Weapon.png<>uid://cy415v01rxeq2::::res://Assets/UI/Placeholder/Armour.png<>uid://drlebs364pck::::res://Assets/UI/Placeholder/Legs.png<>uid://bj4gr15a8mb50::::res://Assets/UI/Placeholder/Ring.png
@@ -643,15 +652,22 @@ SkillButton.tscn::PackedScene::2257793714545099823::1778222436::0::1::::<><><>0<
 SkillsPanel.tscn::PackedScene::4519246322625708657::1777895348::0::1::::<><><>0<>0<><>::uid://dk5pvee7uwiks::::res://Scripts/UI/SkillsPanel.gd<>uid://7fxsdxy7cd0b::::res://Scenes/UI/SkillButton.tscn
 StatsPanel.tscn::PackedScene::4267290168425006483::1778234998::0::1::::<><><>0<>0<><>::uid://bym8ir6tvxrgh::::res://Scripts/UI/StatsPanel.gd<>uid://bqs80but2ahli::::res://Assets/UI/Minus.png<>uid://dwlk00lgsb8no::::res://Assets/UI/Plus.png
 ::res://Scripts/::1776678475
-::res://Scripts/Core/::1778224320
+::res://Scripts/Core/::1778245079
 AnimState.gd::GDScript::4699549104459699517::1776861345::0::1::::State<>Node<><>0<>0<><>::
-FSM.gd::GDScript::2254460112393831158::1776861331::0::1::::FSM<>Node<><>0<>0<><>::
+FSM.gd::GDScript::2254460112393831158::1778245079::0::1::::FSM<>Node<><>0<>0<><>::
 Town.gd::GDScript::6121753566253475314::1778224320::0::1::::Town<>Node2D<><>0<>0<><>::
-::res://Scripts/Enemy/::1776678461
+::res://Scripts/Enemy/::1778674537
+Enemy.gd::GDScript::1894671315687173038::1778674537::0::1::::Enemy<>Area2D<><>0<>0<><>::
+EnemyZone.gd::GDScript::8350117184604745846::1778243606::0::1::::EnemyZone<>Area2D<><>0<>0<><>::
+::res://Scripts/Enemy/States/::1778677138
+EnemyAttackState.gd::GDScript::9202253512403906877::1778677138::0::1::::EnemyAttackState<>EnemyState<><>0<>0<><>::
+EnemyFollowState.gd::GDScript::1047125267503604625::1778675153::0::1::::EnemyFollowState<>EnemyState<><>0<>0<><>::
+EnemyState.gd::GDScript::7472181814973431533::1778244325::0::1::::EnemyState<>State<><>0<>0<><>::
+EnemyWanderState.gd::GDScript::3264043563165688534::1778244768::0::1::::EnemyWanderState<>EnemyState<><>0<>0<><>::
 ::res://Scripts/NPC/::1776678456
-::res://Scripts/Player/::1778235587
+::res://Scripts/Player/::1778677221
 HealthComponent.gd::GDScript::6272673028176511904::1778151330::0::1::::HealthComponent<>Node<><>0<>0<><>::
-Player.gd::GDScript::4862221819888112462::1778235587::0::1::::Player<>CharacterBody2D<><>0<>0<><>::
+Player.gd::GDScript::4862221819888112462::1778677221::0::1::::Player<>CharacterBody2D<><>0<>0<><>::
 ::res://Scripts/Player/States/::1776861280
 PlayerAttackState.gd::GDScript::6562904501539608513::1776861280::0::1::::PlayerAttackState<>PlayerState<><>0<>0<><>::
 PlayerIdleState.gd::GDScript::2438264249071922549::1776861251::0::1::::PlayerIdleState<>PlayerState<><>0<>0<><>::
@@ -669,5 +685,5 @@ SkillButton.gd::GDScript::59480143884947357::1777886287::0::1::::SkillButton<>Bu
 SkillsPanel.gd::GDScript::7924030294399072886::1777887068::0::1::::SkillsPanel<>PanelContainer<><>0<>0<><>::
 StatsPanel.gd::GDScript::4097744352845277375::1778234998::0::1::::StatsPanel<>PanelContainer<><>0<>0<><>::
 ::res://Scripts/World/::1776678467
-::res://Shaders/::1778213747
-DropItem.gdshader::Shader::8228249913571500709::1778213747::0::1::::<><><>0<>0<><>::
+::res://Shaders/::1778668749
+DropItem.gdshader::Shader::8228249913571500709::1778668749::0::1::::<><><>0<>0<><>::

@@ -7,28 +7,19 @@ class_name EnemyWanderState
 
 var target_pos: Vector2
 
-
 func enter_state() -> void:
 	pick_new_target()
-	
+	enemy.play_direction_anim("Idle")
 
 func process_state(delta: float) -> void:
 	if not enemy:
 		return
-
-	# Move to target
 	var direction = enemy.global_position.direction_to(target_pos)
 	var speed = randf_range(min_move_speed, max_move_speed)
-
 	enemy.global_position += direction * speed * delta
-
-	# Update animation
 	enemy.update_animation(direction)
-
-	# Check arrive at destination
 	if enemy.global_position.distance_to(target_pos) < arrival_distance:
 		pick_new_target()
-
 
 func pick_new_target() -> void:
 	if enemy and enemy.enemy_zone:

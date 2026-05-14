@@ -36,6 +36,15 @@ var strength_value: int = 0
 var dexterity_value: int = 0
 var intelligence_value: int = 0
 
+var is_dead: bool = false
+var hit_enemies_this_attack: Array = []
+
+var selected_enemy: Enemy:
+	set(value):
+		if selected_enemy:
+			selected_enemy.deselect_enemy()
+		selected_enemy = value
+		selected_enemy.select_enemy()
 
 func _process(delta: float) -> void:
 	if fsm.curr_state:
@@ -68,69 +77,63 @@ func play_direction_anim(anim_name: String) -> void:
 		anim_sprite.flip_h = false
 		anim_sprite.play("%s_%s" % [anim_name, last_direction])
 
+func play_damage_anim() -> void:
+	if is_dead:
+		return
+	print("[PLAYER] taking damage, playing damage anim | direction: %s" % last_direction)
+	play_direction_anim("Damage")
+	if not anim_sprite.animation_finished.is_connected(_on_damage_anim_finished):
+		anim_sprite.animation_finished.connect(_on_damage_anim_finished, CONNECT_ONE_SHOT)
+
+func _on_damage_anim_finished() -> void:
+	print("[PLAYER] damage anim finished, resuming state: %s" % fsm.curr_state.name)
+	fsm.curr_state.enter_state()
+
 func upgrade_stat(stat_name: String) -> void:
 	if curr_points <= 0:
 		return
-
 	curr_points -= 1
-
 	match stat_name:
 		"STR":
 			strength_value += 1
 			damage += 1.5
 			max_health += 3.0
-
 			reset_health()
-
 		"DEX":
 			dexterity_value += 1
 			move_speed += 2.0
 			crit_chance += 2.0
-
 		"INT":
 			intelligence_value += 1
 			max_mana += 15.0
 			crit_damage += 5
-
 			reset_mana()
-
 	EventBus.on_player_stats_updated.emit()
-
 
 func downgrade_stat(stat_name: String) -> void:
 	match stat_name:
 		"STR":
 			if strength_value <= 0:
 				return
-
 			strength_value -= 1
 			damage -= 1.5
 			max_health -= 3.0
-
 			reset_health()
-
 		"DEX":
 			if dexterity_value <= 0:
 				return
-
 			dexterity_value -= 1
 			move_speed -= 2.0
 			crit_chance -= 2.0
-
 		"INT":
 			if intelligence_value <= 0:
 				return
-
 			intelligence_value -= 1
 			max_mana -= 15.0
 			crit_damage -= 5
-
 			reset_mana()
-
 	curr_points += 1
-
 	EventBus.on_player_stats_updated.emit()
-
 
 func add_exp(value: float) -> void:
 	curr_exp += value
@@ -143,6 +146,8 @@ func level_up() -> void:
 	curr_level += 1
 	curr_points += 4
 	next_level_exp *= exp_multiplier
+	print("[PLAYER] leveled up! level: %d | next level exp: %.1f" % [curr_level, next_level_exp])
+	Reference.create_new_level_fx(global_position)
 	EventBus.on_player_stats_updated.emit()
 
 func use_mana(value: float) -> void:
@@ -170,24 +175,43 @@ func reset_mana() -> void:
 
 func get_damage(skill_dmg: float = 0.0) -> float:
 	var total_dmg = damage + skill_dmg
-
-	# Add bonus damage of each equipment
 	for equip: EquipData in GameData.equipment.values():
 		if equip:
 			total_dmg += equip.bonus_damage
-
-	# Check our critical attack
 	if randf() * 100 <= crit_chance:
 		total_dmg *= (1.0 + (crit_damage / 100.0))
-
 	return total_dmg
 
 func enable_weapon_collision(value: bool) -> void:
+	print("[PLAYER] EnemyAttackArea monitoring: %s" % value)
 	enemy_attack_area.monitoring = value
 
-
 func _on_health_component_on_health_changed(curr_health: float) -> void:
+	print("[PLAYER] health changed: %.1f / %.1f" % [curr_health, max_health])
 	EventBus.on_player_health_updated.emit(curr_health, max_health)
+	play_damage_anim()
 
 func _on_health_component_on_dead() -> void:
+	print("[PLAYER] died")
+	is_dead = true
+	fsm.curr_state.exit_state()
+	play_direction_anim("Dead")
+	anim_sprite.animation_finished.connect(_on_dead_anim_finished, CONNECT_ONE_SHOT)
+
+func _on_dead_anim_finished() -> void:
+	print("[PLAYER] dead anim finished, removing")
 	queue_free()
+
+func _on_enemy_attack_area_area_entered(area: Area2D) -> void:
+	var enemy = area as Enemy
+	if not enemy:
+		print("[PLAYER ATTACK] area entered but not Enemy: %s" % area.name)
+		return
+	if enemy in hit_enemies_this_attack:
+		print("[PLAYER ATTACK] already hit %s this swing, skipping" % enemy.name)
+		return
+	hit_enemies_this_attack.append(enemy)
+	var dmg = get_damage()
+	print("[PLAYER ATTACK] hit %s for %.1f dmg | enemy health after: %.1f" % [enemy.name, dmg, enemy.health_component.curr_health - dmg])
+	enemy.health_component.take_damage(dmg)
+	Reference.create_damage_text(enemy.global_position, dmg)

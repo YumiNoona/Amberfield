@@ -3,8 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://cg357incy4cwv" path="res://Assets/Sprites/Character/Shadow.png" id="1_48uba"]
 [ext_resource type="Script" uid="uid://1817vqgng0lu" path="res://Scripts/Enemy/Enemy.gd" id="1_md1pk"]
 [ext_resource type="Texture2D" uid="uid://0pm2cmii4n2e" path="res://Assets/Enemy/Archer Goblin/Bow.png" id="2_bfiqn"]
+[ext_resource type="Script" uid="uid://c4wkvclb0aib2" path="res://Data/LootData.gd" id="2_yrauw"]
 [ext_resource type="Texture2D" uid="uid://cv61dt1bwd8y7" path="res://Assets/Enemy/Archer Goblin/Damage.png" id="3_md1pk"]
+[ext_resource type="Resource" uid="uid://dmn4d1fdcrrlu" path="res://Resources/Equipment/Common/CommonHelmet.tres" id="3_pn5fr"]
 [ext_resource type="Texture2D" uid="uid://di3w5gcqh0dfd" path="res://Assets/Enemy/Archer Goblin/Dead.png" id="4_lbd7k"]
+[ext_resource type="Resource" uid="uid://c62qiugkg2mw2" path="res://Resources/Potions/Rare HP Potion.tres" id="4_tvaxx"]
 [ext_resource type="Texture2D" uid="uid://d1kyaver5gujs" path="res://Assets/Enemy/Archer Goblin/Idle.png" id="5_2y7h8"]
 [ext_resource type="Texture2D" uid="uid://cusgneussbvq0" path="res://Assets/Enemy/Archer Goblin/Run.png" id="6_bycmk"]
 [ext_resource type="Texture2D" uid="uid://rakyyst43dra" path="res://Assets/Enemy/Archer Goblin/Walk.png" id="7_kk0sw"]
@@ -12,6 +15,19 @@
 [ext_resource type="PackedScene" uid="uid://dh2jh3memmx2a" path="res://Scenes/Player/HealthComponent.tscn" id="9_bfiqn"]
 [ext_resource type="Script" uid="uid://7ecvm0i4l8h3" path="res://Scripts/Core/FSM.gd" id="11_lbd7k"]
 [ext_resource type="Script" uid="uid://bmrek5u72lyos" path="res://Scripts/Enemy/States/EnemyWanderState.gd" id="12_2y7h8"]
+[ext_resource type="Script" uid="uid://o6iaagvwujgb" path="res://Scripts/Enemy/States/EnemyFollowState.gd" id="13_bycmk"]
+[ext_resource type="Script" uid="uid://d4dv1he2aledp" path="res://Scripts/Enemy/States/EnemyAttackState.gd" id="13_kk0sw"]
+
+[sub_resource type="Resource" id="Resource_h4bf1"]
+script = ExtResource("2_yrauw")
+item = ExtResource("3_pn5fr")
+metadata/_custom_type_script = "uid://c4wkvclb0aib2"
+
+[sub_resource type="Resource" id="Resource_qcad6"]
+script = ExtResource("2_yrauw")
+item = ExtResource("4_tvaxx")
+amount = 3
+metadata/_custom_type_script = "uid://c4wkvclb0aib2"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ml70m"]
 atlas = ExtResource("2_bfiqn")
@@ -1060,14 +1076,38 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yrauw"]
+size = Vector2(14.5, 26)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_48uba"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bfiqn"]
-radius = 40.0
+radius = 95.189285
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kk0sw"]
+bg_color = Color(0.25490198, 0.023529412, 0.02745098, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kc1ff"]
+bg_color = Color(0.70980394, 0.13725491, 0.14901961, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.25490198, 0.023529412, 0.02745098, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
 
 [node name="GoblinArcher" type="Area2D" unique_id=766509666]
 light_mask = 4
+collision_layer = 4
 script = ExtResource("1_md1pk")
+loot = Array[ExtResource("2_yrauw")]([SubResource("Resource_h4bf1"), SubResource("Resource_qcad6")])
 
 [node name="Shadow" type="Sprite2D" parent="." unique_id=1181035479]
 self_modulate = Color(1, 1, 1, 0.19607843)
@@ -1076,12 +1116,44 @@ texture = ExtResource("1_48uba")
 
 [node name="AnimSprite" type="AnimatedSprite2D" parent="." unique_id=1281639567]
 sprite_frames = SubResource("SpriteFrames_seemo")
-animation = &"Idle_Down"
+animation = &"Attack_Down"
 autoplay = "Idle_Down"
 
 [node name="Selector" type="Sprite2D" parent="." unique_id=894582555]
 visible = false
 texture = ExtResource("8_kc1ff")
+
+[node name="Weapon" type="Node2D" parent="." unique_id=708266779]
+
+[node name="PlayerAttackArea" type="Area2D" parent="Weapon" unique_id=1595902341]
+unique_name_in_owner = true
+position = Vector2(2, 15)
+collision_layer = 16
+collision_mask = 2
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Weapon/PlayerAttackArea" unique_id=1374260049]
+position = Vector2(-2, 0.75)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_yrauw")
+
+[node name="AttackPos" type="Node2D" parent="." unique_id=1412747869]
+
+[node name="Down" type="Marker2D" parent="AttackPos" unique_id=1849129709]
+unique_name_in_owner = true
+position = Vector2(2, 12)
+
+[node name="Up" type="Marker2D" parent="AttackPos" unique_id=640953347]
+unique_name_in_owner = true
+position = Vector2(0, -6)
+
+[node name="Left" type="Marker2D" parent="AttackPos" unique_id=1084506729]
+unique_name_in_owner = true
+position = Vector2(-14, 3)
+
+[node name="Right" type="Marker2D" parent="AttackPos" unique_id=396463763]
+unique_name_in_owner = true
+position = Vector2(14, 2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1570740556]
 shape = SubResource("CircleShape2D_48uba")
@@ -1089,10 +1161,25 @@ shape = SubResource("CircleShape2D_48uba")
 [node name="DetectArea" type="Area2D" parent="." unique_id=964261095]
 light_mask = 0
 visibility_layer = 2
+collision_layer = 32
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectArea" unique_id=45258950]
 shape = SubResource("CircleShape2D_bfiqn")
 debug_color = Color(0, 0.649932, 0.13555473, 0.41960785)
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=1175501957]
+custom_minimum_size = Vector2(20, 5)
+offset_left = -10.0
+offset_top = -20.0
+offset_right = 10.0
+offset_bottom = -15.0
+theme_override_styles/background = SubResource("StyleBoxFlat_kk0sw")
+theme_override_styles/fill = SubResource("StyleBoxFlat_kc1ff")
+max_value = 1.0
+step = 0.001
+value = 1.0
+show_percentage = false
 
 [node name="HealthComponent" parent="." unique_id=1894323576 instance=ExtResource("9_bfiqn")]
 
@@ -1104,5 +1191,15 @@ initial_state = NodePath("Wander")
 script = ExtResource("12_2y7h8")
 
 [node name="Attack" type="Node" parent="FSM" unique_id=1566192257]
+script = ExtResource("13_kk0sw")
 
 [node name="Follow" type="Node" parent="FSM" unique_id=812479046]
+script = ExtResource("13_bycmk")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="area_entered" from="Weapon/PlayerAttackArea" to="." method="_on_player_attack_area_area_entered"]
+[connection signal="body_entered" from="Weapon/PlayerAttackArea" to="." method="_on_player_attack_area_body_entered"]
+[connection signal="body_entered" from="DetectArea" to="." method="_on_detect_area_body_entered"]
+[connection signal="body_exited" from="DetectArea" to="." method="_on_detect_area_body_exited"]
+[connection signal="on_dead" from="HealthComponent" to="." method="_on_health_component_on_dead"]
+[connection signal="on_health_changed" from="HealthComponent" to="." method="_on_health_component_on_health_changed"]

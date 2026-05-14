@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://ctekw1xgrg320"]
+
+[ext_resource type="Texture2D" uid="uid://biqawgwpehuju" path="res://Assets/FX/LevelUP.png" id="1_7y6ud"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4v8jd"]
+atlas = ExtResource("1_7y6ud")
+region = Rect2(0, 0, 25, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmnxh"]
+atlas = ExtResource("1_7y6ud")
+region = Rect2(25, 0, 25, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wly3"]
+atlas = ExtResource("1_7y6ud")
+region = Rect2(50, 0, 25, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mkni"]
+atlas = ExtResource("1_7y6ud")
+region = Rect2(75, 0, 25, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3uq5j"]
+atlas = ExtResource("1_7y6ud")
+region = Rect2(100, 0, 25, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tyg24"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4v8jd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gmnxh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2wly3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5mkni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3uq5j")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="NewLevelFX" type="AnimatedSprite2D" unique_id=1764903539]
+sprite_frames = SubResource("SpriteFrames_tyg24")
+autoplay = "default"
+frame = 4
+frame_progress = 1.0

@@ -18,9 +18,9 @@ func setup() -> void:
 	if item and item.icon:
 		icon.texture = item.icon
 
-func load_item(data: SlotData) -> void:
+func load_item(data: LootData) -> void:
 	item = data.item
-	amount = data.quantity
+	amount = data.amount
 	
 func shine_item() -> void:
 	var shine_tween := create_tween().set_loops()

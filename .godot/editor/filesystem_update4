@@ -1,56 +1,18 @@
-res://Scenes/UI/EquipmentSlot.tscn
+res://Scenes/FX/DamageText.tscn
 res://Shaders/DropItem.gdshader
-res://Scripts/UI/EquipmentSlot.gd
-res://Scenes/UI/EquipmentPanel.tscn
-res://Scripts/UI/EquipmentPanel.gd
-res://Autoloads/GameData.gd
-res://Data/EquipData.gd
-res://Scenes/Level/Town.tscn
-res://Autoloads/Inventory.gd
-res://Resources/Food/Beaf.tres
-res://Resources/Food/Honey.tres
-res://Resources/Food/Meat.tres
-res://Resources/Food/Noodle.tres
-res://Resources/Food/FortuneCookie.tres
-res://Resources/Food/Nut.tres
-res://Resources/Food/Octopus.tres
-res://Resources/Food/Onigiri.tres
-res://Resources/Food/Shrimp.tres
-res://Resources/Food/Sushi.tres
-res://Resources/Food/TeaLeaf.tres
-res://Resources/Food/Yakitori.tres
-res://Resources/Equipment/Common/CommonHelmet.tres
-res://Resources/Equipment/Common/CommonArmour.tres
-res://Resources/Equipment/Common/CommonArrow.tres
-res://Resources/Equipment/Common/CommonAxe.tres
-res://Resources/Equipment/Common/CommonBow.tres
-res://Resources/Equipment/Common/CommonFishingRod.tres
-res://Resources/Equipment/Common/CommonLegs.tres
-res://Resources/Equipment/Common/CommonPickAxe.tres
-res://Resources/Equipment/Common/CommonQuiver.tres
-res://Resources/Equipment/Common/CommonRing.tres
-res://Resources/Equipment/Common/CommonShovel.tres
-res://Resources/Equipment/Common/CommonSickel.tres
-res://Resources/Equipment/Common/CommonSword.tres
-res://Resources/Equipment/Common/CommonWateringCan.tres
-res://Scenes/UI/InventorySlots.tscn
-res://Resources/Potions/Common HP Potion.tres
-res://Resources/Potions/Rare Mana Potion.tres
-res://Resources/Potions/Epic Mana Potion.tres
-res://Resources/Potions/Legendary Buff Potion.tres
-res://Resources/Potions/Mythic Mana Potion.tres
-res://Resources/Potions/Rare HP Potion.tres
-res://Scripts/Core/Town.gd
-res://Scenes/UI/DropItem.tscn
-res://Scripts/Player/Player.gd
-res://Scripts/UI/StatsPanel.gd
-res://Scenes/UI/StatsPanel.tscn
-res://Scenes/Player/Player.tscn
-res://Scenes/Enemy/Enemy.tscn
-res://Scenes/Enemy/EnemyGoblin.tscn
 res://Scenes/Enemy/GoblinArcher.tscn
 res://Scripts/Enemy/Enemy.gd
-res://Scripts/Enemy/EnemyZone.gd
+res://Scenes/Level/Town.tscn
+res://Scripts/Player/Player.gd
+res://Scenes/Player/Player.tscn
+res://Data/LootData.gd
+res://Autoloads/Reference.gd
+res://Scripts/UI/DropItem.gd
+res://Scripts/Enemy/States/EnemyAttackState.gd
 res://Scripts/Enemy/States/EnemyState.gd
 res://Scripts/Enemy/States/EnemyWanderState.gd
-res://Scripts/Core/FSM.gd
+res://Scripts/Enemy/States/EnemyFollowState.gd
+res://Scripts/Player/HealthComponent.gd
+res://Scripts/Player/States/PlayerAttackState.gd
+res://Scripts/UI/HUD.gd
+res://Data/SkillData.gd

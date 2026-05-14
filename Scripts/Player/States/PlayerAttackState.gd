@@ -9,20 +9,27 @@ var attack_rotations: Dictionary = {
 }
 
 func enter_state() -> void:
+	print("[PLAYER STATE] entering Attack | direction: %s" % player.last_direction)
+	player.hit_enemies_this_attack.clear()
 	player.play_direction_anim("Attack")
 	_position_hitbox()
 	player.enable_weapon_collision(true)
-	player.anim_sprite.animation_finished.connect(_on_animation_finished)
+	if not player.anim_sprite.animation_finished.is_connected(_on_animation_finished):
+		player.anim_sprite.animation_finished.connect(_on_animation_finished)
+
+func exit_state() -> void:
+	print("[PLAYER STATE] exiting Attack")
+	player.hit_enemies_this_attack.clear()
+	player.enable_weapon_collision(false)
+	if player.anim_sprite.animation_finished.is_connected(_on_animation_finished):
+		player.anim_sprite.animation_finished.disconnect(_on_animation_finished)
 
 func _position_hitbox() -> void:
 	var marker: Marker2D = player.attack_positions[player.last_direction]
 	player.enemy_attack_area.global_position = marker.global_position
 	player.enemy_attack_area.rotation_degrees = attack_rotations[player.last_direction]
 
-func exit_state() -> void:
-	if player.anim_sprite.animation_finished.is_connected(_on_animation_finished):
-		player.anim_sprite.animation_finished.disconnect(_on_animation_finished)
-
 func _on_animation_finished() -> void:
+	print("[PLAYER STATE] attack anim finished, going to Idle")
 	player.enable_weapon_collision(false)
 	fsm.transition_to("Idle")
