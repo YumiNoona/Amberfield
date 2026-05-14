@@ -16,3 +16,6 @@ res://Scripts/Player/HealthComponent.gd
 res://Scripts/Player/States/PlayerAttackState.gd
 res://Scripts/UI/HUD.gd
 res://Data/SkillData.gd
+res://Resources/Skills/SkillShuriken.tres
+res://Scenes/UI/SkillButton.tscn
+res://Scripts/UI/SkillButton.gd
