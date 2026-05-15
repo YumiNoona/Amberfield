@@ -137,8 +137,9 @@ tile_set = SubResource("TileSet_drxi1")
 tile_map_data = PackedByteArray("AAAEAAEAAwAEAAAAAAAEAAAAAwAHAAEAAAAEAP//AwALAAIAAAAEAP7/AwAHAAEAAAAEAP3/AwALAAAAAAADAAEAAwAGAAMAAAADAAAAAwAJAAIAAAADAP//AwAFAAEAAAADAP7/AwAFAAEAAAADAP3/AwAKAAAAAAACAAEAAwACAAEAAAACAAAAAwAJAAIAAAACAP//AwAFAAEAAAACAP7/AwAFAAEAAAACAP3/AwAKAAAAAAABAAEAAwACAAEAAAABAAAAAwAFAAEAAAABAP//AwAFAAEAAAABAP7/AwAJAAIAAAABAP3/AwAKAAAAAAAAAAEAAwAGAAMAAAAAAAAAAwAGAAEAAAAAAP//AwAFAAEAAAAAAP7/AwAFAAEAAAAAAP3/AwAKAAAAAAD//wEAAwAGAAMAAAD//wAAAwAGAAEAAAD/////AwAJAAIAAAD///7/AwAJAAIAAAD///3/AwAKAAAAAAD+/wEAAwAGAAMAAAD+/wAAAwAJAAIAAAD+////AwAJAAIAAAD+//7/AwAFAAEAAAD+//3/AwAKAAAAAAD9/wEAAwAGAAMAAAD9/wAAAwAJAAIAAAD9////AwAFAAEAAAD9//7/AwAFAAEAAAD9//3/AwAKAAAAAAD8/wEAAwAHAAAAAAD8/wAAAwAEAAEAAAD8////AwAEAAEAAAD8//7/AwAIAAEAAAD8//3/AwAFAAAAAAA=")
 tile_set = SubResource("TileSet_drxi1")
 
-[node name="HUD" type="CanvasLayer" parent="." unique_id=470864458]
+[node name="HUD" type="CanvasLayer" parent="." unique_id=470864458 node_paths=PackedStringArray("skill_buttons")]
 script = ExtResource("2_clneh")
+skill_buttons = [NodePath("ActionButtons/MarginContainer/HBoxContainer/EquippedSkillButton1"), NodePath("ActionButtons/MarginContainer/HBoxContainer/EquippedSkillButton2"), NodePath("ActionButtons/MarginContainer/HBoxContainer/EquippedSkillButton3"), NodePath("ActionButtons/MarginContainer/HBoxContainer/EquippedSkillButton4")]
 
 [node name="HealthBar" type="ProgressBar" parent="HUD" unique_id=1271459084]
 custom_minimum_size = Vector2(200, 30)
@@ -352,7 +353,7 @@ theme_override_constants/margin_bottom = 5
 layout_mode = 2
 alignment = 1
 
-[node name="EquippedSkillButton" parent="HUD/ActionButtons/MarginContainer/HBoxContainer" unique_id=2040865236 instance=ExtResource("7_34u31")]
+[node name="EquippedSkillButton1" parent="HUD/ActionButtons/MarginContainer/HBoxContainer" unique_id=2040865236 instance=ExtResource("7_34u31")]
 layout_mode = 2
 number = 1
 

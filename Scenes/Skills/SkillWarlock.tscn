@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://d2hlur7h8juf8"]
+
+[ext_resource type="Texture2D" uid="uid://xfotx2qbc7q2" path="res://Assets/FX/Warlock/Warlock_skill1_frame1.png" id="1_o764u"]
+[ext_resource type="Texture2D" uid="uid://d3xtjfixo64ih" path="res://Assets/FX/Warlock/Warlock_skill1_frame2.png" id="2_luvj0"]
+[ext_resource type="Texture2D" uid="uid://jot5enu1vwly" path="res://Assets/FX/Warlock/Warlock_skill1_frame3.png" id="3_4bbbr"]
+[ext_resource type="Texture2D" uid="uid://cp8ancv0axtnx" path="res://Assets/FX/Warlock/Warlock_skill1_frame4.png" id="4_vcvwq"]
+[ext_resource type="Texture2D" uid="uid://cwssr3le45pn0" path="res://Assets/FX/Warlock/Warlock_skill1_frame5.png" id="5_ucmct"]
+[ext_resource type="Texture2D" uid="uid://cxhjdymtrokhq" path="res://Assets/FX/Warlock/Warlock_skill1_frame6.png" id="6_uth86"]
+[ext_resource type="Texture2D" uid="uid://h7uobbb266nc" path="res://Assets/FX/Warlock/Warlock_skill1_frame7.png" id="7_3kvcm"]
+[ext_resource type="Texture2D" uid="uid://chotv7dpj5d5t" path="res://Assets/FX/Warlock/Warlock_skill1_frame8.png" id="8_j1erx"]
+[ext_resource type="Script" uid="uid://d4d18ncfie3vn" path="res://Scripts/FX/SkillEffect.gd" id="9_luvj0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_loddh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_o764u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_luvj0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4bbbr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vcvwq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ucmct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_uth86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3kvcm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_j1erx")
+}],
+"loop": false,
+"name": &"Warlock",
+"speed": 15.0
+}]
+
+[node name="SkillWarlock" type="Node2D" unique_id=920913325]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=34284666]
+sprite_frames = SubResource("SpriteFrames_loddh")
+animation = &"Warlock"
+autoplay = "Warlock"
+frame = 7
+frame_progress = 1.0
+script = ExtResource("9_luvj0")

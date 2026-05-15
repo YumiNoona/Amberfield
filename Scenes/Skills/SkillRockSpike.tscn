@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://dy22mke1m6qwr"]
+
+[ext_resource type="Texture2D" uid="uid://jkr0rbeet7df" path="res://Assets/FX/RockSpike.png" id="1_m81e7"]
+[ext_resource type="Script" uid="uid://d4d18ncfie3vn" path="res://Scripts/FX/SkillEffect.gd" id="2_dfx3y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dfx3y"]
+atlas = ExtResource("1_m81e7")
+region = Rect2(0, 0, 54, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7micg"]
+atlas = ExtResource("1_m81e7")
+region = Rect2(54, 0, 54, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvv2e"]
+atlas = ExtResource("1_m81e7")
+region = Rect2(108, 0, 54, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c74lh"]
+atlas = ExtResource("1_m81e7")
+region = Rect2(162, 0, 54, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4a0kx"]
+atlas = ExtResource("1_m81e7")
+region = Rect2(216, 0, 54, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nsusp"]
+atlas = ExtResource("1_m81e7")
+region = Rect2(270, 0, 54, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhqsm"]
+atlas = ExtResource("1_m81e7")
+region = Rect2(324, 0, 54, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hfvws"]
+atlas = ExtResource("1_m81e7")
+region = Rect2(378, 0, 54, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jep2"]
+atlas = ExtResource("1_m81e7")
+region = Rect2(432, 0, 54, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_llqop"]
+atlas = ExtResource("1_m81e7")
+region = Rect2(486, 0, 54, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_loddh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dfx3y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7micg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pvv2e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c74lh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4a0kx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nsusp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhqsm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hfvws")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1jep2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_llqop")
+}],
+"loop": false,
+"name": &"RockSpike",
+"speed": 15.0
+}]
+
+[node name="SkillRockSpike" type="Node2D" unique_id=920913325]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=34284666]
+sprite_frames = SubResource("SpriteFrames_loddh")
+animation = &"RockSpike"
+autoplay = "RockSpike"
+script = ExtResource("2_dfx3y")

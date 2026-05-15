@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://c6fr6mg32v51c"]
+
+[ext_resource type="Texture2D" uid="uid://dp6wa7d8nkbu0" path="res://Assets/FX/SlashDouble.png" id="1_ln11l"]
+[ext_resource type="Script" uid="uid://d4d18ncfie3vn" path="res://Scripts/FX/SkillEffect.gd" id="2_lgsqm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lgsqm"]
+atlas = ExtResource("1_ln11l")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1wgq"]
+atlas = ExtResource("1_ln11l")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_efugb"]
+atlas = ExtResource("1_ln11l")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjqv8"]
+atlas = ExtResource("1_ln11l")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_loddh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lgsqm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1wgq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_efugb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjqv8")
+}],
+"loop": false,
+"name": &"Slash",
+"speed": 15.0
+}]
+
+[node name="SkillSlash" type="Node2D" unique_id=920913325]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=34284666]
+sprite_frames = SubResource("SpriteFrames_loddh")
+animation = &"Slash"
+autoplay = "Slash"
+script = ExtResource("2_lgsqm")

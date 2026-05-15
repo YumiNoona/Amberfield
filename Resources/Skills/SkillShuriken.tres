@@ -1,9 +1,15 @@
 [gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://c4jfl53dy5n5o"]
 
+[ext_resource type="Texture2D" uid="uid://bw4ijdyin08v8" path="res://Assets/Sprites/Skill/Shuriken.png" id="1_big2o"]
 [ext_resource type="Script" uid="uid://dygfgfbrfatee" path="res://Data/SkillData.gd" id="1_pdwok"]
 
 [resource]
 script = ExtResource("1_pdwok")
-mana_cost = 2.0
-base_dmg = 5.0
+mana_cost = 5.0
+base_dmg = 10.0
+icon = ExtResource("1_big2o")
+id = "shuriken"
+name = "Shuriken"
+description = "it hits hard"
+price = 50
 metadata/_custom_type_script = "uid://dygfgfbrfatee"

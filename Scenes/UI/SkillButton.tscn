@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://7fxsdxy7cd0b"]
 
-[ext_resource type="Texture2D" uid="uid://bp6d7mnsg1eqs" path="res://Assets/Sprites/Bags/Legendary.png" id="1_26th0"]
 [ext_resource type="Texture2D" uid="uid://0guff5ah8xd8" path="res://Assets/UI/BG.png" id="1_068ne"]
 [ext_resource type="Script" uid="uid://32vnphaxfm0" path="res://Scripts/UI/SkillButton.gd" id="1_j36gr"]
 [ext_resource type="Texture2D" uid="uid://6uofqrhkolvr" path="res://Assets/UI/Lock.png" id="2_c2bui"]
+[ext_resource type="Texture2D" uid="uid://bw4ijdyin08v8" path="res://Assets/Sprites/Skill/Shuriken.png" id="3_068ne"]
 
 [node name="SkillButton" type="Button" unique_id=607376640]
 custom_minimum_size = Vector2(40, 40)
@@ -14,7 +14,7 @@ flat = true
 script = ExtResource("1_j36gr")
 
 [node name="SkillIcon" type="TextureRect" parent="." unique_id=31316099]
-self_modulate = Color(0.42365062, 0.42365065, 0.42365062, 1)
+self_modulate = Color(0.47058824, 0.47058824, 0.47058824, 1)
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 1
 anchors_preset = 8
@@ -29,23 +29,25 @@ offset_bottom = 15.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("1_26th0")
+texture = ExtResource("3_068ne")
 expand_mode = 1
 
 [node name="LockIcon" type="TextureRect" parent="." unique_id=437828025]
-custom_minimum_size = Vector2(30, 30)
+custom_minimum_size = Vector2(20, 20)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -16.0
-offset_top = -15.0
-offset_right = 14.0
-offset_bottom = 15.0
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_c2bui")
 expand_mode = 1
 stretch_mode = 5
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -43,6 +43,8 @@ func _ready() -> void:
 	print("[ENEMY] %s spawned | health: %.1f" % [name, max_health])
 
 func _process(delta: float) -> void:
+	if is_dead:
+		return
 	if fsm.curr_state:
 		fsm.curr_state.process_state(delta)
 
@@ -72,8 +74,11 @@ func play_damage_anim() -> void:
 		anim_sprite.animation_finished.connect(_on_damage_anim_finished, CONNECT_ONE_SHOT)
 
 func _on_damage_anim_finished() -> void:
+	if is_dead:
+		return
 	print("[ENEMY] %s damage anim finished, back to idle" % name)
 	play_direction_anim("Idle")
+
 
 func play_dead_anim() -> void:
 	print("[ENEMY] %s playing dead anim" % name)

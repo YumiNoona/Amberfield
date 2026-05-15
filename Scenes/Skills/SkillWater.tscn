@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://bc0m5etn5h0n7"]
+
+[ext_resource type="Texture2D" uid="uid://8db2t8t6r4bh" path="res://Assets/FX/Water.png" id="1_34lwf"]
+[ext_resource type="Script" uid="uid://d4d18ncfie3vn" path="res://Scripts/FX/SkillEffect.gd" id="2_8xw5g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8xw5g"]
+atlas = ExtResource("1_34lwf")
+region = Rect2(0, 0, 30, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3lei"]
+atlas = ExtResource("1_34lwf")
+region = Rect2(30, 0, 30, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmu5s"]
+atlas = ExtResource("1_34lwf")
+region = Rect2(60, 0, 30, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8uus"]
+atlas = ExtResource("1_34lwf")
+region = Rect2(90, 0, 30, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_55ci6"]
+atlas = ExtResource("1_34lwf")
+region = Rect2(120, 0, 30, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vfs7n"]
+atlas = ExtResource("1_34lwf")
+region = Rect2(150, 0, 30, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qyd52"]
+atlas = ExtResource("1_34lwf")
+region = Rect2(180, 0, 30, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_usiqd"]
+atlas = ExtResource("1_34lwf")
+region = Rect2(210, 0, 30, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vowbm"]
+atlas = ExtResource("1_34lwf")
+region = Rect2(240, 0, 30, 41)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_loddh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8xw5g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y3lei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmu5s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y8uus")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_55ci6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vfs7n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qyd52")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_usiqd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vowbm")
+}],
+"loop": false,
+"name": &"Water",
+"speed": 15.0
+}]
+
+[node name="SkillWater" type="Node2D" unique_id=920913325]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=34284666]
+sprite_frames = SubResource("SpriteFrames_loddh")
+animation = &"Water"
+autoplay = "Water"
+script = ExtResource("2_8xw5g")

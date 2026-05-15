@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://biuuyqf0vn7us"]
+
+[ext_resource type="Texture2D" uid="uid://bndi6ghxmxmli" path="res://Assets/FX/Ground.png" id="1_cdaja"]
+[ext_resource type="Script" uid="uid://d4d18ncfie3vn" path="res://Scripts/FX/SkillEffect.gd" id="2_xjve1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjve1"]
+atlas = ExtResource("1_cdaja")
+region = Rect2(30, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6yrc"]
+atlas = ExtResource("1_cdaja")
+region = Rect2(60, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qh4qf"]
+atlas = ExtResource("1_cdaja")
+region = Rect2(90, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4ppx"]
+atlas = ExtResource("1_cdaja")
+region = Rect2(120, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2sf1"]
+atlas = ExtResource("1_cdaja")
+region = Rect2(150, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bo1ug"]
+atlas = ExtResource("1_cdaja")
+region = Rect2(180, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dpf3s"]
+atlas = ExtResource("1_cdaja")
+region = Rect2(210, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rrdwn"]
+atlas = ExtResource("1_cdaja")
+region = Rect2(240, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fsor"]
+atlas = ExtResource("1_cdaja")
+region = Rect2(270, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p4udv"]
+atlas = ExtResource("1_cdaja")
+region = Rect2(300, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3lis"]
+atlas = ExtResource("1_cdaja")
+region = Rect2(330, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qvvuy"]
+atlas = ExtResource("1_cdaja")
+region = Rect2(360, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d5jdj"]
+atlas = ExtResource("1_cdaja")
+region = Rect2(390, 0, 30, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_loddh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xjve1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6yrc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qh4qf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4ppx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o2sf1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bo1ug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dpf3s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rrdwn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7fsor")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p4udv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3lis")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qvvuy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d5jdj")
+}],
+"loop": false,
+"name": &"Ground",
+"speed": 15.0
+}]
+
+[node name="SkillGround" type="Node2D" unique_id=920913325]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=34284666]
+sprite_frames = SubResource("SpriteFrames_loddh")
+animation = &"Ground"
+autoplay = "Ground"
+script = ExtResource("2_xjve1")

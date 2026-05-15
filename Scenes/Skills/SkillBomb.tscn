@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://q6jnd028bqih"]
+
+[ext_resource type="Texture2D" uid="uid://cletroma1upse" path="res://Assets/FX/Bomb.png" id="1_e58uj"]
+[ext_resource type="Script" uid="uid://d4d18ncfie3vn" path="res://Scripts/FX/SkillEffect.gd" id="2_0rwea"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rwea"]
+atlas = ExtResource("1_e58uj")
+region = Rect2(0, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2m4n"]
+atlas = ExtResource("1_e58uj")
+region = Rect2(40, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f52ro"]
+atlas = ExtResource("1_e58uj")
+region = Rect2(80, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v5k3s"]
+atlas = ExtResource("1_e58uj")
+region = Rect2(120, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qufa"]
+atlas = ExtResource("1_e58uj")
+region = Rect2(160, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fx0o"]
+atlas = ExtResource("1_e58uj")
+region = Rect2(200, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jlj0m"]
+atlas = ExtResource("1_e58uj")
+region = Rect2(240, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_60s0k"]
+atlas = ExtResource("1_e58uj")
+region = Rect2(280, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xoby0"]
+atlas = ExtResource("1_e58uj")
+region = Rect2(320, 0, 40, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_loddh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0rwea")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h2m4n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f52ro")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v5k3s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qufa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7fx0o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jlj0m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_60s0k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xoby0")
+}],
+"loop": false,
+"name": &"Bomb",
+"speed": 15.0
+}]
+
+[node name="SkillIceBomb" type="Node2D" unique_id=920913325]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=34284666]
+sprite_frames = SubResource("SpriteFrames_loddh")
+animation = &"Bomb"
+autoplay = "Bomb"
+script = ExtResource("2_0rwea")

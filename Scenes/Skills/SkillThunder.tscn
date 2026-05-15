@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://cdrfgv2fradty"]
+
+[ext_resource type="Texture2D" uid="uid://bepo6q7c1j0sj" path="res://Assets/FX/Thunder.png" id="1_6ahs1"]
+[ext_resource type="Script" uid="uid://d4d18ncfie3vn" path="res://Scripts/FX/SkillEffect.gd" id="2_c580t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c580t"]
+atlas = ExtResource("1_6ahs1")
+region = Rect2(0, 0, 40, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjho7"]
+atlas = ExtResource("1_6ahs1")
+region = Rect2(40, 0, 40, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wabig"]
+atlas = ExtResource("1_6ahs1")
+region = Rect2(80, 0, 40, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1gnh"]
+atlas = ExtResource("1_6ahs1")
+region = Rect2(120, 0, 40, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_loddh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c580t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yjho7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wabig")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1gnh")
+}],
+"loop": false,
+"name": &"Thunder",
+"speed": 15.0
+}]
+
+[node name="SkillThunder" type="Node2D" unique_id=920913325]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=34284666]
+sprite_frames = SubResource("SpriteFrames_loddh")
+animation = &"Thunder"
+autoplay = "Thunder"
+script = ExtResource("2_c580t")

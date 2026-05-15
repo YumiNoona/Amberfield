@@ -47,6 +47,8 @@ var selected_enemy: Enemy:
 		selected_enemy.select_enemy()
 
 func _process(delta: float) -> void:
+	if is_dead:
+		return
 	if fsm.curr_state:
 		fsm.curr_state.process_state(delta)
 
@@ -86,6 +88,8 @@ func play_damage_anim() -> void:
 		anim_sprite.animation_finished.connect(_on_damage_anim_finished, CONNECT_ONE_SHOT)
 
 func _on_damage_anim_finished() -> void:
+	if is_dead:
+		return
 	print("[PLAYER] damage anim finished, resuming state: %s" % fsm.curr_state.name)
 	fsm.curr_state.enter_state()
 

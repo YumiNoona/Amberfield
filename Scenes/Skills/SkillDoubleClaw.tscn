@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://cep5ys526hxyw"]
+
+[ext_resource type="Texture2D" uid="uid://cc13t2e8wp1gi" path="res://Assets/FX/ClawDouble.png" id="1_odex0"]
+[ext_resource type="Script" uid="uid://d4d18ncfie3vn" path="res://Scripts/FX/SkillEffect.gd" id="2_hge85"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hge85"]
+atlas = ExtResource("1_odex0")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2q708"]
+atlas = ExtResource("1_odex0")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cj64l"]
+atlas = ExtResource("1_odex0")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wka1s"]
+atlas = ExtResource("1_odex0")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_loddh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hge85")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2q708")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cj64l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wka1s")
+}],
+"loop": false,
+"name": &"DoubleClaw",
+"speed": 15.0
+}]
+
+[node name="SkillDoubleClaw" type="Node2D" unique_id=920913325]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=34284666]
+sprite_frames = SubResource("SpriteFrames_loddh")
+animation = &"DoubleClaw"
+autoplay = "DoubleClaw"
+script = ExtResource("2_hge85")

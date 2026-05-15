@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://cbwckojysk3ho"]
+
+[ext_resource type="Texture2D" uid="uid://dusn1q65kgh4q" path="res://Assets/FX/IceSpikes.png" id="1_ebbvb"]
+[ext_resource type="Script" uid="uid://d4d18ncfie3vn" path="res://Scripts/FX/SkillEffect.gd" id="2_b11jv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b11jv"]
+atlas = ExtResource("1_ebbvb")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofbox"]
+atlas = ExtResource("1_ebbvb")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r1rj6"]
+atlas = ExtResource("1_ebbvb")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q0g1s"]
+atlas = ExtResource("1_ebbvb")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ktuf7"]
+atlas = ExtResource("1_ebbvb")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tk0d7"]
+atlas = ExtResource("1_ebbvb")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8vxhp"]
+atlas = ExtResource("1_ebbvb")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_55gty"]
+atlas = ExtResource("1_ebbvb")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8kuk"]
+atlas = ExtResource("1_ebbvb")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jfknj"]
+atlas = ExtResource("1_ebbvb")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_loddh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b11jv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofbox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r1rj6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q0g1s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ktuf7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tk0d7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8vxhp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_55gty")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w8kuk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jfknj")
+}],
+"loop": false,
+"name": &"IceSpike",
+"speed": 15.0
+}]
+
+[node name="SkillIceSpike" type="Node2D" unique_id=920913325]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=34284666]
+sprite_frames = SubResource("SpriteFrames_loddh")
+animation = &"IceSpike"
+autoplay = "IceSpike"
+script = ExtResource("2_b11jv")

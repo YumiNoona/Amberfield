@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://bai87pwsbysgt"]
+
+[ext_resource type="Texture2D" uid="uid://civbojtm6ssyk" path="res://Assets/FX/Claw.png" id="1_bu13h"]
+[ext_resource type="Script" uid="uid://d4d18ncfie3vn" path="res://Scripts/FX/SkillEffect.gd" id="2_v6jtv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v6jtv"]
+atlas = ExtResource("1_bu13h")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hpc2y"]
+atlas = ExtResource("1_bu13h")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_41edq"]
+atlas = ExtResource("1_bu13h")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_noi1x"]
+atlas = ExtResource("1_bu13h")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_loddh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v6jtv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hpc2y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_41edq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_noi1x")
+}],
+"loop": false,
+"name": &"Claw",
+"speed": 15.0
+}]
+
+[node name="SkillClaw" type="Node2D" unique_id=920913325]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=34284666]
+sprite_frames = SubResource("SpriteFrames_loddh")
+animation = &"Claw"
+autoplay = "Claw"
+script = ExtResource("2_v6jtv")
