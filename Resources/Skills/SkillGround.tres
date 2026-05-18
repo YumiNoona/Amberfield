@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://cd0este5modvl"]
+
+[ext_resource type="PackedScene" uid="uid://biuuyqf0vn7us" path="res://Scenes/Skills/SkillGround.tscn" id="1_4rwu3"]
+[ext_resource type="Script" uid="uid://dygfgfbrfatee" path="res://Data/SkillData.gd" id="2_4rwu3"]
+[ext_resource type="Texture2D" uid="uid://x6glneu2v6da" path="res://Assets/Sprites/Skill/OrbPlant.png" id="2_8yfwy"]
+
+[resource]
+script = ExtResource("2_4rwu3")
+mana_cost = 5.0
+base_dmg = 10.0
+explosion_effect = ExtResource("1_4rwu3")
+icon = ExtResource("2_8yfwy")
+id = "ground"
+name = "Ground"
+description = "it hits hard"
+price = 50
+metadata/_custom_type_script = "uid://dygfgfbrfatee"

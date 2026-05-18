@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://c5jch72d6eqnu"]
+
+[ext_resource type="PackedScene" uid="uid://c6fr6mg32v51c" path="res://Scenes/Skills/SkillSlash.tscn" id="1_v7c24"]
+[ext_resource type="Texture2D" uid="uid://breww8f12i562" path="res://Assets/Sprites/Skill/Cut.png" id="2_qeqq8"]
+[ext_resource type="Script" uid="uid://dygfgfbrfatee" path="res://Data/SkillData.gd" id="2_v7c24"]
+
+[resource]
+script = ExtResource("2_v7c24")
+mana_cost = 5.0
+base_dmg = 10.0
+explosion_effect = ExtResource("1_v7c24")
+icon = ExtResource("2_qeqq8")
+id = "slash"
+name = "Slash"
+description = "it hits hard"
+price = 50
+metadata/_custom_type_script = "uid://dygfgfbrfatee"

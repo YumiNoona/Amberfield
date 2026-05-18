@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://b3k6pol3feryy"]
+
+[ext_resource type="PackedScene" uid="uid://q6jnd028bqih" path="res://Scenes/Skills/SkillBomb.tscn" id="1_4q6xs"]
+[ext_resource type="Script" uid="uid://dygfgfbrfatee" path="res://Data/SkillData.gd" id="2_4q6xs"]
+[ext_resource type="Texture2D" uid="uid://b2emticlqmbxf" path="res://Assets/Sprites/Skill/Explosion.png" id="2_hha84"]
+
+[resource]
+script = ExtResource("2_4q6xs")
+mana_cost = 5.0
+base_dmg = 10.0
+explosion_effect = ExtResource("1_4q6xs")
+icon = ExtResource("2_hha84")
+id = "bomb"
+name = "Bomb"
+description = "it hits hard"
+price = 50
+metadata/_custom_type_script = "uid://dygfgfbrfatee"

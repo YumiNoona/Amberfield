@@ -16,6 +16,7 @@ func _ready() -> void:
 	if skill_data:
 		load_data(skill_data)
 	if is_free:
+		is_unlocked = true
 		enable_skill(true)
 
 func load_data(data: SkillData) -> void:
@@ -29,17 +30,12 @@ func enable_skill(value: bool) -> void:
 
 
 func _on_pressed() -> void:
-
 	# Unlock skill if player has enough coins
 	if not is_unlocked:
-
 		if GameData.coins >= skill.price:
 			GameData.coins -= skill.price
-
 			is_unlocked = true
-
 			enable_skill(true)
-
 	# Equip unlocked skill
 	else:
 		Reference.hud.equip_skill_to_empty_slot(skill)

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://cht6dd411sm51"]
+
+[ext_resource type="PackedScene" uid="uid://bc0m5etn5h0n7" path="res://Scenes/Skills/SkillWater.tscn" id="1_ihubv"]
+[ext_resource type="Texture2D" uid="uid://bo8bj72ejc676" path="res://Assets/Sprites/Skill/WaterCanon.png" id="2_3fsxk"]
+[ext_resource type="Script" uid="uid://dygfgfbrfatee" path="res://Data/SkillData.gd" id="2_ihubv"]
+
+[resource]
+script = ExtResource("2_ihubv")
+mana_cost = 5.0
+base_dmg = 10.0
+explosion_effect = ExtResource("1_ihubv")
+icon = ExtResource("2_3fsxk")
+id = "water"
+name = "Water"
+description = "it hits hard"
+price = 50
+metadata/_custom_type_script = "uid://dygfgfbrfatee"

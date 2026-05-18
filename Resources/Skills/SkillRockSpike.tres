@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://c6maqj21mfauh"]
+
+[ext_resource type="PackedScene" uid="uid://dy22mke1m6qwr" path="res://Scenes/Skills/SkillRockSpike.tscn" id="1_66exs"]
+[ext_resource type="Script" uid="uid://dygfgfbrfatee" path="res://Data/SkillData.gd" id="2_66exs"]
+[ext_resource type="Texture2D" uid="uid://ckkoqve8og0hg" path="res://Assets/Sprites/Skill/RockSpike.png" id="2_wkrr5"]
+
+[resource]
+script = ExtResource("2_66exs")
+mana_cost = 5.0
+base_dmg = 10.0
+explosion_effect = ExtResource("1_66exs")
+icon = ExtResource("2_wkrr5")
+id = "rockspike"
+name = "Rock Spike"
+description = "it hits hard"
+price = 50
+metadata/_custom_type_script = "uid://dygfgfbrfatee"

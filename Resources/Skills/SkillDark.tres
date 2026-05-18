@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://dug3mtatjfmp3"]
+
+[ext_resource type="PackedScene" uid="uid://b8oivjhnrf53t" path="res://Scenes/Skills/SkillDark.tscn" id="1_13jkl"]
+[ext_resource type="Script" uid="uid://dygfgfbrfatee" path="res://Data/SkillData.gd" id="2_13jkl"]
+[ext_resource type="Texture2D" uid="uid://c2wbs633inxae" path="res://Assets/Sprites/Skill/OrbDark.png" id="2_h4p5n"]
+
+[resource]
+script = ExtResource("2_13jkl")
+mana_cost = 5.0
+base_dmg = 10.0
+explosion_effect = ExtResource("1_13jkl")
+icon = ExtResource("2_h4p5n")
+id = "dark"
+name = "Dark"
+description = "it hits hard"
+price = 50
+metadata/_custom_type_script = "uid://dygfgfbrfatee"

@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://c4jfl53dy5n5o"]
 
+[ext_resource type="PackedScene" uid="uid://cvwswcqt1cvud" path="res://Scenes/Skills/SkillShuriken.tscn" id="1_0hgob"]
 [ext_resource type="Texture2D" uid="uid://bw4ijdyin08v8" path="res://Assets/Sprites/Skill/Shuriken.png" id="1_big2o"]
 [ext_resource type="Script" uid="uid://dygfgfbrfatee" path="res://Data/SkillData.gd" id="1_pdwok"]
 
@@ -7,6 +8,7 @@
 script = ExtResource("1_pdwok")
 mana_cost = 5.0
 base_dmg = 10.0
+explosion_effect = ExtResource("1_0hgob")
 icon = ExtResource("1_big2o")
 id = "shuriken"
 name = "Shuriken"

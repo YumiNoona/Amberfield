@@ -53,8 +53,17 @@ func _process(delta: float) -> void:
 		fsm.curr_state.process_state(delta)
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_accept"):
-		add_exp(100.0)
+	if event.is_action_pressed("Skill_1"):
+		use_skill(0)
+
+	elif event.is_action_pressed("Skill_2"):
+		use_skill(1)
+
+	elif event.is_action_pressed("Skill_3"):
+		use_skill(2)
+
+	elif event.is_action_pressed("Skill_4"):
+		use_skill(3)
 
 func is_moving() -> bool:
 	var move_input = ["Move_Up", "Move_Down", "Move_Left", "Move_Right"]
@@ -163,6 +172,28 @@ func add_mana(value: float) -> void:
 	curr_mana += value
 	curr_mana = min(curr_mana, max_mana)
 	EventBus.on_player_mana_updated.emit(curr_mana, max_mana)
+
+
+func use_skill(index: int) -> void:
+	if index < 0 or index >= GameData.skill_slots.size():
+		return
+	var skill: SkillData = GameData.skill_slots[index]
+	if not skill:
+		return
+	if not selected_enemy:
+		return
+	# Not enough mana
+	if curr_mana < skill.mana_cost:
+		return
+	use_mana(skill.mana_cost)
+	var total_dmg = get_damage(skill.base_dmg)
+	selected_enemy.health_component.take_damage(total_dmg)
+	# Spawn explosion effect on enemy
+	var exp_effect: Node2D = skill.explosion_effect.instantiate()
+	exp_effect.global_position = selected_enemy.global_position
+	get_tree().root.add_child(exp_effect)
+	# Show floating damage text
+	Reference.create_damage_text(selected_enemy.global_position,total_dmg)
 
 func setup() -> void:
 	reset_health()

@@ -22,6 +22,7 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
+	gold_label.text = str(GameData.coins)
 	if grabbed_slot.visible:
 		grabbed_slot.global_position = get_global_mouse_position()
 

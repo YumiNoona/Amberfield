@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://rfdhusnyuaev"]
+
+[ext_resource type="PackedScene" uid="uid://bai87pwsbysgt" path="res://Scenes/Skills/SkillClaw.tscn" id="1_ia7xw"]
+[ext_resource type="Texture2D" uid="uid://186whck2uf8f" path="res://Assets/Sprites/Skill/Harvest.png" id="2_e3exy"]
+[ext_resource type="Script" uid="uid://dygfgfbrfatee" path="res://Data/SkillData.gd" id="2_ia7xw"]
+
+[resource]
+script = ExtResource("2_ia7xw")
+mana_cost = 5.0
+base_dmg = 10.0
+explosion_effect = ExtResource("1_ia7xw")
+icon = ExtResource("2_e3exy")
+id = "claw"
+name = "Claw"
+description = "it hits hard"
+price = 50
+metadata/_custom_type_script = "uid://dygfgfbrfatee"
