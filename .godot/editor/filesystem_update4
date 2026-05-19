@@ -1,19 +1,19 @@
-res://Scenes/UI/SkillButton.tscn
 res://Shaders/DropItem.gdshader
-res://Scripts/UI/SkillButton.gd
-res://Scripts/UI/InventoryPanel.gd
-res://Scenes/UI/SkillsPanel.tscn
-res://Resources/Skills/SkillBomb.tres
-res://Resources/Skills/SkillClaw.tres
-res://Resources/Skills/SkillShuriken.tres
-res://Resources/Skills/SkillDark.tres
-res://Resources/Skills/SkillGround.tres
-res://Resources/Skills/SkillIceSpike.tres
-res://Resources/Skills/SkillKunai.tres
-res://Resources/Skills/SkillRockSpike.tres
-res://Resources/Skills/SkillSlash.tres
-res://Resources/Skills/SkillSmoke.tres
-res://Resources/Skills/SkillThunder.tres
-res://Resources/Skills/SkillWarlock.tres
-res://Resources/Skills/SkillWater.tres
-res://Scripts/Player/Player.gd
+res://Scenes/NPC/NPCSimple.tscn
+res://Scenes/Player/Player.tscn
+res://Scenes/Enemy/GoblinArcher.tscn
+res://Scripts/NPC/NPC.gd
+res://Scenes/Level/Town.tscn
+res://Scenes/NPC/NPCJosh.tscn
+res://Scenes/NPC/NPC.tscn
+res://Scenes/NPC/NPC Lyria.tscn
+res://Scenes/NPC/NPC Josh.tscn
+res://Scenes/UI/DialoguePanel.tscn
+res://Autoloads/EventBus.gd
+res://Data/DialogueData.gd
+res://Scripts/UI/DialoguePanel.gd
+res://Resources/Dialogue/test.tres
+res://Resources/Animations/LyriaAnim.tres
+res://Shaders/TileSet.tres
+res://Autoloads/Reference.gd
+res://Scripts/Core/Town.gd

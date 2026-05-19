@@ -2,6 +2,7 @@ extends Node
 
 var player: Player
 var hud: HUD
+var navigation : TileMapLayer
 
 const NEW_LEVEL_FX_SCENE = preload("uid://ctekw1xgrg320")
 const DAMAGE_TEXT_SCENE = preload("uid://ci0lssb7ksbut")

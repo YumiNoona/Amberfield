@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://dma5bhbhyfiga"]
+
+[ext_resource type="Script" uid="uid://h1h5dqm5pgnw" path="res://Scripts/UI/DialoguePanel.gd" id="1_cmm3w"]
+[ext_resource type="Texture2D" uid="uid://dg66q76tkktph" path="res://Assets/UI/Dialogue Box.png" id="1_ggwrx"]
+[ext_resource type="SpriteFrames" uid="uid://bfa4mj06qvrl1" path="res://Resources/Animations/LyriaAnim.tres" id="3_cmm3w"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_w24x1"]
+line_spacing = 0.0
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+
+[node name="DialoguePanel" type="Control" unique_id=998245148]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cmm3w")
+
+[node name="DialogueBox" type="NinePatchRect" parent="." unique_id=990968121]
+custom_minimum_size = Vector2(800, 160)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -401.0
+offset_top = -188.0
+offset_right = 399.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("1_ggwrx")
+
+[node name="MarginContainer" type="MarginContainer" parent="DialogueBox" unique_id=618125900]
+custom_minimum_size = Vector2(800, 160)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="DialogueLabel" type="Label" parent="DialogueBox/MarginContainer" unique_id=2044019822]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 25)
+layout_mode = 2
+size_flags_vertical = 1
+label_settings = SubResource("LabelSettings_w24x1")
+autowrap_mode = 2
+
+[node name="NPC Potrait" type="AnimatedSprite2D" parent="." unique_id=156448596]
+show_behind_parent = true
+position = Vector2(270, 368)
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("3_cmm3w")
+animation = &"Talk"
+flip_h = true
+
+[node name="NPC Name" type="Label" parent="." unique_id=1439770839]
+custom_minimum_size = Vector2(160, 25)
+layout_mode = 0
+offset_left = 192.0
+offset_top = 465.0
+offset_right = 352.0
+offset_bottom = 490.0
+horizontal_alignment = 1
+vertical_alignment = 1

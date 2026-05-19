@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bq71vvmgle8ou"]
 
-[ext_resource type="Texture2D" uid="uid://cg357incy4cwv" path="res://Assets/Sprites/Character/Shadow.png" id="1_b424u"]
+[ext_resource type="Texture2D" uid="uid://cg357incy4cwv" path="res://Assets/Character/Shadow.png" id="1_b424u"]
 [ext_resource type="Texture2D" uid="uid://by5yt3ficc703" path="res://Assets/UI/Selector (2).png" id="2_e0oyi"]
 [ext_resource type="PackedScene" uid="uid://dh2jh3memmx2a" path="res://Scenes/Player/HealthComponent.tscn" id="3_02vxf"]
 

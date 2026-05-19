@@ -17,3 +17,9 @@ signal on_player_stats_updated
 
 @warning_ignore("unused_signal")
 signal on_inventory_used_item(item: ItemData)
+
+@warning_ignore("unused_signal")
+signal on_dialogue_started(data: DialogueData)
+
+@warning_ignore("unused_signal")
+signal on_dialogue_finished

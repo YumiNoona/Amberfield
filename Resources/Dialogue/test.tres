@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://c5dwah8demlu8"]
+
+[ext_resource type="SpriteFrames" uid="uid://bfa4mj06qvrl1" path="res://Resources/Animations/LyriaAnim.tres" id="1_1mydu"]
+[ext_resource type="Script" uid="uid://dk8pyoigli3mp" path="res://Data/DialogueData.gd" id="1_vt3yj"]
+
+[resource]
+script = ExtResource("1_vt3yj")
+npc_name = "Joshua - The Flinker"
+emotions = Array[String](["Talk", "Angry", "Concern", "Talk"])
+npc_sprite_frames = ExtResource("1_1mydu")
+lines = Array[String](["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna exercitation labore amet tempor ad minim labore ad dolore ullamco. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna exercitation labore amet tempor ad minim labore ad dolore ullamco.", "Ea consectetur ex dolor sit ipsum veniam enim. Elit enim ipsum tempor lorem sed veniam enim minim.", "Consectetur lorem enim labore veniam aliqua aliqua nostrud.", "Aliqua ut elit ullamco elit et minim eiusmod amet incididunt."])
+metadata/_custom_type_script = "uid://dk8pyoigli3mp"

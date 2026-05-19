@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://daqc4symhca27"]
 
-[ext_resource type="Texture2D" uid="uid://cg357incy4cwv" path="res://Assets/Sprites/Character/Shadow.png" id="1_48uba"]
+[ext_resource type="Texture2D" uid="uid://cg357incy4cwv" path="res://Assets/Character/Shadow.png" id="1_48uba"]
 [ext_resource type="Script" uid="uid://1817vqgng0lu" path="res://Scripts/Enemy/Enemy.gd" id="1_md1pk"]
 [ext_resource type="Texture2D" uid="uid://0pm2cmii4n2e" path="res://Assets/Enemy/Archer Goblin/Bow.png" id="2_bfiqn"]
 [ext_resource type="Script" uid="uid://c4wkvclb0aib2" path="res://Data/LootData.gd" id="2_yrauw"]

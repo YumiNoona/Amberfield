@@ -1,3 +1,4 @@
+DialogueData
 SkillData
 ItemData
 EquipData

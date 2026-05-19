@@ -1,10 +1,18 @@
+res://Shaders/
+res://Resources/Animations/
+res://Resources/Dialogue/
+res://Scripts/UI/
+res://Assets/NPC/Josh/
+res://Scenes/UI/
+res://Scenes/NPC/
+res://Scripts/NPC/
+res://Assets/NPC/Lyria/
 res://Scripts/FX/
 res://Assets/FX/Dark/
 res://Assets/FX/
 res://Scenes/Skills/
 res://Resources/Skills/
 res://Scenes/FX/
-res://Assets/Sprites/Character/Tori/
 res://Scripts/Enemy/States/
 res://Scripts/Enemy/
 res://Assets/Enemy/Archer Goblin/
@@ -12,7 +20,3 @@ res://Scenes/Enemy/
 res://Resources/Food/
 res://Autoloads/
 res://Resources/Equipment/
-res://Shaders/
-res://Scripts/UI/
-res://Scenes/UI/
-res://Resources/

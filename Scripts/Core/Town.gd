@@ -2,11 +2,13 @@ extends Node2D
 class_name Town
 
 
+@onready var navigation: TileMapLayer = %Navigation
 @export var player_scene: PackedScene
 
 
 func _ready() -> void:
 	EventBus.on_inventory_used_item.connect(_on_inventory_used_item)
+	Reference.navigation =  navigation
 	create_player()
 
 

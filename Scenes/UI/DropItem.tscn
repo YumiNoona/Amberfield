@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b26wcnaggn" path="res://Scripts/UI/DropItem.gd" id="1_o1e82"]
 [ext_resource type="Shader" uid="uid://dph3crpefo1ft" path="res://Shaders/DropItem.gdshader" id="2_ehtn4"]
-[ext_resource type="Texture2D" uid="uid://cg357incy4cwv" path="res://Assets/Sprites/Character/Shadow.png" id="2_xg1o4"]
+[ext_resource type="Texture2D" uid="uid://cg357incy4cwv" path="res://Assets/Character/Shadow.png" id="2_xg1o4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xg1o4"]
 shader = ExtResource("2_ehtn4")
