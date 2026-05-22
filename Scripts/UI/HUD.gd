@@ -15,12 +15,21 @@ class_name HUD
 @onready var inventory_panel: InventoryPanel = %InventoryPanel
 @onready var stats_panel: StatsPanel = %StatsPanel
 @onready var skills_panel: SkillsPanel = %SkillsPanel
+@onready var shop_panel: Control = $ShopPanel
 
 func _ready() -> void:
 	Reference.hud = self
 	EventBus.on_player_health_updated.connect(on_player_health_updated)
 	EventBus.on_player_mana_updated.connect(on_player_mana_updated)
 	EventBus.on_player_new_level.connect(on_player_new_level)
+
+func open_npc_panel(type: NPC.NPCType) -> void:
+
+	match type:
+
+		NPC.NPCType.SHOP:
+			shop_panel.show()
+
 
 func _on_equipment_pressed() -> void:
 	equipment_panel.visible = not equipment_panel.visible

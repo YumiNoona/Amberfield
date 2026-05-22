@@ -1,0 +1,172 @@
+[gd_scene format=3 uid="uid://dvsbacw2ma6fu"]
+
+[ext_resource type="Texture2D" uid="uid://b2vy08gewle3w" path="res://Assets/Sprites/Coins/Coins (1).png" id="2_6g0gq"]
+[ext_resource type="PackedScene" uid="uid://u3yfcbqxi56r" path="res://Scenes/UI/PurchaseButton.tscn" id="2_lh7e1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_00856"]
+bg_color = Color(0.14901961, 0.16470589, 0.20784314, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(0.101960786, 0.11372549, 0.14901961, 1)
+shadow_size = 2
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="LabelSettings" id="LabelSettings_lh7e1"]
+font_size = 20
+
+[node name="ShopPanel" type="Control" unique_id=1566577161]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=457933564]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.19607843)
+
+[node name="Panel" type="Panel" parent="." unique_id=557578070]
+custom_minimum_size = Vector2(1000, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_00856")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=69579621]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=1090472215]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=1657601689]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Shop"
+
+[node name="Control" type="Control" parent="Panel/MarginContainer/VBoxContainer" unique_id=42514520]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Container" type="GridContainer" parent="Panel/MarginContainer/VBoxContainer" unique_id=437966393]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(900, 350)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 8
+
+[node name="PurchaseButton" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=122284097 instance=ExtResource("2_lh7e1")]
+layout_mode = 2
+
+[node name="PurchaseButton2" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=776154310 instance=ExtResource("2_lh7e1")]
+layout_mode = 2
+
+[node name="PurchaseButton3" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=1778307883 instance=ExtResource("2_lh7e1")]
+layout_mode = 2
+
+[node name="PurchaseButton4" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=2138068888 instance=ExtResource("2_lh7e1")]
+layout_mode = 2
+
+[node name="PurchaseButton5" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=1534740654 instance=ExtResource("2_lh7e1")]
+layout_mode = 2
+
+[node name="PurchaseButton6" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=234676152 instance=ExtResource("2_lh7e1")]
+layout_mode = 2
+
+[node name="PurchaseButton7" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=1399816419 instance=ExtResource("2_lh7e1")]
+layout_mode = 2
+
+[node name="PurchaseButton8" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=142793649 instance=ExtResource("2_lh7e1")]
+layout_mode = 2
+
+[node name="PurchaseButton9" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=409545246 instance=ExtResource("2_lh7e1")]
+layout_mode = 2
+
+[node name="PurchaseButton10" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=1267045730 instance=ExtResource("2_lh7e1")]
+layout_mode = 2
+
+[node name="PurchaseButton11" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=11961552 instance=ExtResource("2_lh7e1")]
+layout_mode = 2
+
+[node name="PurchaseButton12" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=760496580 instance=ExtResource("2_lh7e1")]
+layout_mode = 2
+
+[node name="PurchaseButton13" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=848744287 instance=ExtResource("2_lh7e1")]
+layout_mode = 2
+
+[node name="PurchaseButton14" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=1231193159 instance=ExtResource("2_lh7e1")]
+layout_mode = 2
+
+[node name="PurchaseButton15" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=1651622415 instance=ExtResource("2_lh7e1")]
+layout_mode = 2
+
+[node name="PurchaseButton16" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=340874233 instance=ExtResource("2_lh7e1")]
+layout_mode = 2
+
+[node name="PurchaseButton17" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=1533022288 instance=ExtResource("2_lh7e1")]
+layout_mode = 2
+
+[node name="PurchaseButton18" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=768430985 instance=ExtResource("2_lh7e1")]
+layout_mode = 2
+
+[node name="PurchaseButton19" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=1703745040 instance=ExtResource("2_lh7e1")]
+layout_mode = 2
+
+[node name="PurchaseButton20" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=1592058179 instance=ExtResource("2_lh7e1")]
+layout_mode = 2
+
+[node name="PurchaseButton21" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=747928243 instance=ExtResource("2_lh7e1")]
+layout_mode = 2
+
+[node name="PurchaseButton22" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=912180092 instance=ExtResource("2_lh7e1")]
+layout_mode = 2
+
+[node name="PurchaseButton23" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=538385704 instance=ExtResource("2_lh7e1")]
+layout_mode = 2
+
+[node name="PurchaseButton24" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=116194460 instance=ExtResource("2_lh7e1")]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer" unique_id=2100353448]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1220688113]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("2_6g0gq")
+expand_mode = 1
+
+[node name="TotalCoins" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=246724400]
+unique_name_in_owner = true
+layout_mode = 2
+text = "20"
+label_settings = SubResource("LabelSettings_lh7e1")

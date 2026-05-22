@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://p8agk38evmxt"]
+
+[ext_resource type="Script" uid="uid://8rvsde13dymp" path="res://Scripts/World/Portal.gd" id="1_mn2w3"]
+
+[node name="Portal" type="Area2D" unique_id=750968239]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_mn2w3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

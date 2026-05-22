@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://clixaseqvjwyv" path="res://Scenes/UI/DropItem.tscn" id="14_pg3w3"]
 [ext_resource type="PackedScene" uid="uid://1glycur4qm4u" path="res://Scenes/UI/InventorySlots.tscn" id="15_47ufo"]
 [ext_resource type="Resource" uid="uid://dmt3b2d6itqv" path="res://Resources/Potions/Common HP Potion.tres" id="15_w73ec"]
+[ext_resource type="PackedScene" uid="uid://dvsbacw2ma6fu" path="res://Scenes/UI/ShopPanel.tscn" id="15_wawxl"]
 [ext_resource type="Script" uid="uid://dq74he3k220jy" path="res://Scripts/Enemy/EnemyZone.gd" id="18_2eknc"]
 [ext_resource type="Resource" uid="uid://dmn4d1fdcrrlu" path="res://Resources/Equipment/Common/CommonHelmet.tres" id="18_bo67d"]
 [ext_resource type="Resource" uid="uid://c62qiugkg2mw2" path="res://Resources/Potions/Rare HP Potion.tres" id="18_p55rt"]
@@ -23,6 +24,7 @@
 [ext_resource type="Resource" uid="uid://c5dwah8demlu8" path="res://Resources/Dialogue/test.tres" id="21_nhgur"]
 [ext_resource type="PackedScene" uid="uid://nqsoq2onqc3a" path="res://Scenes/NPC/NPC Josh.tscn" id="23_2xudy"]
 [ext_resource type="PackedScene" uid="uid://cmxeiqcpflsg8" path="res://Scenes/NPC/NPC Lyria.tscn" id="23_ou1al"]
+[ext_resource type="PackedScene" uid="uid://p8agk38evmxt" path="res://Scenes/Level/Portal.tscn" id="24_2xudy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_34u31"]
 bg_color = Color(0.25882354, 0.05882353, 0.011764706, 1)
@@ -116,6 +118,8 @@ load_path = "res://.godot/imported/CommonPickAxe.png-b198273e1a35de690caa846e1f4
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_47ufo"]
 size = Vector2(198, 142)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wawxl"]
 
 [node name="Town" type="Node2D" unique_id=594205815]
 script = ExtResource("1_7cdkx")
@@ -418,19 +422,34 @@ flat = true
 [node name="DialoguePanel" parent="HUD" unique_id=998245148 instance=ExtResource("14_6y7ex")]
 visible = false
 
-[node name="DropItem" parent="." unique_id=1600881298 instance=ExtResource("14_pg3w3")]
+[node name="ShopPanel" parent="HUD" unique_id=1566577161 instance=ExtResource("15_wawxl")]
+visible = false
+
+[node name="Items" type="Node2D" parent="." unique_id=1996010870]
+
+[node name="DropItem" parent="Items" unique_id=1600881298 instance=ExtResource("14_pg3w3")]
 position = Vector2(215, 109)
 item = ExtResource("15_w73ec")
 amount = 20
 
-[node name="DropItem2" parent="." unique_id=1350690633 instance=ExtResource("14_pg3w3")]
+[node name="DropItem2" parent="Items" unique_id=1350690633 instance=ExtResource("14_pg3w3")]
 position = Vector2(215, 144)
 item = ExtResource("18_p55rt")
 amount = 20
 
-[node name="DropItem3" parent="." unique_id=1783966479 instance=ExtResource("14_pg3w3")]
+[node name="DropItem3" parent="Items" unique_id=1783966479 instance=ExtResource("14_pg3w3")]
 position = Vector2(248, 89)
 item = ExtResource("18_bo67d")
+
+[node name="NPC" type="Node2D" parent="." unique_id=1639512668]
+
+[node name="NPC Lyria" parent="NPC" unique_id=1499885172 instance=ExtResource("23_ou1al")]
+position = Vector2(28, 122)
+dialogue = ExtResource("21_nhgur")
+
+[node name="NPC Josh" parent="NPC" unique_id=492224986 instance=ExtResource("23_2xudy")]
+position = Vector2(63, 128)
+can_move = true
 
 [node name="EnemyZones" type="Node2D" parent="." unique_id=133079998]
 position = Vector2(193, 81)
@@ -445,15 +464,27 @@ max_enemies = 2
 shape = SubResource("RectangleShape2D_47ufo")
 debug_color = Color(0.48235294, 0.56078434, 0.007843138, 0.39215687)
 
-[node name="NPC" type="Node2D" parent="." unique_id=1639512668]
+[node name="Teleports" type="Node2D" parent="." unique_id=1592464677]
 
-[node name="NPC Lyria" parent="NPC" unique_id=1499885172 instance=ExtResource("23_ou1al")]
-position = Vector2(28, 122)
-dialogue = ExtResource("21_nhgur")
+[node name="Portal" parent="Teleports" unique_id=750968239 node_paths=PackedStringArray("target_pos") instance=ExtResource("24_2xudy")]
+position = Vector2(86, 111)
+target_pos = NodePath("../new pos")
 
-[node name="NPC Josh" parent="NPC" unique_id=492224986 instance=ExtResource("23_2xudy")]
-position = Vector2(63, 128)
-can_move = true
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teleports/Portal" unique_id=2045531188]
+shape = SubResource("RectangleShape2D_wawxl")
+
+[node name="Portal2" parent="Teleports" unique_id=1527357714 node_paths=PackedStringArray("target_pos") instance=ExtResource("24_2xudy")]
+position = Vector2(633, 109)
+target_pos = NodePath("../old pos")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teleports/Portal2" unique_id=967233907]
+shape = SubResource("RectangleShape2D_wawxl")
+
+[node name="new pos" type="Node2D" parent="Teleports" unique_id=406637090]
+position = Vector2(579, 117)
+
+[node name="old pos" type="Node2D" parent="Teleports" unique_id=600310378]
+position = Vector2(77, 155)
 
 [connection signal="pressed" from="HUD/MainButtons/MarginContainer/HBoxContainer/Equipment" to="HUD" method="_on_equipment_pressed"]
 [connection signal="pressed" from="HUD/MainButtons/MarginContainer/HBoxContainer/Inventory" to="HUD" method="_on_inventory_pressed"]

@@ -1,0 +1,113 @@
+[gd_scene format=3 uid="uid://l7vphs7wnnfx"]
+
+[ext_resource type="PackedScene" uid="uid://jk6qvu152yra" path="res://Scenes/NPC/NPC.tscn" id="1_2wunw"]
+[ext_resource type="Resource" uid="uid://jlvxvtjr20u2" path="res://Resources/Dialogue/Shop.tres" id="2_2wunw"]
+[ext_resource type="Texture2D" uid="uid://4lip1iewo16x" path="res://Assets/NPC/BlackSmith/1.png" id="2_qcav5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wunw"]
+atlas = ExtResource("2_qcav5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xcvn0"]
+atlas = ExtResource("2_qcav5")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p4bi1"]
+atlas = ExtResource("2_qcav5")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1wu6l"]
+atlas = ExtResource("2_qcav5")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jlhk3"]
+atlas = ExtResource("2_qcav5")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7lxf"]
+atlas = ExtResource("2_qcav5")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_428wc"]
+atlas = ExtResource("2_qcav5")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fd1ks"]
+atlas = ExtResource("2_qcav5")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1wu6l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2wunw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xcvn0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p4bi1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1wu6l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jlhk3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r7lxf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_428wc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fd1ks")
+}],
+"loop": true,
+"name": &"IdleDown",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"IdleLeft",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"IdleRight",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"IdleUp",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"WalkDown",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"WalkLeft",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"WalkRight",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"WalkUp",
+"speed": 5.0
+}]
+
+[node name="NPC Shop" unique_id=492224986 instance=ExtResource("1_2wunw")]
+type = 1
+dialogue = ExtResource("2_2wunw")
+
+[node name="AnimSprite" parent="." index="1" unique_id=790150368]
+sprite_frames = SubResource("SpriteFrames_1wu6l")
+frame = 1
+frame_progress = 0.797401

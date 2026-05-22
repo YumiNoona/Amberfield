@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://u3yfcbqxi56r"]
+
+[ext_resource type="Texture2D" uid="uid://b2vy08gewle3w" path="res://Assets/Sprites/Coins/Coins (1).png" id="1_etrwh"]
+[ext_resource type="Texture2D" uid="uid://c0dpl1336swi7" path="res://Assets/Sprites/Food/Shrimp.png" id="1_q7p8h"]
+[ext_resource type="Texture2D" uid="uid://0guff5ah8xd8" path="res://Assets/UI/BG.png" id="1_ut67q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q7p8h"]
+bg_color = Color(0.21960784, 0.23137255, 0.2901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="PurchaseButton" type="Control" unique_id=122284097]
+custom_minimum_size = Vector2(95, 100)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 95.0
+offset_bottom = 100.0
+
+[node name="BG" type="TextureRect" parent="." unique_id=647545027]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.5
+offset_top = -50.0
+offset_right = 27.5
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ut67q")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1187975064]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.5
+offset_top = -40.0
+offset_right = 17.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_q7p8h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="." unique_id=2075344236]
+custom_minimum_size = Vector2(90, 30)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.026
+anchor_top = 0.67300004
+anchor_right = 0.97400004
+anchor_bottom = 1.0070001
+offset_left = 0.029999971
+offset_top = 0.02999878
+offset_right = -0.030006409
+offset_bottom = -0.030014038
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_q7p8h")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Button" unique_id=562555570]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.15
+anchor_right = 1.0
+anchor_bottom = 1.1500001
+offset_top = 0.0009994507
+offset_bottom = -0.0010032654
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Button/HBoxContainer" unique_id=192650035]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("1_etrwh")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Button/HBoxContainer" unique_id=57104097]
+layout_mode = 2
+text = "300"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://jlvxvtjr20u2"]
+
+[ext_resource type="SpriteFrames" uid="uid://ci5hfaxfk5kyq" path="res://Resources/Animations/ShopAnim.tres" id="1_rntrk"]
+[ext_resource type="Script" uid="uid://dk8pyoigli3mp" path="res://Data/DialogueData.gd" id="2_1shp0"]
+
+[resource]
+script = ExtResource("2_1shp0")
+npc_name = "Hamid - The Guy"
+emotions = Array[String](["Talk", "Talk"])
+npc_sprite_frames = ExtResource("1_rntrk")
+lines = Array[String](["Welcomen", "Got Things For You!! Have A Look"])
+metadata/_custom_type_script = "uid://dk8pyoigli3mp"

@@ -71,9 +71,15 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 	if event is InputEventMouseButton \
 	and event.is_pressed() \
 	and event.button_index == MOUSE_BUTTON_LEFT:
-
+	
 		if dialogue:
 			EventBus.on_dialogue_started.emit(dialogue)
+			if type != NPCType.ROAM:
+				await EventBus.on_dialogue_finished
+				Reference.hud.open_npc_panel(type)
+		else:
+			if type != NPCType.ROAM:
+				Reference.hud.open_npc_panel(type)
 
 func is_waiting_for_next_move() -> bool:
 	return not timer.is_stopped()
