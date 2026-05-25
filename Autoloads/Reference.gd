@@ -7,6 +7,7 @@ var navigation : TileMapLayer
 const NEW_LEVEL_FX_SCENE = preload("uid://ctekw1xgrg320")
 const DAMAGE_TEXT_SCENE = preload("uid://ci0lssb7ksbut")
 const DROP_ITEM_SCENE = preload("uid://clixaseqvjwyv")
+const PURCHASE_BUTTON_SCENE = preload("uid://u3yfcbqxi56r")
 
 func create_new_level_fx(pos: Vector2) -> void:
 	create_fx_at_pos(NEW_LEVEL_FX_SCENE, pos)

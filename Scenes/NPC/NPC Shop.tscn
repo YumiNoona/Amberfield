@@ -109,5 +109,4 @@ dialogue = ExtResource("2_2wunw")
 
 [node name="AnimSprite" parent="." index="1" unique_id=790150368]
 sprite_frames = SubResource("SpriteFrames_1wu6l")
-frame = 1
-frame_progress = 0.797401
+autoplay = "IdleDown"

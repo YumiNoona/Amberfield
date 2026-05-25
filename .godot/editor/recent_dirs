@@ -1,3 +1,4 @@
+res://Scripts/UI/
 res://Assets/NPC/BlackSmith/
 res://Resources/Animations/
 res://Scenes/NPC/
@@ -6,7 +7,6 @@ res://Scripts/World/
 res://Shaders/
 res://Scenes/UI/
 res://Resources/Dialogue/
-res://Scripts/UI/
 res://Assets/NPC/Josh/
 res://Scripts/NPC/
 res://Assets/NPC/Lyria/

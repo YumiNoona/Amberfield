@@ -24,6 +24,7 @@
 [ext_resource type="Resource" uid="uid://c5dwah8demlu8" path="res://Resources/Dialogue/test.tres" id="21_nhgur"]
 [ext_resource type="PackedScene" uid="uid://nqsoq2onqc3a" path="res://Scenes/NPC/NPC Josh.tscn" id="23_2xudy"]
 [ext_resource type="PackedScene" uid="uid://cmxeiqcpflsg8" path="res://Scenes/NPC/NPC Lyria.tscn" id="23_ou1al"]
+[ext_resource type="PackedScene" uid="uid://l7vphs7wnnfx" path="res://Scenes/NPC/NPC Shop.tscn" id="23_pmwfn"]
 [ext_resource type="PackedScene" uid="uid://p8agk38evmxt" path="res://Scenes/Level/Portal.tscn" id="24_2xudy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_34u31"]
@@ -450,6 +451,10 @@ dialogue = ExtResource("21_nhgur")
 [node name="NPC Josh" parent="NPC" unique_id=492224986 instance=ExtResource("23_2xudy")]
 position = Vector2(63, 128)
 can_move = true
+wait_time = 2.0
+
+[node name="NPC Shop" parent="NPC" unique_id=1808877885 instance=ExtResource("23_pmwfn")]
+position = Vector2(660, 87)
 
 [node name="EnemyZones" type="Node2D" parent="." unique_id=133079998]
 position = Vector2(193, 81)

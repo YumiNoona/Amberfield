@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://u3yfcbqxi56r"]
 
-[ext_resource type="Texture2D" uid="uid://b2vy08gewle3w" path="res://Assets/Sprites/Coins/Coins (1).png" id="1_etrwh"]
 [ext_resource type="Texture2D" uid="uid://c0dpl1336swi7" path="res://Assets/Sprites/Food/Shrimp.png" id="1_q7p8h"]
-[ext_resource type="Texture2D" uid="uid://0guff5ah8xd8" path="res://Assets/UI/BG.png" id="1_ut67q"]
+[ext_resource type="Script" uid="uid://baol63mqnqoxm" path="res://Scripts/UI/PurchaseButton.gd" id="3_sgio4"]
+[ext_resource type="Texture2D" uid="uid://y53q36nf3r00" path="res://Assets/UI/CoinMedium.png" id="4_sgio4"]
+[ext_resource type="Texture2D" uid="uid://bqs80but2ahli" path="res://Assets/UI/Minus.png" id="5_m4yab"]
+[ext_resource type="Texture2D" uid="uid://dwlk00lgsb8no" path="res://Assets/UI/Plus.png" id="6_hlt03"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q7p8h"]
 bg_color = Color(0.21960784, 0.23137255, 0.2901961, 1)
@@ -16,65 +18,88 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[node name="PurchaseButton" type="Control" unique_id=122284097]
-custom_minimum_size = Vector2(95, 100)
-layout_mode = 3
-anchors_preset = 0
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xevuk"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="PurchaseButton" type="Button" unique_id=1352236369]
+custom_minimum_size = Vector2(213.645, 100)
 offset_right = 95.0
 offset_bottom = 100.0
+flat = true
+script = ExtResource("3_sgio4")
 
 [node name="BG" type="TextureRect" parent="." unique_id=647545027]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -32.5
-offset_top = -50.0
-offset_right = 27.5
-offset_bottom = 10.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_ut67q")
 expand_mode = 1
-stretch_mode = 5
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1187975064]
+[node name="Info" type="Label" parent="." unique_id=125682514]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 65.0
+offset_top = 12.0
+offset_right = 140.0
+offset_bottom = 35.0
+text = "jhdddhdd"
+
+[node name="ItemIcon" type="TextureRect" parent="." unique_id=1187975064]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 4
 anchor_top = 0.5
-anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -22.5
-offset_top = -40.0
-offset_right = 17.5
-grow_horizontal = 2
+offset_left = 10.0
+offset_top = -20.0
+offset_right = 50.0
+offset_bottom = 20.0
 grow_vertical = 2
 texture = ExtResource("1_q7p8h")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Button" type="Button" parent="." unique_id=2075344236]
+[node name="MoneyIcon" type="TextureRect" parent="." unique_id=192650035]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 0
+offset_left = 140.0
+offset_top = 30.0
+offset_right = 170.0
+offset_bottom = 73.0
+texture = ExtResource("4_sgio4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Price" type="Label" parent="." unique_id=57104097]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 174.0
+offset_top = 43.0
+offset_right = 202.0
+offset_bottom = 66.0
+text = "300"
+
+[node name="ShopButton" type="Button" parent="." unique_id=2075344236]
 custom_minimum_size = Vector2(90, 30)
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.026
-anchor_top = 0.67300004
-anchor_right = 0.97400004
-anchor_bottom = 1.0070001
-offset_left = 0.029999971
-offset_top = 0.02999878
-offset_right = -0.030006409
-offset_bottom = -0.030014038
-grow_horizontal = 2
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -162.645
+offset_top = 13.0
+offset_right = -72.645004
+offset_bottom = 43.0
+grow_horizontal = 0
 grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_q7p8h")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Button" unique_id=562555570]
+[node name="HBoxContainer" type="HBoxContainer" parent="ShopButton" unique_id=562555570]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = -0.15
@@ -86,13 +111,22 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="Button/HBoxContainer" unique_id=192650035]
-custom_minimum_size = Vector2(40, 40)
+[node name="Dexterity Minus Button" type="Button" parent="ShopButton/HBoxContainer" unique_id=1639461372]
+custom_minimum_size = Vector2(25, 25)
 layout_mode = 2
-texture = ExtResource("1_etrwh")
-expand_mode = 1
-stretch_mode = 5
+theme_override_styles/normal = SubResource("StyleBoxFlat_xevuk")
+icon = ExtResource("5_m4yab")
+icon_alignment = 1
 
-[node name="Label" type="Label" parent="Button/HBoxContainer" unique_id=57104097]
+[node name="Quantity" type="Label" parent="ShopButton/HBoxContainer" unique_id=206719640]
 layout_mode = 2
 text = "300"
+
+[node name="Dexterity Plus Button" type="Button" parent="ShopButton/HBoxContainer" unique_id=783599449]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_xevuk")
+icon = ExtResource("6_hlt03")
+icon_alignment = 1
+
+[connection signal="pressed" from="ShopButton" to="." method="_on_shop_button_pressed"]

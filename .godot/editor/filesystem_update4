@@ -1,17 +1,14 @@
+res://Scenes/Level/Town.tscn
 res://Shaders/DropItem.gdshader
+res://Shaders/Transition.gdshader
 res://Shaders/TileSet.tres
 res://Resources/Animations/LyriaAnim.tres
-res://Scenes/UI/ShopPanel.tscn
-res://Scenes/UI/ShopButton.tscn
-res://Scenes/UI/PurchaseButton.tscn
-res://Scenes/Level/Portal.tscn
-res://Scenes/Level/Transition.tscn
-res://Scripts/World/Portal.gd
-res://Shaders/Transition.gdshader
-res://Scripts/World/Transition.gd
-res://Scenes/Level/Town.tscn
-res://Scenes/NPC/NPC Shop.tscn
-res://Resources/Dialogue/Shop.tres
 res://Resources/Animations/ShopAnim.tres
-res://Scripts/UI/HUD.gd
-res://Scripts/NPC/NPC.gd
+res://Resources/Dialogue/Shop.tres
+res://Scenes/NPC/NPC Shop.tscn
+res://Scenes/UI/PurchaseButton.tscn
+res://Scripts/UI/ShopButton.gd
+res://Scripts/UI/PurchaseButton.gd
+res://Autoloads/Reference.gd
+res://Scenes/UI/ShopPanel.tscn
+res://Scripts/UI/ShopPanel.gd

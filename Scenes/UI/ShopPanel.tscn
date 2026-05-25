@@ -1,7 +1,14 @@
 [gd_scene format=3 uid="uid://dvsbacw2ma6fu"]
 
+[ext_resource type="Script" uid="uid://bk3r7hoy1jav4" path="res://Scripts/UI/ShopPanel.gd" id="1_6g0gq"]
+[ext_resource type="Script" uid="uid://dbi2l6pf50xf7" path="res://Data/ItemData.gd" id="2_2hu6u"]
 [ext_resource type="Texture2D" uid="uid://b2vy08gewle3w" path="res://Assets/Sprites/Coins/Coins (1).png" id="2_6g0gq"]
 [ext_resource type="PackedScene" uid="uid://u3yfcbqxi56r" path="res://Scenes/UI/PurchaseButton.tscn" id="2_lh7e1"]
+[ext_resource type="Resource" uid="uid://c62qiugkg2mw2" path="res://Resources/Potions/Rare HP Potion.tres" id="3_iilh4"]
+[ext_resource type="Resource" uid="uid://ds12wr88qmh7n" path="res://Resources/Food/Meat.tres" id="4_bh4te"]
+[ext_resource type="Resource" uid="uid://3nysl3xug0yl" path="res://Resources/Food/Honey.tres" id="5_mokld"]
+[ext_resource type="Texture2D" uid="uid://bt4kq3qxiipmo" path="res://Assets/UI/Close.png" id="8_iilh4"]
+[ext_resource type="Texture2D" uid="uid://bedp75gs40gi8" path="res://Assets/UI/ClosePressed.png" id="9_bh4te"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_00856"]
 bg_color = Color(0.14901961, 0.16470589, 0.20784314, 1)
@@ -23,6 +30,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_6g0gq")
+items = Array[ExtResource("2_2hu6u")]([ExtResource("3_iilh4"), ExtResource("4_bh4te"), ExtResource("5_mokld")])
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=457933564]
 layout_mode = 1
@@ -170,3 +179,20 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "20"
 label_settings = SubResource("LabelSettings_lh7e1")
+
+[node name="CloseButton" type="TextureButton" parent="." unique_id=697894965]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -104.0
+offset_top = 53.0
+offset_right = -54.0
+offset_bottom = 103.0
+grow_horizontal = 0
+texture_normal = ExtResource("8_iilh4")
+texture_pressed = ExtResource("9_bh4te")
+stretch_mode = 0
+
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]
