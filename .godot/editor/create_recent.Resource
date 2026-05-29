@@ -1,3 +1,4 @@
+CraftData
 DialogueData
 SkillData
 ItemData

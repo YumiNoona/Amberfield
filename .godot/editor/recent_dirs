@@ -1,11 +1,12 @@
+res://Resources/Crafting/
 res://Scripts/UI/
+res://Scenes/UI/
 res://Assets/NPC/BlackSmith/
 res://Resources/Animations/
 res://Scenes/NPC/
 res://Scenes/Level/
 res://Scripts/World/
 res://Shaders/
-res://Scenes/UI/
 res://Resources/Dialogue/
 res://Assets/NPC/Josh/
 res://Scripts/NPC/
@@ -19,4 +20,3 @@ res://Scenes/FX/
 res://Scripts/Enemy/States/
 res://Scripts/Enemy/
 res://Assets/Enemy/Archer Goblin/
-res://Scenes/Enemy/

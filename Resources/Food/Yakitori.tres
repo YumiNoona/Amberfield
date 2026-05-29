@@ -5,5 +5,11 @@
 
 [resource]
 script = ExtResource("1_csuuv")
+is_consumable = true
+max_stack = 24
+value = 20.0
 icon = ExtResource("1_pvw87")
+id = "hp_potion"
+name = "Yakitori"
+price = 50
 metadata/_custom_type_script = "uid://dbi2l6pf50xf7"

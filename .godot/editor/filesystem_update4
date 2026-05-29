@@ -1,14 +1,15 @@
-res://Scenes/Level/Town.tscn
+res://Scenes/UI/PurchaseButton.tscn
 res://Shaders/DropItem.gdshader
 res://Shaders/Transition.gdshader
 res://Shaders/TileSet.tres
 res://Resources/Animations/LyriaAnim.tres
 res://Resources/Animations/ShopAnim.tres
-res://Resources/Dialogue/Shop.tres
-res://Scenes/NPC/NPC Shop.tscn
-res://Scenes/UI/PurchaseButton.tscn
-res://Scripts/UI/ShopButton.gd
-res://Scripts/UI/PurchaseButton.gd
-res://Autoloads/Reference.gd
+res://Scenes/UI/CraftPanel.tscn
 res://Scenes/UI/ShopPanel.tscn
-res://Scripts/UI/ShopPanel.gd
+res://Scripts/UI/CraftPanel.gd
+res://Data/CraftingData.gd
+res://Data/CraftingMaterial.gd
+res://Scenes/UI/CraftButton.tscn
+res://Scripts/UI/CraftButton.gd
+res://Resources/Crafting/Yakitori.tres
+res://Resources/Food/Yakitori.tres

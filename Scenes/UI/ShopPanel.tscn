@@ -90,7 +90,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 20
-columns = 8
+columns = 4
 
 [node name="PurchaseButton" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=122284097 instance=ExtResource("2_lh7e1")]
 layout_mode = 2
@@ -126,42 +126,6 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="PurchaseButton12" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=760496580 instance=ExtResource("2_lh7e1")]
-layout_mode = 2
-
-[node name="PurchaseButton13" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=848744287 instance=ExtResource("2_lh7e1")]
-layout_mode = 2
-
-[node name="PurchaseButton14" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=1231193159 instance=ExtResource("2_lh7e1")]
-layout_mode = 2
-
-[node name="PurchaseButton15" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=1651622415 instance=ExtResource("2_lh7e1")]
-layout_mode = 2
-
-[node name="PurchaseButton16" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=340874233 instance=ExtResource("2_lh7e1")]
-layout_mode = 2
-
-[node name="PurchaseButton17" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=1533022288 instance=ExtResource("2_lh7e1")]
-layout_mode = 2
-
-[node name="PurchaseButton18" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=768430985 instance=ExtResource("2_lh7e1")]
-layout_mode = 2
-
-[node name="PurchaseButton19" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=1703745040 instance=ExtResource("2_lh7e1")]
-layout_mode = 2
-
-[node name="PurchaseButton20" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=1592058179 instance=ExtResource("2_lh7e1")]
-layout_mode = 2
-
-[node name="PurchaseButton21" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=747928243 instance=ExtResource("2_lh7e1")]
-layout_mode = 2
-
-[node name="PurchaseButton22" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=912180092 instance=ExtResource("2_lh7e1")]
-layout_mode = 2
-
-[node name="PurchaseButton23" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=538385704 instance=ExtResource("2_lh7e1")]
-layout_mode = 2
-
-[node name="PurchaseButton24" parent="Panel/MarginContainer/VBoxContainer/Container" unique_id=116194460 instance=ExtResource("2_lh7e1")]
 layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer" unique_id=2100353448]
