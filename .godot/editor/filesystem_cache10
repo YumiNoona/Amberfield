@@ -1,5 +1,5 @@
-63f7b34db8d8cdea90c76aacccf841ec
-::res://::1780054829
+78098b89c88a74ebe8c20117b8754620
+::res://::1783314624
 icon.png::CompressedTexture2D::3642966689326395674::1777865536::1778045968::1::::<><><>0<>0<>02591770243c3bc24d285926dcddcedd<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex::
 ::res://Assets/::1779171520
 ::res://Assets/Character/::1779171548
@@ -687,9 +687,9 @@ EventBus.gd::GDScript::4481961355723250474::1779183998::0::1::::<>Node<><>0<>0<>
 GameData.gd::GDScript::5801982402677174056::1778848672::0::1::::<>Node<><>0<>0<><>::
 Inventory.gd::GDScript::8266082703161563270::1778216087::0::1::::<>Node<><>0<>0<><>::
 Reference.gd::GDScript::4755533352128747540::1779684324::0::1::::<>Node<><>0<>0<><>::
-::res://Data/::1780054802
+::res://Data/::1780055006
 CraftingData.gd::GDScript::1818678983978040814::1780054701::0::1::::CraftData<>Resource<><>0<>0<><>::
-CraftingMaterial.gd::GDScript::8265507879828402392::1780054802::0::1::::CraftMaterial<>Resource<><>0<>0<><>::
+CraftingMaterial.gd::GDScript::8265507879828402392::1780055006::0::1::::CraftMaterial<>Resource<><>0<>0<><>::
 DialogueData.gd::GDScript::7930229315261810887::1779187918::0::1::::DialogueData<>Resource<><>0<>0<><>::
 EquipData.gd::GDScript::5697159985136202928::1778235554::0::1::::EquipData<>ItemData<><>0<>0<><>::
 Item.gd::GDScript::8270245839520188751::1778155239::0::1::::Item<>Resource<><>0<>0<><>::
@@ -698,11 +698,11 @@ LootData.gd::GDScript::6854378937196525773::1778755827::0::1::::LootData<>Resour
 SkillData.gd::GDScript::8856495129584361864::1778761972::0::1::::SkillData<>Item<><>0<>0<><>::
 SlotData.gd::GDScript::7458825042161041821::1778049303::0::1::::SlotData<>Resource<><>0<>0<><>::
 ::res://Resources/::1780054618
-::res://Resources/Animations/::1780048043
-LyriaAnim.tres::SpriteFrames::2739147636961335836::1780048043::0::1::::<><><>0<>0<><>::uid://b2tudccwc16jt::::res://Assets/NPC/Josh/Potrait.png<>uid://ciqmfb3gp7jr0::::res://Assets/NPC/BlackSmith/Portrait Outiline.png
-ShopAnim.tres::SpriteFrames::5396717432803377752::1780048043::0::1::::<><><>0<>0<><>::uid://ciqmfb3gp7jr0::::res://Assets/NPC/BlackSmith/Portrait Outiline.png
-::res://Resources/Crafting/::1780054829
-Tako.tres::Resource/CraftData::6499180710482242340::1780054810::0::1::::<><><>0<>0<><>::uid://058m28wgrr7c::::res://Data/CraftingData.gd
+::res://Resources/Animations/::1781258414
+LyriaAnim.tres::SpriteFrames::2739147636961335836::1781258414::0::1::::<><><>0<>0<><>::uid://b2tudccwc16jt::::res://Assets/NPC/Josh/Potrait.png<>uid://ciqmfb3gp7jr0::::res://Assets/NPC/BlackSmith/Portrait Outiline.png
+ShopAnim.tres::SpriteFrames::5396717432803377752::1781258414::0::1::::<><><>0<>0<><>::uid://ciqmfb3gp7jr0::::res://Assets/NPC/BlackSmith/Portrait Outiline.png
+::res://Resources/Crafting/::1780055113
+Yakitori.tres::Resource/CraftData::6499180710482242340::1780055113::0::1::::<><><>0<>0<><>::uid://bejtnmvw1much::::res://Resources/Food/Yakitori.tres<>uid://058m28wgrr7c::::res://Data/CraftingData.gd
 ::res://Resources/Dialogue/::1779683839
 Shop.tres::Resource/DialogueData::655725010919221615::1779683839::0::1::::<><><>0<>0<><>::uid://ci5hfaxfk5kyq::::res://Resources/Animations/ShopAnim.tres<>uid://dk8pyoigli3mp::::res://Data/DialogueData.gd
 test.tres::Resource/DialogueData::6886036002414348597::1779191930::0::1::::<><><>0<>0<><>::uid://bfa4mj06qvrl1::::res://Resources/Animations/LyriaAnim.tres<>uid://dk8pyoigli3mp::::res://Data/DialogueData.gd
@@ -728,7 +728,7 @@ CommonWateringCan.tres::Resource/EquipData::3120574898359295105::1778224887::0::
 ::res://Resources/Equipment/Mythic/::1778219417
 ::res://Resources/Equipment/Rare/::1778219402
 ::res://Resources/Equipment/Uncommon/::1778219394
-::res://Resources/Food/::1778224486
+::res://Resources/Food/::1780054979
 Beaf.tres::Resource/ItemData::739884199063091517::1778224486::0::1::::<><><>0<>0<><>::uid://ca2577esqq6jn::::res://Assets/Sprites/Food/Beaf.png<>uid://dbi2l6pf50xf7::::res://Data/ItemData.gd
 FortuneCookie.tres::Resource/ItemData::9127626602252732469::1778217454::0::1::::<><><>0<>0<><>::uid://biob2oclo2gw1::::res://Assets/Sprites/Food/FortuneCookie.png<>uid://dbi2l6pf50xf7::::res://Data/ItemData.gd
 Honey.tres::Resource/ItemData::1993614506867749359::1778217454::0::1::::<><><>0<>0<><>::uid://dbi2l6pf50xf7::::res://Data/ItemData.gd<>uid://bwewrndr3ix0e::::res://Assets/Sprites/Food/Honey.png
@@ -740,7 +740,7 @@ Onigiri.tres::Resource/ItemData::5276258614049893409::1778217454::0::1::::<><><>
 Shrimp.tres::Resource/ItemData::1085319280634673676::1778217454::0::1::::<><><>0<>0<><>::uid://c0dpl1336swi7::::res://Assets/Sprites/Food/Shrimp.png<>uid://dbi2l6pf50xf7::::res://Data/ItemData.gd
 Sushi.tres::Resource/ItemData::2593945015250679277::1778217454::0::1::::<><><>0<>0<><>::uid://pkkw4dr0xcut::::res://Assets/Sprites/Food/Sushi.png<>uid://dbi2l6pf50xf7::::res://Data/ItemData.gd
 TeaLeaf.tres::Resource/ItemData::2235415362295859755::1778217454::0::1::::<><><>0<>0<><>::uid://bmy7mt6nq2h3d::::res://Assets/Sprites/Food/TeaLeaf.png<>uid://dbi2l6pf50xf7::::res://Data/ItemData.gd
-Yakitori.tres::Resource/ItemData::2686932959971008411::1778217454::0::1::::<><><>0<>0<><>::uid://dbi2l6pf50xf7::::res://Data/ItemData.gd<>uid://dgteislxpsggx::::res://Assets/Sprites/Food/Yakitori.png
+Yakitori.tres::Resource/ItemData::2686932959971008411::1780054979::0::1::::<><><>0<>0<><>::uid://dbi2l6pf50xf7::::res://Data/ItemData.gd<>uid://dgteislxpsggx::::res://Assets/Sprites/Food/Yakitori.png
 ::res://Resources/Potions/::1778224630
 Common HP Potion.tres::Resource/ItemData::236542783465853393::1778224547::0::1::::<><><>0<>0<><>::uid://b65y1uvxrxqdy::::res://Assets/Sprites/Potion/CommonHealthPotion.png<>uid://dbi2l6pf50xf7::::res://Data/ItemData.gd
 Epic Mana Potion.tres::Resource/ItemData::4890409963656898897::1778224630::0::1::::<><><>0<>0<><>::uid://d1s4pm3fpthaw::::res://Assets/Sprites/Potion/EpicManaPotion.png<>uid://dbi2l6pf50xf7::::res://Data/ItemData.gd
@@ -795,9 +795,9 @@ SkillSmoke.tscn::PackedScene::6338935978135573199::1778847915::0::1::::<><><>0<>
 SkillThunder.tscn::PackedScene::5018817764796548378::1778847915::0::1::::<><><>0<>0<><>::uid://bepo6q7c1j0sj::::res://Assets/FX/Thunder.png<>uid://d4d18ncfie3vn::::res://Scripts/FX/SkillEffect.gd
 SkillWarlock.tscn::PackedScene::9069516019076342867::1778847915::0::1::::<><><>0<>0<><>::uid://xfotx2qbc7q2::::res://Assets/FX/Warlock/Warlock_skill1_frame1.png<>uid://d3xtjfixo64ih::::res://Assets/FX/Warlock/Warlock_skill1_frame2.png<>uid://jot5enu1vwly::::res://Assets/FX/Warlock/Warlock_skill1_frame3.png<>uid://cp8ancv0axtnx::::res://Assets/FX/Warlock/Warlock_skill1_frame4.png<>uid://cwssr3le45pn0::::res://Assets/FX/Warlock/Warlock_skill1_frame5.png<>uid://cxhjdymtrokhq::::res://Assets/FX/Warlock/Warlock_skill1_frame6.png<>uid://h7uobbb266nc::::res://Assets/FX/Warlock/Warlock_skill1_frame7.png<>uid://chotv7dpj5d5t::::res://Assets/FX/Warlock/Warlock_skill1_frame8.png<>uid://d4d18ncfie3vn::::res://Scripts/FX/SkillEffect.gd
 SkillWater.tscn::PackedScene::2579190232626744246::1778847915::0::1::::<><><>0<>0<><>::uid://8db2t8t6r4bh::::res://Assets/FX/Water.png<>uid://d4d18ncfie3vn::::res://Scripts/FX/SkillEffect.gd
-::res://Scenes/UI/::1780054801
+::res://Scenes/UI/::1781258414
 CraftButton.tscn::PackedScene::3411624772449896763::1780054801::0::1::::<><><>0<>0<><>::uid://k5qf4ujb02lq::::res://Scripts/UI/CraftButton.gd<>uid://c0dpl1336swi7::::res://Assets/Sprites/Food/Shrimp.png
-CraftPanel.tscn::PackedScene::1941430791914561260::1780054403::0::1::::<><><>0<>0<><>::uid://bouu7xtccy64f::::res://Scenes/UI/CraftButton.tscn<>uid://d06qvn1uju065::::res://Scripts/UI/CraftPanel.gd<>uid://cnucrp0ddi4ew::::res://Assets/UI/Dialogue Box Curver.png<>uid://dgteislxpsggx::::res://Assets/Sprites/Food/Yakitori.png<>uid://bqs80but2ahli::::res://Assets/UI/Minus.png<>uid://b46ll0p0yxtqy::::res://Assets/Sprites/Food/Fish.png<>uid://dwlk00lgsb8no::::res://Assets/UI/Plus.png<>uid://udab1jw7ksth::::res://Assets/Sprites/Food/Meat.png<>uid://bt4kq3qxiipmo::::res://Assets/UI/Close.png<>uid://bedp75gs40gi8::::res://Assets/UI/ClosePressed.png
+CraftPanel.tscn::PackedScene::1941430791914561260::1781258414::0::1::::<><><>0<>0<><>::uid://bouu7xtccy64f::::res://Scenes/UI/CraftButton.tscn<>uid://d06qvn1uju065::::res://Scripts/UI/CraftPanel.gd<>uid://cnucrp0ddi4ew::::res://Assets/UI/Dialogue Box Curver.png<>uid://dgteislxpsggx::::res://Assets/Sprites/Food/Yakitori.png<>uid://bqs80but2ahli::::res://Assets/UI/Minus.png<>uid://b46ll0p0yxtqy::::res://Assets/Sprites/Food/Fish.png<>uid://dwlk00lgsb8no::::res://Assets/UI/Plus.png<>uid://udab1jw7ksth::::res://Assets/Sprites/Food/Meat.png<>uid://bt4kq3qxiipmo::::res://Assets/UI/Close.png<>uid://bedp75gs40gi8::::res://Assets/UI/ClosePressed.png
 DialoguePanel.tscn::PackedScene::8003351839871172020::1779189019::0::1::::<><><>0<>0<><>::uid://h1h5dqm5pgnw::::res://Scripts/UI/DialoguePanel.gd<>uid://dg66q76tkktph::::res://Assets/UI/Dialogue Box.png<>uid://bfa4mj06qvrl1::::res://Resources/Animations/LyriaAnim.tres
 DropItem.tscn::PackedScene::5562831112625595317::1779171520::0::1::::<><><>0<>0<><>::uid://b26wcnaggn::::res://Scripts/UI/DropItem.gd<>uid://dph3crpefo1ft::::res://Shaders/DropItem.gdshader<>uid://cg357incy4cwv::::res://Assets/Character/Shadow.png
 EquipmentPanel.tscn::PackedScene::6937412566455099271::1778231748::0::1::::<><><>0<>0<><>::uid://dc78c2abmcv6p::::res://Scripts/UI/EquipmentPanel.gd<>uid://03vlyprcxpoc::::res://Scenes/UI/EquipmentSlot.tscn<>uid://c5ruq50xq0m5q::::res://Assets/UI/Placeholder/Helmet.png<>uid://c0blvm1681q3i::::res://Assets/UI/Placeholder/Weapon.png<>uid://cy415v01rxeq2::::res://Assets/UI/Placeholder/Armour.png<>uid://drlebs364pck::::res://Assets/UI/Placeholder/Legs.png<>uid://bj4gr15a8mb50::::res://Assets/UI/Placeholder/Ring.png
@@ -854,7 +854,7 @@ StatsPanel.gd::GDScript::4097744352845277375::1778234998::0::1::::StatsPanel<>Pa
 ::res://Scripts/World/::1779453779
 Portal.gd::GDScript::2352633627980621343::1779453779::0::1::::Portal<>Area2D<><>0<>0<><>::
 Transition.gd::GDScript::4503783477580399448::1779453555::0::1::::<>Node<><>0<>0<><>::
-::res://Shaders/::1780048043
-DropItem.gdshader::Shader::8228249913571500709::1780048043::0::1::::<><><>0<>0<><>::
-TileSet.tres::TileSet::1097557371150426559::1780048043::0::1::::<><><>0<>0<><>::uid://b3clke7q7ksfp::::res://Assets/Sprites/Tileset/Tileset Grass Water Summer.png<>uid://b3saruoehxywy::::res://Assets/Sprites/Tileset/Water tile.png
-Transition.gdshader::Shader::2470744172528712088::1780048043::0::1::::<><><>0<>0<><>::
+::res://Shaders/::1781258414
+DropItem.gdshader::Shader::8228249913571500709::1781258414::0::1::::<><><>0<>0<><>::
+TileSet.tres::TileSet::1097557371150426559::1781258414::0::1::::<><><>0<>0<><>::uid://b3clke7q7ksfp::::res://Assets/Sprites/Tileset/Tileset Grass Water Summer.png<>uid://b3saruoehxywy::::res://Assets/Sprites/Tileset/Water tile.png
+Transition.gdshader::Shader::2470744172528712088::1781258414::0::1::::<><><>0<>0<><>::
