@@ -6,12 +6,13 @@
 
 [resource]
 script = ExtResource("2_3adph")
-mana_cost = 5.0
-base_dmg = 10.0
+mana_cost = 18.0
+base_dmg = 30.0
+cooldown = 4.0
 explosion_effect = ExtResource("1_3adph")
 icon = ExtResource("2_c2164")
 id = "thunder"
-name = "Thunder"
-description = "it hits hard"
-price = 50
+item_name = "Thunder"
+description = "Calls down lightning from the sky"
+price = 130
 metadata/_custom_type_script = "uid://dygfgfbrfatee"

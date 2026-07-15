@@ -187,7 +187,7 @@ func equip_item(slot_index: int) -> void:
 		return
 
 	var equip: EquipData = slot.item as EquipData
-	var equip_key: String = equip.get_equip_key()
+	var equip_key: String = Reference.get_equip_key(equip.equip_type)
 
 	var current_equipped_item = GameData.equipment[equip_key]
 
@@ -205,7 +205,7 @@ func equip_item(slot_index: int) -> void:
 
 
 func unequip_item(equip_type: EquipData.EquipType) -> void:
-	var equip_key = GameData.equipment.keys()[equip_type]
+	var equip_key = Reference.get_equip_key(equip_type)
 	var equipped_item = GameData.equipment[equip_key]
 
 	if not equipped_item:

@@ -5,10 +5,15 @@
 
 [resource]
 script = ExtResource("1_qk6rq")
+bonus_damage = null
 type = 4
+is_consumable = null
 max_stack = 1
+value = null
 icon = ExtResource("1_lpitf")
 id = "equip_helmet"
 name = "Common Helmet"
+description = null
 price = 10
+item_name = "Common Helmet"
 metadata/_custom_type_script = "uid://cnf0nl3l0t521"

@@ -42,22 +42,22 @@ func update_stats() -> void:
 	intelligence_points.text = str(Reference.player.intelligence_value)
 
 func _on_strength_plus_button_pressed() -> void:
-	Reference.player.upgrade_stat("STR")
+	Reference.player.upgrade_stat(Player.StatType.STR)
 
 func _on_strength_minus_button_pressed() -> void:
-	Reference.player.downgrade_stat("STR")
+	Reference.player.downgrade_stat(Player.StatType.STR)
 
 func _on_dexterity_plus_button_pressed() -> void:
-	Reference.player.upgrade_stat("DEX")
+	Reference.player.upgrade_stat(Player.StatType.DEX)
 
 func _on_dexterity_minus_button_pressed() -> void:
-	Reference.player.downgrade_stat("DEX")
+	Reference.player.downgrade_stat(Player.StatType.DEX)
 
 func _on_intelligence_plus_button_pressed() -> void:
-	Reference.player.upgrade_stat("INT")
+	Reference.player.upgrade_stat(Player.StatType.INT)
 
 func _on_intelligence_minus_button_pressed() -> void:
-	Reference.player.downgrade_stat("INT")
+	Reference.player.downgrade_stat(Player.StatType.INT)
 
 func _on_player_created() -> void:
 	update_stats()

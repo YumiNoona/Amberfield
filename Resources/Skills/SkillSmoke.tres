@@ -6,12 +6,13 @@
 
 [resource]
 script = ExtResource("2_r2tdl")
-mana_cost = 5.0
-base_dmg = 10.0
+mana_cost = 10.0
+base_dmg = 5.0
+cooldown = 4.0
 explosion_effect = ExtResource("1_r2tdl")
 icon = ExtResource("2_f7xxe")
 id = "smoke"
-name = "Smoke"
-description = "it hits hard"
-price = 50
+item_name = "Smoke"
+description = "Blinds enemies with smoke, reducing their accuracy"
+price = 70
 metadata/_custom_type_script = "uid://dygfgfbrfatee"

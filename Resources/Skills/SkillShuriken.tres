@@ -6,12 +6,13 @@
 
 [resource]
 script = ExtResource("1_pdwok")
-mana_cost = 5.0
+mana_cost = 6.0
 base_dmg = 10.0
+cooldown = 0.8
 explosion_effect = ExtResource("1_0hgob")
 icon = ExtResource("1_big2o")
 id = "shuriken"
-name = "Shuriken"
-description = "it hits hard"
-price = 50
+item_name = "Shuriken"
+description = "Throws multiple shurikens at the target"
+price = 40
 metadata/_custom_type_script = "uid://dygfgfbrfatee"

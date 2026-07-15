@@ -17,23 +17,23 @@ var attack_rotations: Dictionary = {
 }
 
 func enter_state() -> void:
-	print("[ENEMY STATE] %s entering Attack | direction: %s" % [enemy.name, enemy.last_direction])
+	Reference.log("ENEMY STATE", "%s entering Attack | direction: %s" % [enemy.name, enemy.animator.last_direction])
 	attack_timer = attack_duration
 	cooldown_timer = 0.0
 	damage_applied = false
 	in_cooldown = false
 	_position_hitbox()
-	enemy.play_direction_anim("Attack")
+	enemy.animator.play_anim("Attack")
 	enemy.enable_player_collision(true)
 
 func exit_state() -> void:
-	print("[ENEMY STATE] %s exiting Attack" % enemy.name)
+	Reference.log("ENEMY STATE", "%s exiting Attack" % enemy.name)
 	enemy.enable_player_collision(false)
 
 func _position_hitbox() -> void:
-	var marker: Marker2D = enemy.attack_positions[enemy.last_direction]
+	var marker: Marker2D = enemy.attack_positions[enemy.animator.last_direction]
 	enemy.player_attack_area.global_position = marker.global_position
-	enemy.player_attack_area.rotation_degrees = attack_rotations[enemy.last_direction]
+	enemy.player_attack_area.rotation_degrees = attack_rotations[enemy.animator.last_direction]
 
 func process_state(delta: float) -> void:
 	if not enemy or not Reference.player:
@@ -43,19 +43,19 @@ func process_state(delta: float) -> void:
 	var distance = enemy.global_position.distance_to(Reference.player.global_position)
 
 	if distance > enemy.attack_range * 2.0:
-		print("[ENEMY STATE] %s player out of range, switching to Follow" % enemy.name)
+		Reference.log("ENEMY STATE", "%s player out of range, switching to Follow" % enemy.name)
 		fsm.transition_to("Follow")
 		return
 
 	if in_cooldown:
 		cooldown_timer -= delta
 		if cooldown_timer <= 0.0:
-			print("[ENEMY STATE] %s cooldown done, attacking again" % enemy.name)
+			Reference.log("ENEMY STATE", "%s cooldown done, attacking again" % enemy.name)
 			in_cooldown = false
 			attack_timer = attack_duration
 			damage_applied = false
 			_position_hitbox()
-			enemy.play_direction_anim("Attack")
+			enemy.animator.play_anim("Attack")
 			enemy.enable_player_collision(true)
 		return
 
@@ -65,4 +65,4 @@ func process_state(delta: float) -> void:
 		enemy.enable_player_collision(false)
 		in_cooldown = true
 		cooldown_timer = attack_cooldown
-		enemy.play_direction_anim("Idle")
+		enemy.animator.play_anim("Idle")

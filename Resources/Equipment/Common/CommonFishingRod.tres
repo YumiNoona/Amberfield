@@ -10,6 +10,6 @@ type = 4
 max_stack = 1
 icon = ExtResource("1_ge0af")
 id = "equip_weapon"
-name = "Common FishingRod"
+item_name = "Common FishingRod"
 price = 30
 metadata/_custom_type_script = "uid://cnf0nl3l0t521"

@@ -1,6 +1,8 @@
 extends CharacterBody2D
 class_name Player
 
+enum StatType { STR, DEX, INT }
+
 @export_group("Stats")
 @export var max_health: float = 10.0
 @export var max_mana: float = 10.0
@@ -17,6 +19,7 @@ class_name Player
 @onready var health_component: HealthComponent = $HealthComponent
 @onready var enemy_attack_area: Area2D = %EnemyAttackArea
 @onready var fsm: FSM = $FSM
+@onready var animator: DirectionalAnimator = $DirectionalAnimator
 
 @onready var attack_positions: Dictionary = {
 	"Down": %Down,
@@ -30,7 +33,6 @@ var next_level_exp: float
 var curr_level: int = 1
 var curr_points: int = 0
 var curr_mana: float
-var last_direction: String = "Down"
 
 var strength_value: int = 0
 var dexterity_value: int = 0
@@ -46,9 +48,16 @@ var selected_enemy: Enemy:
 		selected_enemy = value
 		selected_enemy.select_enemy()
 
+func _ready() -> void:
+	animator.damage_anim_finished.connect(_on_damage_anim_finished)
+	animator.dead_anim_finished.connect(_on_dead_anim_finished)
+
 func _process(delta: float) -> void:
 	if is_dead:
 		return
+	for i in GameData.skill_cooldowns.size():
+		if GameData.skill_cooldowns[i] > 0.0:
+			GameData.skill_cooldowns[i] -= delta
 	if fsm.curr_state:
 		fsm.curr_state.process_state(delta)
 
@@ -72,73 +81,51 @@ func is_moving() -> bool:
 			return true
 	return false
 
-func update_direction(input_vector: Vector2) -> void:
-	if input_vector == Vector2.ZERO:
-		return
-	if abs(input_vector.x) > abs(input_vector.y):
-		last_direction = "Right" if input_vector.x > 0 else "Left"
-	else:
-		last_direction = "Down" if input_vector.y > 0 else "Up"
-
-func play_direction_anim(anim_name: String) -> void:
-	if last_direction == "Left":
-		anim_sprite.flip_h = true
-		anim_sprite.play("%s_Right" % anim_name)
-	else:
-		anim_sprite.flip_h = false
-		anim_sprite.play("%s_%s" % [anim_name, last_direction])
-
-func play_damage_anim() -> void:
-	if is_dead:
-		return
-	print("[PLAYER] taking damage, playing damage anim | direction: %s" % last_direction)
-	play_direction_anim("Damage")
-	if not anim_sprite.animation_finished.is_connected(_on_damage_anim_finished):
-		anim_sprite.animation_finished.connect(_on_damage_anim_finished, CONNECT_ONE_SHOT)
-
 func _on_damage_anim_finished() -> void:
 	if is_dead:
 		return
-	print("[PLAYER] damage anim finished, resuming state: %s" % fsm.curr_state.name)
+	Reference.log("PLAYER", "damage anim finished, resuming state: %s" % fsm.curr_state.name)
 	fsm.curr_state.enter_state()
 
-func upgrade_stat(stat_name: String) -> void:
+#region Stats & Leveling
+
+func upgrade_stat(stat: StatType) -> void:
 	if curr_points <= 0:
 		return
 	curr_points -= 1
-	match stat_name:
-		"STR":
+	match stat:
+		StatType.STR:
 			strength_value += 1
 			damage += 1.5
 			max_health += 3.0
 			reset_health()
-		"DEX":
+		StatType.DEX:
 			dexterity_value += 1
 			move_speed += 2.0
 			crit_chance += 2.0
-		"INT":
+		StatType.INT:
 			intelligence_value += 1
 			max_mana += 15.0
 			crit_damage += 5
 			reset_mana()
 	EventBus.on_player_stats_updated.emit()
 
-func downgrade_stat(stat_name: String) -> void:
-	match stat_name:
-		"STR":
+func downgrade_stat(stat: StatType) -> void:
+	match stat:
+		StatType.STR:
 			if strength_value <= 0:
 				return
 			strength_value -= 1
 			damage -= 1.5
 			max_health -= 3.0
 			reset_health()
-		"DEX":
+		StatType.DEX:
 			if dexterity_value <= 0:
 				return
 			dexterity_value -= 1
 			move_speed -= 2.0
 			crit_chance -= 2.0
-		"INT":
+		StatType.INT:
 			if intelligence_value <= 0:
 				return
 			intelligence_value -= 1
@@ -159,7 +146,7 @@ func level_up() -> void:
 	curr_level += 1
 	curr_points += 4
 	next_level_exp *= exp_multiplier
-	print("[PLAYER] leveled up! level: %d | next level exp: %.1f" % [curr_level, next_level_exp])
+	Reference.log("PLAYER", "leveled up! level: %d | next level exp: %.1f" % [curr_level, next_level_exp])
 	Reference.create_new_level_fx(global_position)
 	EventBus.on_player_stats_updated.emit()
 
@@ -173,6 +160,10 @@ func add_mana(value: float) -> void:
 	curr_mana = min(curr_mana, max_mana)
 	EventBus.on_player_mana_updated.emit(curr_mana, max_mana)
 
+#endregion
+
+#region Combat
+
 
 func use_skill(index: int) -> void:
 	if index < 0 or index >= GameData.skill_slots.size():
@@ -180,19 +171,20 @@ func use_skill(index: int) -> void:
 	var skill: SkillData = GameData.skill_slots[index]
 	if not skill:
 		return
+	if GameData.skill_cooldowns[index] > 0.0:
+		return
 	if not selected_enemy:
 		return
-	# Not enough mana
 	if curr_mana < skill.mana_cost:
 		return
 	use_mana(skill.mana_cost)
+	GameData.skill_cooldowns[index] = skill.cooldown
 	var total_dmg = get_damage(skill.base_dmg)
 	selected_enemy.health_component.take_damage(total_dmg)
-	# Spawn explosion effect on enemy
-	var exp_effect: Node2D = skill.explosion_effect.instantiate()
-	exp_effect.global_position = selected_enemy.global_position
-	get_tree().root.add_child(exp_effect)
-	# Show floating damage text
+	if skill.explosion_effect:
+		var exp_effect: Node2D = skill.explosion_effect.instantiate()
+		exp_effect.global_position = selected_enemy.global_position
+		get_tree().root.add_child(exp_effect)
 	Reference.create_damage_text(selected_enemy.global_position,total_dmg)
 
 func setup() -> void:
@@ -218,35 +210,40 @@ func get_damage(skill_dmg: float = 0.0) -> float:
 	return total_dmg
 
 func enable_weapon_collision(value: bool) -> void:
-	print("[PLAYER] EnemyAttackArea monitoring: %s" % value)
+	Reference.log("PLAYER", "EnemyAttackArea monitoring: %s" % value)
 	enemy_attack_area.monitoring = value
 
+#endregion
+
+#region Lifecycle
+
 func _on_health_component_on_health_changed(curr_health: float) -> void:
-	print("[PLAYER] health changed: %.1f / %.1f" % [curr_health, max_health])
+	Reference.log("PLAYER", "health changed: %.1f / %.1f" % [curr_health, max_health])
 	EventBus.on_player_health_updated.emit(curr_health, max_health)
-	play_damage_anim()
+	animator.play_damage_anim()
 
 func _on_health_component_on_dead() -> void:
-	print("[PLAYER] died")
+	Reference.log("PLAYER", "died")
 	is_dead = true
 	fsm.curr_state.exit_state()
-	play_direction_anim("Dead")
-	anim_sprite.animation_finished.connect(_on_dead_anim_finished, CONNECT_ONE_SHOT)
+	animator.play_dead_anim()
 
 func _on_dead_anim_finished() -> void:
-	print("[PLAYER] dead anim finished, removing")
+	Reference.log("PLAYER", "dead anim finished, removing")
 	queue_free()
 
 func _on_enemy_attack_area_area_entered(area: Area2D) -> void:
 	var enemy = area as Enemy
 	if not enemy:
-		print("[PLAYER ATTACK] area entered but not Enemy: %s" % area.name)
+		Reference.log("PLAYER ATTACK", "area entered but not Enemy: %s" % area.name)
 		return
 	if enemy in hit_enemies_this_attack:
-		print("[PLAYER ATTACK] already hit %s this swing, skipping" % enemy.name)
+		Reference.log("PLAYER ATTACK", "already hit %s this swing, skipping" % enemy.name)
 		return
 	hit_enemies_this_attack.append(enemy)
 	var dmg = get_damage()
-	print("[PLAYER ATTACK] hit %s for %.1f dmg | enemy health after: %.1f" % [enemy.name, dmg, enemy.health_component.curr_health - dmg])
+	Reference.log("PLAYER ATTACK", "hit %s for %.1f dmg | enemy health after: %.1f" % [enemy.name, dmg, enemy.health_component.curr_health - dmg])
 	enemy.health_component.take_damage(dmg)
 	Reference.create_damage_text(enemy.global_position, dmg)
+
+#endregion

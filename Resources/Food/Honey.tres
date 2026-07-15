@@ -5,5 +5,12 @@
 
 [resource]
 script = ExtResource("1_8t7ew")
+is_consumable = true
+max_stack = 15
+value = 1.0
 icon = ExtResource("1_bmqvs")
+id = "food"
+item_name = "Honey"
+description = "Sweet golden honey"
+price = 3
 metadata/_custom_type_script = "uid://dbi2l6pf50xf7"

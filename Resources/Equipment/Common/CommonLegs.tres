@@ -10,6 +10,6 @@ type = 4
 max_stack = 1
 icon = ExtResource("1_8s804")
 id = "equip_legs"
-name = "Common Legs"
+item_name = "Common Legs"
 price = 10
 metadata/_custom_type_script = "uid://cnf0nl3l0t521"

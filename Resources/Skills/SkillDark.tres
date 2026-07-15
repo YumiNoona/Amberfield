@@ -6,12 +6,13 @@
 
 [resource]
 script = ExtResource("2_13jkl")
-mana_cost = 5.0
-base_dmg = 10.0
+mana_cost = 20.0
+base_dmg = 35.0
+cooldown = 5.0
 explosion_effect = ExtResource("1_13jkl")
 icon = ExtResource("2_h4p5n")
 id = "dark"
-name = "Dark"
-description = "it hits hard"
-price = 50
+item_name = "Dark"
+description = "Unleashes dark energy that consumes the target"
+price = 150
 metadata/_custom_type_script = "uid://dygfgfbrfatee"

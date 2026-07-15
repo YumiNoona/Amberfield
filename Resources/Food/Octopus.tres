@@ -5,5 +5,12 @@
 
 [resource]
 script = ExtResource("1_0ssey")
+is_consumable = true
+max_stack = 10
+value = 5.0
 icon = ExtResource("1_gfcue")
+id = "food"
+item_name = "Octopus"
+description = "Fresh sea octopus, restores 5 HP"
+price = 15
 metadata/_custom_type_script = "uid://dbi2l6pf50xf7"

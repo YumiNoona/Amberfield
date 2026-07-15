@@ -78,7 +78,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ucakx")
 }],
-"loop": false,
+"loop": 0,
 "name": &"Angry",
 "speed": 5.0
 }, {
@@ -95,7 +95,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qpebc")
 }],
-"loop": false,
+"loop": 0,
 "name": &"Concern",
 "speed": 5.0
 }, {
@@ -112,7 +112,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ff7m3")
 }],
-"loop": false,
+"loop": 0,
 "name": &"Happy",
 "speed": 5.0
 }, {
@@ -132,7 +132,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ykoxr")
 }],
-"loop": false,
+"loop": 0,
 "name": &"Talk",
 "speed": 5.0
 }]

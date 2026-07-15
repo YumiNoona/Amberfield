@@ -6,12 +6,13 @@
 
 [resource]
 script = ExtResource("2_ihubv")
-mana_cost = 5.0
-base_dmg = 10.0
+mana_cost = 8.0
+base_dmg = 14.0
+cooldown = 1.5
 explosion_effect = ExtResource("1_ihubv")
 icon = ExtResource("2_3fsxk")
 id = "water"
-name = "Water"
-description = "it hits hard"
-price = 50
+item_name = "Water"
+description = "A powerful water cannon blast"
+price = 55
 metadata/_custom_type_script = "uid://dygfgfbrfatee"

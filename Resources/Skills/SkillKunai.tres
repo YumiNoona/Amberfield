@@ -6,12 +6,13 @@
 
 [resource]
 script = ExtResource("2_h65nb")
-mana_cost = 5.0
-base_dmg = 10.0
+mana_cost = 4.0
+base_dmg = 6.0
+cooldown = 0.3
 explosion_effect = ExtResource("1_h65nb")
 icon = ExtResource("2_ytyv6")
 id = "kunai"
-name = "Kunai"
-description = "it hits hard"
-price = 50
+item_name = "Kunai"
+description = "A fast kunai throw, low damage but rapid"
+price = 25
 metadata/_custom_type_script = "uid://dygfgfbrfatee"

@@ -6,12 +6,13 @@
 
 [resource]
 script = ExtResource("2_v7c24")
-mana_cost = 5.0
-base_dmg = 10.0
+mana_cost = 3.0
+base_dmg = 5.0
+cooldown = 0.2
 explosion_effect = ExtResource("1_v7c24")
 icon = ExtResource("2_qeqq8")
 id = "slash"
-name = "Slash"
-description = "it hits hard"
-price = 50
+item_name = "Slash"
+description = "A basic sword slash, low cost and fast"
+price = 20
 metadata/_custom_type_script = "uid://dygfgfbrfatee"

@@ -6,12 +6,13 @@
 
 [resource]
 script = ExtResource("2_4rwu3")
-mana_cost = 5.0
-base_dmg = 10.0
+mana_cost = 10.0
+base_dmg = 15.0
+cooldown = 2.0
 explosion_effect = ExtResource("1_4rwu3")
 icon = ExtResource("2_8yfwy")
 id = "ground"
-name = "Ground"
-description = "it hits hard"
-price = 50
+item_name = "Ground"
+description = "Shakes the earth, damaging enemies in an area"
+price = 60
 metadata/_custom_type_script = "uid://dygfgfbrfatee"

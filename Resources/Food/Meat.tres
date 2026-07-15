@@ -5,5 +5,12 @@
 
 [resource]
 script = ExtResource("1_d0qis")
+is_consumable = true
+max_stack = 20
+value = 3.0
 icon = ExtResource("1_sv6mb")
+id = "food"
+item_name = "Raw Meat"
+description = "Tough raw meat, needs cooking"
+price = 8
 metadata/_custom_type_script = "uid://dbi2l6pf50xf7"

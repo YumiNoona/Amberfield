@@ -6,10 +6,15 @@
 [resource]
 script = ExtResource("2_1fu77")
 equip_type = 1
+bonus_damage = null
 type = 4
+is_consumable = null
 max_stack = 1
+value = null
 icon = ExtResource("1_ryddu")
 id = "equip_armour"
 name = "Common Armour"
+description = null
 price = 15
+item_name = "Common Armour"
 metadata/_custom_type_script = "uid://cnf0nl3l0t521"

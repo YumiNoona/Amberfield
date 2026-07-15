@@ -10,6 +10,6 @@ type = 4
 max_stack = 1
 icon = ExtResource("1_5617l")
 id = "equip_weapon"
-name = "Common Arrow"
+item_name = "Common Arrow"
 price = 30
 metadata/_custom_type_script = "uid://cnf0nl3l0t521"

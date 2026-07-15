@@ -6,11 +6,22 @@ class_name EquippedSkillButton
 @onready var empty: Panel = $Empty
 @onready var skill_icon: TextureRect = $SkillIcon
 @onready var label: Label = $Label
+@onready var cooldown_overlay: ColorRect = $CooldownOverlay
 
 var equipped_data: SkillData
 
 func _ready() -> void:
-	label.text =str(number)
+	label.text = str(number)
+	cooldown_overlay.visible = false
+
+func _process(_delta: float) -> void:
+	var cd: float = GameData.skill_cooldowns[number - 1]
+	var skill: SkillData = GameData.skill_slots[number - 1]
+	if cd > 0.0 and skill and skill.cooldown > 0.0:
+		cooldown_overlay.visible = true
+		cooldown_overlay.size.y = (cd / skill.cooldown) * skill_icon.size.y
+	else:
+		cooldown_overlay.visible = false
 
 
 func equip_skill(data: SkillData) -> void:

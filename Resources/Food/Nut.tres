@@ -5,5 +5,12 @@
 
 [resource]
 script = ExtResource("1_r75y0")
+is_consumable = true
+max_stack = 30
+value = 0.5
 icon = ExtResource("1_5l6tv")
+id = "food"
+item_name = "Nut"
+description = "A crunchy forest nut"
+price = 2
 metadata/_custom_type_script = "uid://dbi2l6pf50xf7"

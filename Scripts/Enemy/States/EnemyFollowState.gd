@@ -13,6 +13,7 @@ func process_state(delta: float) -> void:
 	if distance > stop_distance:
 		var speed = randf_range(min_move_speed, max_move_speed)
 		enemy.global_position += dir * speed * delta
-		enemy.update_animation(dir)
+		enemy.animator.set_direction_from_vector(dir)
+		enemy.animator.play_anim("Walk")
 	if distance <= stop_distance:
 		fsm.transition_to("Attack")

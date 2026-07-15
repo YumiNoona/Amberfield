@@ -6,4 +6,12 @@
 [resource]
 script = ExtResource("1_u20mh")
 icon = ExtResource("1_gossn")
+type = 0
+is_consumable = true
+max_stack = 3
+value = 15.0
+id = "food"
+item_name = "Sushi"
+description = "Delicious fresh sushi, restores 15 HP"
+price = 20
 metadata/_custom_type_script = "uid://dbi2l6pf50xf7"

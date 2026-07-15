@@ -3,126 +3,127 @@
 [ext_resource type="Texture2D" uid="uid://cg357incy4cwv" path="res://Assets/Character/Shadow.png" id="1_b424u"]
 [ext_resource type="Texture2D" uid="uid://by5yt3ficc703" path="res://Assets/UI/Selector (2).png" id="2_e0oyi"]
 [ext_resource type="PackedScene" uid="uid://dh2jh3memmx2a" path="res://Scenes/Player/HealthComponent.tscn" id="3_02vxf"]
+[ext_resource type="Script" uid="uid://b001c5dleotyp" path="res://Scripts/Components/DirectionalAnimator.gd" id="4_02vxf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_seemo"]
 animations = [{
 "frames": [],
-"loop": false,
+"loop": 0,
 "name": &"Attack_Down",
 "speed": 10.0
 }, {
 "frames": [],
-"loop": false,
+"loop": 0,
 "name": &"Attack_Left",
 "speed": 10.0
 }, {
 "frames": [],
-"loop": false,
+"loop": 0,
 "name": &"Attack_Right",
 "speed": 10.0
 }, {
 "frames": [],
-"loop": false,
+"loop": 0,
 "name": &"Attack_Up",
 "speed": 10.0
 }, {
 "frames": [],
-"loop": false,
+"loop": 0,
 "name": &"Damage_Down",
 "speed": 5.0
 }, {
 "frames": [],
-"loop": false,
+"loop": 0,
 "name": &"Damage_Left",
 "speed": 5.0
 }, {
 "frames": [],
-"loop": false,
+"loop": 0,
 "name": &"Damage_Right",
 "speed": 5.0
 }, {
 "frames": [],
-"loop": false,
+"loop": 0,
 "name": &"Damage_Up",
 "speed": 5.0
 }, {
 "frames": [],
-"loop": false,
+"loop": 0,
 "name": &"Dead_Down",
 "speed": 5.0
 }, {
 "frames": [],
-"loop": false,
+"loop": 0,
 "name": &"Dead_Left",
 "speed": 5.0
 }, {
 "frames": [],
-"loop": false,
+"loop": 0,
 "name": &"Dead_Right",
 "speed": 5.0
 }, {
 "frames": [],
-"loop": false,
+"loop": 0,
 "name": &"Dead_Up",
 "speed": 5.0
 }, {
 "frames": [],
-"loop": true,
+"loop": 1,
 "name": &"Idle_Down",
 "speed": 5.0
 }, {
 "frames": [],
-"loop": true,
+"loop": 1,
 "name": &"Idle_Left",
 "speed": 5.0
 }, {
 "frames": [],
-"loop": true,
+"loop": 1,
 "name": &"Idle_Right",
 "speed": 5.0
 }, {
 "frames": [],
-"loop": true,
+"loop": 1,
 "name": &"Idle_Up",
 "speed": 5.0
 }, {
 "frames": [],
-"loop": true,
+"loop": 1,
 "name": &"Run_Down",
 "speed": 5.0
 }, {
 "frames": [],
-"loop": true,
+"loop": 1,
 "name": &"Run_Left",
 "speed": 5.0
 }, {
 "frames": [],
-"loop": true,
+"loop": 1,
 "name": &"Run_Right",
 "speed": 5.0
 }, {
 "frames": [],
-"loop": true,
+"loop": 1,
 "name": &"Run_Up",
 "speed": 5.0
 }, {
 "frames": [],
-"loop": true,
+"loop": 1,
 "name": &"Walk_Down",
 "speed": 5.0
 }, {
 "frames": [],
-"loop": true,
+"loop": 1,
 "name": &"Walk_Left",
 "speed": 5.0
 }, {
 "frames": [],
-"loop": true,
+"loop": 1,
 "name": &"Walk_Right",
 "speed": 5.0
 }, {
 "frames": [],
-"loop": true,
+"loop": 1,
 "name": &"Walk_Up",
 "speed": 5.0
 }]
@@ -160,3 +161,9 @@ shape = SubResource("CircleShape2D_seemo")
 debug_color = Color(0, 0.649932, 0.13555473, 0.41960785)
 
 [node name="HealthComponent" parent="." unique_id=1894323576 instance=ExtResource("3_02vxf")]
+
+[node name="DirectionalAnimator" type="Node" parent="." unique_id=1087654091 node_paths=PackedStringArray("anim_sprite")]
+script = ExtResource("4_02vxf")
+anim_sprite = NodePath("../AnimSprite")
+use_flip_for_left = true
+metadata/_custom_type_script = "uid://b001c5dleotyp"

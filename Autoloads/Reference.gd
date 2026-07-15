@@ -4,6 +4,23 @@ var player: Player
 var hud: HUD
 var navigation : TileMapLayer
 
+func log(tag: String, msg: String) -> void:
+	print("[%s] %s" % [tag, msg])
+
+func get_equip_key(equip_type: EquipData.EquipType) -> String:
+	match equip_type:
+		EquipData.EquipType.HELMET:
+			return "helmet"
+		EquipData.EquipType.ARMOUR:
+			return "armour"
+		EquipData.EquipType.LEGS:
+			return "legs"
+		EquipData.EquipType.WEAPON:
+			return "weapon"
+		EquipData.EquipType.RING:
+			return "ring"
+	return ""
+
 const NEW_LEVEL_FX_SCENE = preload("uid://ctekw1xgrg320")
 const DAMAGE_TEXT_SCENE = preload("uid://ci0lssb7ksbut")
 const DROP_ITEM_SCENE = preload("uid://clixaseqvjwyv")

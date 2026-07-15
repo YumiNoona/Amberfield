@@ -10,6 +10,6 @@ type = 4
 max_stack = 1
 icon = ExtResource("1_sr7s2")
 id = "equip_weapon"
-name = "Common Axe"
+item_name = "Common Axe"
 price = 30
 metadata/_custom_type_script = "uid://cnf0nl3l0t521"

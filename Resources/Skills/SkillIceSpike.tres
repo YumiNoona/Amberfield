@@ -6,12 +6,13 @@
 
 [resource]
 script = ExtResource("2_6vk8k")
-mana_cost = 5.0
-base_dmg = 10.0
+mana_cost = 12.0
+base_dmg = 18.0
+cooldown = 2.5
 explosion_effect = ExtResource("1_6vk8k")
 icon = ExtResource("2_uebwj")
 id = "icespike"
-name = "IceSpike"
-description = "it hits hard"
-price = 50
+item_name = "IceSpike"
+description = "Launches sharp ice spikes at the enemy"
+price = 80
 metadata/_custom_type_script = "uid://dygfgfbrfatee"

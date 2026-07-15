@@ -7,11 +7,12 @@
 [resource]
 script = ExtResource("2_ia7xw")
 mana_cost = 5.0
-base_dmg = 10.0
+base_dmg = 8.0
+cooldown = 0.5
 explosion_effect = ExtResource("1_ia7xw")
 icon = ExtResource("2_e3exy")
 id = "claw"
-name = "Claw"
-description = "it hits hard"
-price = 50
+item_name = "Claw"
+description = "A quick claw strike with bleeding damage"
+price = 30
 metadata/_custom_type_script = "uid://dygfgfbrfatee"

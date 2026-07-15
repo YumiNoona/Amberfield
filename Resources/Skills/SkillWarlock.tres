@@ -6,12 +6,13 @@
 
 [resource]
 script = ExtResource("2_ir7qb")
-mana_cost = 5.0
-base_dmg = 10.0
+mana_cost = 25.0
+base_dmg = 40.0
+cooldown = 6.0
 explosion_effect = ExtResource("1_ir7qb")
 icon = ExtResource("2_7orw3")
 id = "warlock"
-name = "Warlock"
-description = "it hits hard"
-price = 50
+item_name = "Warlock"
+description = "A devastating warlock curse that deals massive damage"
+price = 200
 metadata/_custom_type_script = "uid://dygfgfbrfatee"

@@ -5,5 +5,12 @@
 
 [resource]
 script = ExtResource("1_f4gtw")
+is_consumable = true
+max_stack = 5
+value = 10.0
 icon = ExtResource("1_qnmvm")
+id = "food"
+item_name = "Onigiri"
+description = "A tasty rice ball, restores 10 HP"
+price = 12
 metadata/_custom_type_script = "uid://dbi2l6pf50xf7"

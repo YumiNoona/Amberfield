@@ -1,3 +1,5 @@
+ColorRect
+DirectionalAnimator
 Button
 Label
 HBoxContainer
@@ -11,4 +13,3 @@ Panel
 TextureButton
 Node2D
 CollisionShape2D
-CanvasLayer

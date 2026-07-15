@@ -151,14 +151,14 @@ size_flags_horizontal = 3
 layout_mode = 2
 alignment = 1
 
-[node name="CraftIcon" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/MaterialsContainer/HBoxContainer" unique_id=718505365]
+[node name="CraftBorder" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/MaterialsContainer/HBoxContainer" unique_id=718505365]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 texture = ExtResource("2_12f3p")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="CraftIcon" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/MaterialsContainer/HBoxContainer/CraftIcon" unique_id=1840122817]
+[node name="CraftIcon" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/MaterialsContainer/HBoxContainer/CraftBorder" unique_id=1840122817]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 1
@@ -194,6 +194,7 @@ text = "Materials"
 layout_mode = 2
 
 [node name="Material1Icon" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/MaterialsContainer/Material1" unique_id=1212813619]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 texture = ExtResource("4_elwwe")
@@ -201,10 +202,12 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="Material1Name" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/MaterialsContainer/Material1" unique_id=1587508332]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Fish"
 
 [node name="Material1Quantity" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/MaterialsContainer/Material1" unique_id=785014419]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 10
 text = "5/64"
@@ -212,18 +215,21 @@ text = "5/64"
 [node name="Material2" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/MaterialsContainer" unique_id=1226728496]
 layout_mode = 2
 
-[node name="Material1Icon" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/MaterialsContainer/Material2" unique_id=1269387293]
+[node name="Material2Icon" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/MaterialsContainer/Material2" unique_id=1269387293]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 texture = ExtResource("5_ih66g")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Material1Name" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/MaterialsContainer/Material2" unique_id=1255997038]
+[node name="Material2Name" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/MaterialsContainer/Material2" unique_id=1255997038]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Chicken"
 
-[node name="Material1Quantity" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/MaterialsContainer/Material2" unique_id=1681122506]
+[node name="Material2Quantity" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/MaterialsContainer/Material2" unique_id=1681122506]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 10
 text = "5/1"
@@ -251,6 +257,7 @@ icon = ExtResource("3_q8oyl")
 flat = true
 
 [node name="AmountLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/MaterialsContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=1024240122]
+unique_name_in_owner = true
 layout_mode = 2
 text = "20"
 

@@ -23,6 +23,8 @@ func _ready() -> void:
 	EventBus.on_player_mana_updated.connect(on_player_mana_updated)
 	EventBus.on_player_new_level.connect(on_player_new_level)
 
+#region Panel Control
+
 func open_npc_panel(type: NPC.NPCType) -> void:
 
 	match type:
@@ -60,6 +62,10 @@ func equip_skill_to_empty_slot(skill: SkillData) -> void:
 
 			return
 
+#endregion
+
+#region HUD Updates
+
 @warning_ignore("shadowed_global_identifier")
 func on_player_health_updated(curr: float, max: float) -> void:
 	health_bar.value = curr / max
@@ -72,3 +78,5 @@ func on_player_mana_updated(curr: float, max: float) -> void:
 
 func on_player_new_level(curr: float, new_level: float) -> void:
 	exp_bar.value = curr / new_level
+
+#endregion

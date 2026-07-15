@@ -1,5 +1,5 @@
+ItemData
 CraftData
 DialogueData
 SkillData
-ItemData
 EquipData

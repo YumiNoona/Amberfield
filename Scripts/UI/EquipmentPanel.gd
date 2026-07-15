@@ -19,10 +19,9 @@ func _ready() -> void:
 
 
 func _on_equipment_changed() -> void:
-	var items: Array[EquipData] = GameData.equipment.values()
-
-	for i in slots.size():
-		slots[i].load_data(items[i])
+	for slot in slots:
+		var key = Reference.get_equip_key(slot.equip_type)
+		slot.load_data(GameData.equipment[key])
 
 func _on_slot_pressed(slot: EquipmentSlot) -> void:
 	Inventory.unequip_item(slot.equip_type)
